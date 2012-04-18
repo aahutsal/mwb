@@ -323,9 +323,9 @@
     */
     
     /* -- Company Profile -- */
-    #profile-form				{margin-left:0;padding:18px 0 18px 20px;background-color:#fcfcfc;border-right:1px solid #d3d3d3;float:left;}
-    #company-profile			{margin-top:18px;}
-    #contact-information		{padding-top:18px;border-top:1px solid #d3d3d3;}
+    #profile					{margin-left:0;padding:18px 0 18px 20px;background-color:#fcfcfc;border-right:1px solid #d3d3d3;float:left;}
+    #company-profile-form		{margin-top:18px;}
+    #contact-information-form	{padding-top:18px;border-top:1px solid #d3d3d3;}
     
     
     /* -- Photo Uploader -- */

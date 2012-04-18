@@ -1,9 +1,15 @@
-<div id="profile-form" class="span10">
+<script language="javascript">
+$(function(){
+ Ê $("#website-preview"").html($.getJSON("http://scanshowsell.com:5984/mwb/_design/mwb-mobile/_rewrite/com.scanshowsell.website:icq/index.html"))
+})
+</script>
+
+<div id="profile" class="span10">
   <!--  =====  COMPANY PROFILE  =====  -->
   <div>
     <h5>About Us</h5>
     <p class="hint-inline">Required fields denoted with a ' * '.</p>
-    <form id="company-profile" name="company-profile">
+    <form id="company-profile-form" name="company-profile">
       <div class="clearfix">
         <label>Company Name *</label>
         <div class="input">
@@ -30,7 +36,7 @@
   <div>
     <h5>Contact Information</h5>
     <p class="hint-inline">All fields required.</p>
-    <form id="contact-information" name="contact-information">
+    <form id="contact-information-form" name="contact-information">
       <div class="clearfix">
         <label>Street Address</label>
         <div class="input">
@@ -95,7 +101,11 @@
     			<h3>Preview - My Mobile Website</h3>
     		</div>
     		<div class="modal-body">
-    			<img src="../images/mobile-service.png" alt="iPhone Screen Preview" />
+    			<div class="emulator-wrap">
+    				<div class="website-preview">
+    					{ template code }
+    				</div>
+    			</div>
     			<h5>Company Profile Page</h5>
     			<p>This is an interactive preview of your company's profile. Scroll up and down the page and play with the various elements to get a general idea of how they will look and work on a smartphone.</p>
     		</div>
