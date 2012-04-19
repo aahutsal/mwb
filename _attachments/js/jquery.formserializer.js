@@ -18,7 +18,6 @@ $.fn.extend({
                 var resultArray = []
                 // transforming array of maps into single map if possible
                 _.each(arr, function(val, idx){
-
                     var key = Object.keys(val)[0]
                     var value = val[key]
                     if(resultMap[key] == undefined){
@@ -44,6 +43,15 @@ $.fn.extend({
         }
     },
     deserializeForms: function(model){
+        var setVal = function(selector, val){
+            _.each(selector, function(el, idx){
+                if($(el).is('input[type=radio]'))
+                    $(el).val() === val && $(el).attr("checked", true);
+                else
+                    $(el).val(val);
+            })
+        }
+
         $(this).each(function(){
             var form = this;
             var id = /* $(this).attr("id") || */ $(form).attr("name");
@@ -51,10 +59,12 @@ $.fn.extend({
             _.each(section, function(value, key){
                 if(typeof(key) == 'number' || key.match(/\d*/)[0] != ""){
                     _.each(value, function(vv, vk){
-                        $(form).find(String.format("[name=\"{0}\"]:eq({1})", vk, key)).val(vv);
+                        var el = $(form).find(String.format("[name=\"{0}\"]:eq({1})", vk, key))
+                        setVal(el, vv)
                     });
                 } else {
-                    $(form).find(String.format("[name=\"{0}\"]", key)).val(value);
+                    var el = $(form).find(String.format("[name=\"{0}\"]", key))
+                    setVal(el, value)
                 }
             });
         }); 
