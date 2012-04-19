@@ -165,7 +165,16 @@ a:hover {
 .container,
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
-  width: 940px;
+  width: 1020px;
+}
+.span15 {
+ width: 1020px;
+}
+.span14 {
+ width: 1000px;
+}
+.span13 {
+ width: 980px;
 }
 .span12 {
   width: 940px;
