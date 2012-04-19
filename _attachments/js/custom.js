@@ -87,7 +87,7 @@ $(function () {
         })
 
     $('.add_service').click(function() {
-        $('.listServices').append('<li>' + '<div class="clearfix"><label>Type of Service</label><div class="input"><input class="span6" id="input" name="Service Type" type="text" placeholder="e.g. Home A/V Setup" required /></div></div>' + '<div class="clearfix"><label>Short Description</label><div class="input"><textarea name="Description" value="" rows="5" class="span6">Short description of service. Maximum of 255 characters.</textarea><p class="hint-inline">Accepted HTML tags: <code>&lt;a&gt;</code>,<code>&lt;strong&gt;</code>, and <code>&lt;em&gt;</code>.</p></div></div>' + '<a href="#" class="remove_service"><button type="button" class="btn small danger delete">Remove service</button></a>' + '</li>');
+        $(this).parents("form").find("ul > li:last").clone().appendTo($(this).parents("form").find("ul"));
 
         return false;
     });
