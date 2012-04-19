@@ -1,231 +1,180 @@
-var hash = window.location.hash;
-var website_name = hash.replace(/#/g,'');
-var username;
+// NOTICE!! DO NOT USE ANY OF THIS JAVASCRIPT
+// IT'S ALL JUST JUNK FOR OUR DOCS!
+// ++++++++++++++++++++++++++++++++++++++++++
 
-getHash = function(val){
-    return String.format("#!{0}", val || window.location.hash.replace(/#!/g,''));
-}
+!function ($) {
 
-websiteId = function(val){
-    return String.format("com.scanshowsell.website:{0}", val || window.location.hash.replace(/#!/g,''));
-}
+  $(function(){
 
-new_hash = function(){
-    hash = window.location.hash;
-    website_name = hash.replace(/#!/g,'');
+    // Disable certain links in docs
+    $('section [href^=#]').click(function (e) {
+      e.preventDefault()
+    })
 
-    $("a.hash").each(function(idx, a){
-        var href = $(a).attr("href")
-        if(href) 
-            href = href.replace(/#!.*/g, '');
-        else 
-            href = ""
+    // make code pretty
+    window.prettyPrint && prettyPrint()
 
-        $(a).attr("href", href + hash);
+    // add-ons
+    $('.add-on :checkbox').on('click', function () {
+      var $this = $(this)
+        , method = $this.attr('checked') ? 'addClass' : 'removeClass'
+      $(this).parents('.add-on')[method]('active')
+    })
 
-    });
-
-    // filling up forms
-    var model = Websites.where({_id: websiteId(website_name)})[0]
-    if(model){
-        $("form").deserializeForms(model);
+    // position static twipsies for components page
+    if ($(".twipsies a").length) {
+      $(window).on('load resize', function () {
+        $(".twipsies a").each(function () {
+          $(this)
+            .tooltip({
+              placement: $(this).attr('title')
+            , trigger: 'manual'
+            })
+            .tooltip('show')
+          })
+      })
     }
 
-    $("#site-manager-dropdown .divider:first").prevAll().removeClass("active");
-    $("#site-manager-dropdown").find(String.format("li:contains('{0}')", website_name)).addClass("active");
-    $("#site-toggle").text("Currently editing:" + website_name) // FIXME template should be used
-}
-
-createWebsiteModel = function(wsName){                
-    var id = websiteId(wsName);
-    var model = {
-        _id: id,
-        owner: username
+    // add tipsies to grid for scaffolding
+    if ($('#grid-system').length) {
+      $('#grid-system').tooltip({
+          selector: '.show-grid > div'
+        , title: function () { return $(this).width() + 'px' }
+      })
     }
-    Websites.create(model,{
-        success:function(model){
-            console.log('Created', model)
-        },
-        error:function(error){
-            console.log('Error', error)
-        }
+
+    // fix sub nav on scroll
+    var $win = $(window)
+      , $nav = $('.subnav')
+      , navTop = $('.subnav').length && $('.subnav').offset().top - 40
+      , isFixed = 0
+
+    processScroll()
+
+    $win.on('scroll', processScroll)
+
+    function processScroll() {
+      var i, scrollTop = $win.scrollTop()
+      if (scrollTop >= navTop && !isFixed) {
+        isFixed = 1
+        $nav.addClass('subnav-fixed')
+      } else if (scrollTop <= navTop && isFixed) {
+        isFixed = 0
+        $nav.removeClass('subnav-fixed')
+      }
+    }
+
+    // tooltip demo
+    $('.tooltip-demo.well').tooltip({
+      selector: "a[rel=tooltip]"
     })
 
-}
+    $('.tooltip-test').tooltip()
+    $('.popover-test').popover()
 
-$(window).bind("hashchange", new_hash)
+    // popover demo
+    $("a[rel=popover]")
+      .popover()
+      .click(function(e) {
+        e.preventDefault()
+      })
 
-$(function(){
-    $.ajaxSetup({ async: false })
-    $.couch.session({
-        success: function(session){
-            username = session.userCtx.name;
-            $.ajaxSetup({ async: true }) // workaround. _session does not accept async:false option
-        }
+    // button state demo
+    $('#fat-btn')
+      .click(function () {
+        var btn = $(this)
+        btn.button('loading')
+        setTimeout(function () {
+          btn.button('reset')
+        }, 3000)
+      })
+
+    // carousel demo
+    $('#myCarousel').carousel()
+
+    // javascript build logic
+    var inputsComponent = $("#components.download input")
+      , inputsPlugin = $("#plugins.download input")
+      , inputsVariables = $("#variables.download input")
+
+    // toggle all plugin checkboxes
+    $('#components.download .toggle-all').on('click', function (e) {
+      e.preventDefault()
+      inputsComponent.attr('checked', !inputsComponent.is(':checked'))
     })
 
-
-    // Fill this with your database information.                                                                                           // `ddoc_name` is the name of your couchapp project.
-
-    Backbone.couch_connector.config.db_name = "mwb"
-    Backbone.couch_connector.config.ddoc_name = "mwb"
-
-    // If set to true, the connector will listen to the changes feed
-    // and will provide your models with real time remote updates.
-    // But in this case we enable the changes feed for each Collection on our own.
-    Backbone.couch_connector.config.global_changes = false;
-
-    // Enables Mustache.js-like templating.
-    
-    // _.templateSettings = {
-    //     interpolate : /\{\{(.+?)\}\}/g
-    // };
-
-    var isDirty = false;
-
-    Websites = new WebsiteCollection();
-
-    Websites.on('change', function(model){ 
-        console.log("change", model)
+    $('#plugins.download .toggle-all').on('click', function (e) {
+      e.preventDefault()
+      inputsPlugin.attr('checked', !inputsPlugin.is(':checked'))
     })
 
-
-    Websites.on('add', function(model){ 
-        console.log("Website added:", model.id);
+    $('#variables.download .toggle-all').on('click', function (e) {
+      e.preventDefault()
+      inputsVariables.val('')
     })
 
-    Websites.on('remove', function(model){ 
-        console.log("Website removed:", model.id);
+    // request built javascript
+    $('.download-btn').on('click', function () {
+
+      var css = $("#components.download input:checked")
+            .map(function () { return this.value })
+            .toArray()
+        , js = $("#plugins.download input:checked")
+            .map(function () { return this.value })
+            .toArray()
+        , vars = {}
+        , img = ['glyphicons-halflings.png', 'glyphicons-halflings-white.png']
+
+    $("#variables.download input")
+      .each(function () {
+        $(this).val() && (vars[ $(this).prev().text() ] = $(this).val())
+      })
+
+      $.ajax({
+        type: 'POST'
+      , url: 'http://bootstrap.herokuapp.com'
+      , dataType: 'jsonpi'
+      , params: {
+          js: js
+        , css: css
+        , vars: vars
+        , img: img
+      }
+      })
     })
 
-    $("#websiteName").val(window.location.hash.replace(/#!/g,''))
+  })
 
+// Modified from the original jsonpi https://github.com/benvinegar/jquery-jsonpi
+$.ajaxTransport('jsonpi', function(opts, originalOptions, jqXHR) {
+  var url = opts.url;
 
-    WebsiteView = Backbone.View.extend({
-        el: $("body"), 
+  return {
+    send: function(_, completeCallback) {
+      var name = 'jQuery_iframe_' + jQuery.now()
+        , iframe, form
 
-        events: {
-            "blur #websiteName": function(e){
-                var a = $(e.target).valid();
-                $("#new-btn").attr("href", $("#new-btn").attr("href").replace(/#.*/g, '') + "#!" + $(e.target).val());
-            },
-            "click #new-btn": function(e){
-                createWebsiteModel($("#websiteName").val())
-            },
+      iframe = $('<iframe>')
+        .attr('name', name)
+        .appendTo('head')
 
-            // TESTME: this block of the code require more testing
-            "click a.btn.success:contains('Save')": function(){
-                var model = Websites.where({_id: websiteId(website_name)})[0];
-                if(model){
-                    var form = $("form").serializeForms();
-                    _.each(form, function(val, key){
-                        model.set(key, _.extend(model.get(key) || {}, val));
-                    })
-                    model.save();
-                }
-            },
-            "click button.btn.success:contains('Build')": function(e){
-                var userProfile = $(e.target).closest("form").serializeForms();
-                userProfile = userProfile['registerForm']
-                var userDoc = {
-                    name: userProfile.emailAddress.replace(/@.*/gi, ''),
-                    email: userProfile.emailAddress
-                }
-                $.couch.signup(userDoc, userProfile.password, {
-                    success: function(){
-                        // registration successful, moving to next page
-                        $.couch.login({
-                            name: username = userDoc.name,
-                            password: userProfile.password,
-                            success: function(){
-                                createWebsiteModel(userProfile.websiteName);
-                                window.location.replace("mwb/wizard.html" + getHash());
-                            }
-                        })
-                    }
-                });
-                e.stopPropagation();
-                e.preventDefault();
-                return true;
-            },
-            "click a.btn.delete:contains('Remove photo')": function(e){
-                var model = Websites.where({_id: websiteId(website_name)})[0];
-                if(model){
-                    var form = $(e.target).closest("form")
-                    var fileName = form.find("input[type=hidden][name=file-name]").val();
-                    form.closest("div.#photo-panel").remove();
-                    delete model.get("_attachments")[fileName];
-                    model.save();
-                }                
-            }
+      form = $('<form>')
+        .attr('method', opts.type) // GET or POST
+        .attr('action', url)
+        .attr('target', name)
 
-        },
+      $.each(opts.params, function(k, v) {
 
-        initialize : function(){
-            // When the session gets destroyed, the row will be destroyed too
-            _.bindAll(this, 'reseted', 'addRow', 'deleteRow', 'render');
+        $('<input>')
+          .attr('type', 'hidden')
+          .attr('name', k)
+          .attr('value', typeof v == 'string' ? v : JSON.stringify(v))
+          .appendTo(form)
+      })
 
-            this.model.bind("add", this.addRow);
-            this.model.bind("remove", this.deleteRow);
-            this.model.bind("reset", this.reseted);
-            this.model.bind("change", this.render);
-        },
-
-        render: function(){
-            console.log("render", this)
-        },
-
-        addRow : function(model){
-            console.log("addRow", this)
-            var hash = getHash()
-            var model_id = model.id.split(":");
-            var name = model_id[1];
-            var li = $("<li/>").append($("<a/>").attr("href", getHash(name)).text(name));
-            // making li active
-            if(name === getHash()){
-                li.addClass("active")
-            }
-            $("#site-manager-dropdown").prepend(li);
-        },
-
-        deleteRow: function(model){
-            console.log("deleteRow", this)
-        },
-        reseted: function(model){
-            console.log("reseted", this)
-            $("#dropdown li.divider:first").prevAll().remove();
-            model.each(this.addRow);
-        }
-    });
-
-
-
-    // The App router initializes the app by calling `UserList.fetch()`
-    var App = Backbone.Router.extend({
-        initialize : function(){
-            Websites.fetch({
-                success:function(){
-                    if(window.location.hash) new_hash()
-                }
-            });
-        }
-    });
-
-    // Booststrap app after delay to avoid continuous activity spinner
-    _.delay(function(){
-
-        // Destroy the current session on unload
-        $(window).unload(function(){
-            $.ajaxSetup({
-                async : false
-            });
-        });
-
-        // Includes the couchlogin
-        // check it out here: <a href="https://github.com/couchapp/couchdb-login-jquery">https://github.com/couchapp/couchdb-login-jquery</a>
-        // Bootstrapping
-        new WebsiteView({model: Websites });
-        new App();
-
-    }, 100);
+      form.appendTo('body').submit()
+    }
+  }
 })
+
+}(window.jQuery)
