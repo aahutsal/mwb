@@ -1,13 +1,19 @@
-<div id="profile-form" class="span10">
+<script language="javascript">
+$(function(){
+ Ê $("#website-preview"").html($.getJSON("http://scanshowsell.com:5984/mwb/_design/mwb-mobile/_rewrite/com.scanshowsell.website:icq/index.html"))
+})
+</script>
+
+<div id="profile" class="span7">
   <!--  =====  COMPANY PROFILE  =====  -->
   <div>
     <h5>About Us</h5>
     <p class="hint-inline">Required fields denoted with a ' * '.</p>
-    <form id="company-profile" name="company-profile">
+    <form id="company-profile-form" name="company-profile">
       <div class="clearfix">
         <label>Company Name *</label>
         <div class="input">
-          <input name="company-name" type="text" placeholder="Company Name" class="span6 {validation: {required:true}}" />
+          <input name="company-name" type="text" placeholder="Company Name" class="span6 {validate: {required:true}}" />
         </div>
       </div><!-- /clearfix -->
       <div class="clearfix">
@@ -30,11 +36,11 @@
   <div>
     <h5>Contact Information</h5>
     <p class="hint-inline">All fields required.</p>
-    <form id="contact-information" name="contact-information">
+    <form id="contact-information-form" name="contact-information">
       <div class="clearfix">
         <label>Street Address</label>
         <div class="input">
-          <input name="street-address" type="text" placeholder="123 Peachtree Street" title="This is the address you used when you registered your business." class="large {validation: {required:true}}"/>
+          <input name="street-address" type="text" placeholder="123 Peachtree Street" title="This is the address you used when you registered your business." class="large {validate: {required:true}}"/>
         </div>
       </div><!-- /clearfix -->
       <div class="clearfix">
@@ -46,7 +52,7 @@
       <div class="clearfix">
         <label>City</label>
         <div class="input">
-          <input name="city" type="text" placeholder="Anytown" class="small {validation: {required:true}}"/>
+          <input name="city" type="text" placeholder="Anytown" class="small {validate: {required:true}}"/>
         </div>
       </div><!-- /clearfix -->
       <div class="clearfix">
@@ -64,25 +70,50 @@
       <div class="clearfix">
         <label>Telephone</label>
         <div class="input">
-          <input name="telephone" type="text" placeholder="(123) 555-6789" title="A mobile number is prefered. This way, interested parties can either call or send you a text message." class="small {validation: {required:true}}"/>
+          <input name="telephone" type="text" placeholder="(123) 555-6789" title="A mobile number is prefered. This way, interested parties can either call or send you a text message." class="small {validate: {required:true}}"/>
         </div>
       </div><!-- /clearfix -->
       <div class="clearfix">
         <label>Email</label>
         <div class="input">
-          <input name="email" type="text" placeholder="you@yourcompany.com" title="Who is the primary contact?"  class="large {validation: {required:true}}" />
+          <input name="email" type="text" placeholder="you@yourcompany.com" title="Who is the primary contact?"  class="large {validate: {required:true}}" />
         </div>
       </div><!-- /clearfix -->
     </form>
   </div><!-- /contact-information -->
 </div>  <!--/profile-form span10 -->
 
-<div id="sidebar" class="span5">
-  <img class="pull-left" src="../images/icn-page-profile.png" alt="Add Page: Profile" />
-  <h5>Create your company's profile.</h5>
-  <div class="btn-group">
-    <a href="#" class="btn success span5 hash">Save</a>
-    <a href="manage.html" class="btn default span5 hash">&larr;&nbsp;&nbsp;Back to Manager</a>
-  </div><!-- /btn-group -->
-  <p>This page is where you can enter and maintain information about your company.</p>
-</div>
+<div class="sidebar span4">
+    <div class="alert-message block-message info">
+	    <a class="close" href="#">&times;</a>
+	    <img class="pull-left" src="../images/icn-page-profile.png" alt="Add Page: Profile" />
+    	<h5>Create your company's profile.</h5>
+		<p>This page is where you can enter and maintain information about your company.</p>    </div>
+    	<div class="page-tools">
+	    <h5>Page Tools</h5>
+	    <img src="../images/mobile-prev-sm.png" alt="iPhone Screen Preview" />
+	    <p class="page-info"><strong>Last Edited:&nbsp;&nbsp;</strong>April 16, 2012</p>
+	    <p class="page-info"><strong>Status:&nbsp;&nbsp;</strong><span class="page-status online">Online</span></p>
+	    <p class="page-info">You can view an interactive preview of this page in your desktop's browser by clicking the 'Preview Page' button below.</p>
+	    <div id="modal-screen" class="modal hide fade">
+    		<div class="modal-header">
+    			<a href="#" class="close">&times;</a>
+    			<h3>Preview - My Mobile Website</h3>
+    		</div>
+    		<div class="modal-body">
+    			<div class="emulator-wrap">
+    				<div class="website-preview">
+    					{ template code }
+    				</div>
+    			</div>
+    			<h5>Company Profile Page</h5>
+    			<p>This is an interactive preview of your company's profile. Scroll up and down the page and play with the various elements to get a general idea of how they will look and work on a smartphone.</p>
+    		</div>
+    	</div>
+    	<div class="btn-group">
+      	<a class="btn-flat blue sidebar" data-controls-modal="modal-screen" data-backdrop="true" data-keyboard="true">Preview Page</a>
+	      <a href="#" class="btn-flat green sidebar">Save Page</a></p>
+	      <a href="manage.html" class="btn-flat dark-grey sidebar">&larr;&nbsp;&nbsp;Back to Manager</a>
+	    </div><!-- /btn-group -->
+    </div>
+  </div><!-- /sidebar -->
