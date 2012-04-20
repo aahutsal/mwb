@@ -2,23 +2,22 @@
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->  
 
 <!-- MANAGE PICTURES -->
-<div class="container">
-  <div id="upload-photo-wrap" class="span10">
+<div id="upload-photo-wrap" class="span7">
     <!--  =====  UPLOAD BUTTON BAR  =====  -->
     <form id="fileupload" method="POST" enctype="multipart/form-data">
       <div class="fileupload-buttonbar">
-        <span class="btn success fileinput-button">
+        <span class="btn-flat green fileinput-button">
           <span>Add files...</span>
           <input type="file" name="_attachments" multiple="multiple"/>
         </span>
-        <a href="#" class="btn primary start">Upload all</a>
+        <a href="#" class="btn-flat blue start">Upload all</a>
       </div>
       <br>
       <div class="files" data-toggle="modal-gallery" data-target="#modal-gallery"></div>
     </form>
-  </div>  <!-- /upload-photo-wrap span10 -->
+  </div>  <!-- /upload-photo-wrap span7 -->
   
-  <div class="sidebar span6">
+  <div class="sidebar span4">
     <div class="alert-message block-message info">
 	    <a class="close" href="#">&times;</a>
 	    <img class="pull-left" src="../images/icn-page-photos.png" alt="Add Page: Photos" />
@@ -43,7 +42,7 @@
     		</div>
     	</div>
     	<div class="btn-group">
-      	  <a class="btn-flat blue sidebar" data-controls-modal="modal-screen" data-backdrop="true" data-keyboard="true">Preview Page</a>
+      	<a class="btn-flat blue sidebar" data-controls-modal="modal-screen" data-backdrop="true" data-keyboard="true">Preview Page</a>
 	      <a href="#" class="btn-flat green sidebar">Save Page</a></p>
 	      <a href="manage.html" class="btn-flat dark-grey sidebar">&larr;&nbsp;&nbsp;Back to Manager</a>
 	    </div><!-- /btn-group -->
@@ -64,29 +63,28 @@
 </script>
 <script id="template-upload" type="text/html">
   <% _.each(files, function(file, idx) { %>
-  <div id="photo-panel">
+  <div class="photo-panel">
     <div class="thumb-wrap">
       <a href="<%=file.url%>" title="<%=file.name%>" rel="gallery"><img class="thumbnail" src="<%= file.thumbnail_url %>"/></a>
     </div>  <!-- /thumb-wrap -->
     <div class="photo-form">        
       <fieldset>
         <div class="clearfix">
-	  <label for="caption">File name:</label>
+    	  <label for="caption">File name:</label>
           <p class="file-name"><%= file.name %></p>
           <input type="hidden" name="file-name" value="<%= file.name %>" />
           <p class="file-size"> <%= formatFileSize(file.size) %></p>
-	  <label for="caption">Photo caption</label>
-	  <div class="input">
+    	  <label for="caption">Photo caption</label>
+      	  <div class="input">
             <input type="text" name="caption" class="span5"/>
           </div>
-          <div class="progress progress-success progress-striped active"><div class="bar" style="width:0%;"></div></div>
+          <div class="progress progress-success progress-striped active">
+            <div class="bar" style="width:0%;"></div>
+          </div>
         </div><!-- /clearfix -->
         <div class="photo-buttons" >
-	  <a href="#" class="btn small danger delete">Remove photo</a>
-          <button class="btn btn-primary">
-            <i class="icon-upload icon-white"> Start</i>
-          </button>
-
+      	  <a href="#" class="btn-flat red small delete">Remove photo</a>
+          <a href="#" class="btn-flat blue"><i class="icon-upload icon-white"> Start</i></a>
         </div><!-- /photo-buttons -->
         <!-- <div class="progressbar"><div style="width:0%;"></div></div> -->
       </fieldset>
@@ -97,34 +95,31 @@
 
 <script id="template-download" type="text/html">
   <% _.each(files, function(file, idx) { %>
-  <div id="photo-panel">
+  <div class="photo-panel">
     <div class="thumb-wrap">
       <img class="thumbnail" src="<%= file.thumbnail_url %>" style="max-width:210px;max-height:150px;"/>
     </div>  <!-- /thumb-wrap -->
     <div class="photo-form">
-      
-
       <fieldset>
         <div class="clearfix">
-	  <label for="caption">File name:</label>
+    	  <label for="caption">File name:</label>
           <p class="file-name"><%= file.name %></p>
           <input type="hidden" name="file-name" value="<%= file.name %>" />
           <p class="file-size"> <%= formatFileSize(file.size) %></p>
-	  <label for="caption">Photo caption</label>
-	  <div class="input">
+    	  <label for="caption">Photo caption</label>
+      	  <div class="input">
             <input type="text" name="caption" class="span5 valid"/>
           </div>
-          <label for="title-picture">Title picture</label>
-	  <div class="input">
+        <label for="title-picture">Title picture</label>
+      	  <div class="input">
             <input type="radio" name="title-picture"/>
           </div>
         </div><!-- /clearfix -->
         <div class="photo-buttons" >
-	  <a href="#" class="btn small danger delete">Remove photo</a>
+      	  <a href="#" class="btn-flat red small delete">Remove photo</a>
         </div><!-- /photo-buttons -->
         <!-- <div class="progressbar"><div style="width:0%;"></div></div> -->
       </fieldset>
-
     </div>  <!-- /photo-form -->
   </div>  <!-- /photo-panel -->
 
