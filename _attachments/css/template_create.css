@@ -642,8 +642,8 @@
 	.btn-flat {
 	  cursor: pointer;
 	  display: inline-block;
-	  background: #d6d6d6;
-	  padding: 5px 14px 6px;
+	  background: #e6e6e6;
+	  padding: 8px 14px 9px;
 	  color: #333;
 	  font-size: 14px;
 	  font-weight:600;
@@ -651,6 +651,7 @@
 	  -webkit-border-radius: 2px;
 	  -moz-border-radius: 2px;
 	  border-radius: 2px;
+	  border:1px solid transparent;
 	  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
 	  -webkit-transition: 0.2s linear all;
 	  -moz-transition: 0.2s linear all;
@@ -662,6 +663,7 @@
 	  color: #131313;
 	  text-decoration: none;
 	  background: #f3f3f3;
+	  border:1px solid #c3c3c3;
 	}
 	.btn-flat:focus {
 	  outline: 1px dotted #666;
