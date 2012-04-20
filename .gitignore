@@ -1,2 +1,7 @@
 /.emacs.desktop
 /.emacs.desktop.lock
+# Sublime Text Project Files 
+#
+##############################
+*.sublime-project
+*.sublime-workspace
