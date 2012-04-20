@@ -107,7 +107,9 @@ $(function(){
         events: {
             "blur #websiteName": function(e){
                 var a = $(e.target).valid();
-                $("#new-btn").attr("href", $("#new-btn").attr("href").replace(/#.*/g, '') + "#!" + $(e.target).val());
+                if($("#new-btn").length)
+                    $("#new-btn").attr("href", 
+                                       $("#new-btn").attr("href").replace(/#.*/g, '') + "#!" + $(e.target).val());
             },
             "click #new-btn": function(e){
                 createWebsiteModel($("#websiteName").val())
@@ -139,7 +141,7 @@ $(function(){
                             password: userProfile.password,
                             success: function(){
                                 createWebsiteModel(userProfile.websiteName);
-                                window.location.replace("mwb/wizard.html" + getHash());
+                                window.location.replace("mwb/wizard.html" + getHash($("#websiteName").val()));
                             }
                         })
                     }
