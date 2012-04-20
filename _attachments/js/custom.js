@@ -19,14 +19,6 @@ $(function () {
         $.couch.logout();
     });
 
-    $("a[rel=twipsy]").twipsy({
-        live: true,
-        offset: 10,
-        delayIn: 800,
-        placement: 'right',
-        trigger: 'focus'
-    });
-
 
     $("#dialog").dialog({ 
         
