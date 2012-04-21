@@ -15,6 +15,8 @@ $(function () {
 
     $("a[href$=#]").attr("href", "")
 
+    $(".dropdown-toggle").dropdown();
+
     $(".topbar-logout").click(function(){
         $.couch.logout();
     });
