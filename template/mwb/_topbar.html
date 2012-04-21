@@ -1,9 +1,12 @@
-<nav class="navbar">  <!--  navbar  -->
+<nav class="navbar navbar-fixed-top">  <!--  navbar  -->
   <div class="navbar-inner">
     <div class="container">
       <ul id="main-nav" class="nav">
-       	<li class="dropdown" data-dropdown="dropdown"><a href="#" id="navbar-requests-toggle" class="dropdown-toggle"><span class="requests-indicator">3</span>Requests</a>
-       	  <ul id="requests-dropdown" class="dropdown-menu">
+       	<li class="dropdown" id="navbar-requests-toggle">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+            <span class="requests-indicator">3</span>Requests
+            </a>
+       	  <ul class="dropdown-menu">
        	    <li><a class="navbar-testimonial" href="#"><b>Testimonial Added</b> by Jenny G.</a></li>
        	    <li><a class="navbar-service" href="#"><b>Service Request</b> from Michael A.</a></li>
        	    <li><a class="navbar-service" href="#"><b>Service Request</b> from Dee G.</a></li>
@@ -11,17 +14,18 @@
        	    <li><a href="inbox.html" class="btnInbox">Go to Inbox&nbsp;&nbsp;&rarr;</a></li>
        	  </ul><!-- /topbar-requests -->
        	</li>
-       	<li class="divider"></li>
+       	<li class="divider-vertical"></li>
        	<li class="active"><a class="navbar-manage" href="manage.html">Manage</a></li>
        	<li><a class="navbar-themes" href="themes.html">Themes</a></li>
        	<li><a class="navbar-stats" href="stats.html">Stats</a></li>
        	<li><a class="navbar-support" href="support.html">Support</a></li>
 
       </ul>
-      <a id="login_form" href="#">Login</a>
-      <ul class="secondary-nav">
-       	<li class="dropdown" data-dropdown="dropdown"><a href="#" id="navbar-user-toggle" class="dropdown-toggle">Dee Giarratano</a>
-       	  <ul id="user-menu-dropdown" class="dropdown-menu">
+      
+      <ul class="nav pull-right">
+       	<li class="dropdown" id="navbar-user-toggle">
+            <a href="#" class="dropdown-toggle"  data-toggle="dropdown">Dee Giarratano</a>
+       	  <ul class="dropdown-menu">
        	    <li><a class="navbar-settings" href="../settings.html">Settings</a></li>
        	    <li><a class="navbar-account" href="../account.html">Account</a></li>
        	    <li><a class="navbar-billing" href="../billing.html">Billing</a></li>
@@ -29,7 +33,8 @@
        	    <li><a class="navbar-logout" href="#">Logout</a></li>
        	  </ul><!-- /navbar-user-menu -->
        	</li>
-      </ul><!-- /secondary-nav -->
+      </ul><!-- /pull-right -->
+      <a id="login_form" href="#">Login</a>
     </div>  <!--  /container  -->
   </div>  <!--  /navbar-inner  -->
 </nav>  <!--  /navbar  -->
