@@ -150,7 +150,7 @@ $(function(){
                 e.preventDefault();
                 return true;
             },
-            "click a.btn.delete:contains('Remove photo')": function(e){
+            "click a.delete:contains('Remove photo')": function(e){
                 var model = Websites.where({_id: websiteId(website_name)})[0];
                 if(model){
                     var form = $(e.target).closest("form")
