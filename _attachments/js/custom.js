@@ -16,6 +16,10 @@ $(function () {
     $("a[href$=#]").attr("href", "")
 
     $(".dropdown-toggle").dropdown();
+    $("a[data-controls-modal]").click(function(){
+        var modalClass = $(this).attr("data-controls-modal");
+        $("#" + modalClass).modal();
+    })
 
     $(".topbar-logout").click(function(){
         $.couch.logout();
