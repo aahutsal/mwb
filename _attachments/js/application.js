@@ -32,7 +32,7 @@ new_hash = function(){
     }
 
     $("#site-manager-dropdown .divider:first").prevAll().removeClass("active");
-    $("#site-manager-dropdown").find(String.format("li:contains('{0}')", website_name)).addClass("active");
+    $("#site-manager-dropdown a[href$='" + hash + "']").parent().addClass('active')
     $("#site-toggle").text("Currently editing:" + website_name) // FIXME template should be used
 }
 
