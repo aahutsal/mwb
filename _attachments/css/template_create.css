@@ -254,7 +254,8 @@
 	.page-tools > h5			{margin-top:-10px;margin-bottom:18px;border-bottom:1px solid #c3c3c3;}
 	.page-tools .page-info		{float:left;width:180px;}
 
-    .btn-group-tools                        {margin-top:9px;padding-top:9px;border-top:1px solid #c3c3c3;display:block;float:left;}
+    .btn-group-tools                        {margin-top:9px;padding-top:18px;border-top:1px solid #c3c3c3;display:block;float:left;}
+    .btn-group-tools:last-child             {padding:0;border:none;}
     .btn-group-tools .btn-flat              {margin:0;position:relative;display:block;float:left;}
     .btn-group-tools .btn-flat:first-child  {margin-right:5px;}
 	
