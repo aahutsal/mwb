@@ -161,6 +161,7 @@
     				margin-left:0;
     				background:#f9f9f9;
 					}
+    #wizard         {border-top:1px solid #d3d3d3;}
 	.tabs {
 			  margin:0;
 			  padding: 0;
@@ -245,13 +246,18 @@
     .sidebar .info > img		{margin:0 20px 10px 0;}
     .sidebar .info > h5			{line-height:18px;}
     
-    .sidebar .btn-group			{margin-top:9px;padding-top:18px;border-top:1px solid #c3c3c3;display:inline;float:left;}
+    .sidebar .btn-group			{margin-top:9px;display:inline;float:left;}
     .sidebar .btn-group a 		{margin:0 0 10px 0;display:block;}
 	
 	.page-tools					{margin:0 0 18px 0;padding:20px;width:300px;background:#fcfcfc;border-radius:2px;/*box-shadow:0pt 3px 3px rgba(0, 0, 0, 0.25);*/float:left;display:block;}
 	.page-tools > img			{margin:0 20px 10px 0;float:left;}
 	.page-tools > h5			{margin-top:-10px;margin-bottom:18px;border-bottom:1px solid #c3c3c3;}
 	.page-tools .page-info		{float:left;width:180px;}
+
+    .btn-group-tools                        {margin-top:9px;padding-top:18px;border-top:1px solid #c3c3c3;display:block;float:left;}
+    .btn-group-tools:last-child             {padding:0;border:none;}
+    .btn-group-tools .btn-flat              {margin:0;position:relative;display:block;float:left;}
+    .btn-group-tools .btn-flat:first-child  {margin-right:5px;}
 	
 	#modal-screen				{top:40% !important;}
 	#modal-screen .modal-body > img			{float:left;margin-right:20px;}
@@ -389,7 +395,7 @@
     #go-next						{margin-top:-25px;margin-right:150px;}
               
     /* -- Preview & Publish -- */
-    #preview-publish				{padding-top:18px;padding-bottom:36px;background-color:#fcfcfc;float:left;}
+    #preview-publish				{margin-left:20px;padding-top:18px;padding-bottom:36px;background-color:#fcfcfc;float:left;}
     #preview-publish h4				{margin-left:20px;}
     #emulator-wrap					{margin-left:0;float:right;}
     #emulator {
@@ -492,16 +498,15 @@
 	.btn-flat {
 	  cursor: pointer;
 	  display: inline-block;
-	  background: #e6e6e6;
+	  background: #dedede;
 	  padding: 8px 14px 9px;
 	  color: #333;
-	  font-size: 14px;
+	  font-size: 16px;
 	  font-weight:600;
-	  line-height: normal;
+	  line-height: 16px;
 	  -webkit-border-radius: 2px;
 	  -moz-border-radius: 2px;
 	  border-radius: 2px;
-	  border:1px solid transparent;
 	  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
 	  -webkit-transition: 0.2s linear all;
 	  -moz-transition: 0.2s linear all;
@@ -512,8 +517,7 @@
     .btn-flat:hover {
 	  color: #131313;
 	  text-decoration: none;
-	  background: #f3f3f3;
-	  border:1px solid #c3c3c3;
+	  background: #efefef;
 	}
 	.btn-flat:focus {
 	  outline: 1px dotted #666;
@@ -569,6 +573,13 @@
 		color:#f3f3f3;
 		background:#ff3019;
 	}
+    .square {
+        width:16px;
+        height:18px;
+    }
+    .large {
+        width:223px;
+    }
 
 
 
