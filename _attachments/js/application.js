@@ -55,6 +55,14 @@ createWebsiteModel = function(wsName){
 
 $(window).bind("hashchange", new_hash)
 
+// FIXME dirty hack
+var parts = window.location.href.split(/\//),
+   file = parts[parts.length - 1]
+if(['register.html', 'create.html', 'manage.html'].indexOf(file) == -1  
+   && window.location.hash.indexOf("#!") < 0){
+    window.location.href = "manage.html"
+}
+
 $(function(){
     $.ajaxSetup({ async: false })
     $.couch.session({
