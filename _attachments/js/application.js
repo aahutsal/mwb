@@ -55,15 +55,17 @@ createWebsiteModel = function(wsName){
 
 $(window).bind("hashchange", new_hash)
 
-// FIXME dirty hack
-var parts = window.location.href.split(/\//),
-   file = parts[parts.length - 1]
-if(['register.html', 'create.html', 'manage.html'].indexOf(file) == -1  
-   && window.location.hash.indexOf("#!") < 0){
-    window.location.href = "manage.html"
-}
 
 $(function(){
+    // FIXME dirty hack
+    // redirecting back to manage.html if hash is does not start with #!
+    var parts = window.location.href.split(/\//),
+    file = parts[parts.length - 1]
+    if(['register.html', 'create.html', 'manage.html'].indexOf(file) == -1  
+       && window.location.hash.indexOf("#!") == -1){
+        window.location.href = "manage.html"
+    }
+
     $.ajaxSetup({ async: false })
     $.couch.session({
         success: function(session){
