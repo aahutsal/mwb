@@ -85,7 +85,7 @@ $(function () {
             e.preventDefault()
         })
 
-    $('.add_service').click(function() {
+    $('.do-clone-widget').click(function() {
         $(this).parents("form").find("ul > li:last").clone().appendTo($(this).parents("form").find("ul"));
 
         return false;
@@ -93,7 +93,7 @@ $(function () {
 
     // using live() will bind the event to all future
     // elements as well as the existing ones
-    $('.remove_service').live('click', function() {
+    $('.do-remove-widget').live('click', function() {
 	$(this).parent().remove();
 
         return false;

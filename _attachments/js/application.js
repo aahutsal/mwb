@@ -124,7 +124,7 @@ $(function(){
             },
 
             // TESTME: this block of the code require more testing
-            "click #save-page": function(){
+            "click .do-save-page": function(){
                 var model = Websites.where({_id: websiteId(website_name)})[0];
                 if(model){
                     var form = $("form").serializeForms();
