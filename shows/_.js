@@ -22,10 +22,11 @@ function(doc, req) {
      };
 
     var tmpl = template[req.path[5]]
+    var sidebar_mode = (req.path[6] == 'wizard.html'?'wizard-sidebar':'sidebar')
 
     processTemplate = function(fileName){
         var callback = _.template(tmpl[fileName])
-        return callback({req: req, template: tmpl, processTemplate: processTemplate })
+        return callback({req: req, template: tmpl, processTemplate: processTemplate, sidebar_mode: sidebar_mode })
     }
 
   

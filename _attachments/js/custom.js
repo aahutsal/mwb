@@ -13,6 +13,11 @@ $(function () {
         }
     })
 
+    $(".do-next").live("click", function(){
+        // if Next: button clicked, emulating tab click
+        $("ul[data-tabs] li > a[href=" + $(this).attr("href") + "]").click();
+    })
+
     $("a[href$=#]").attr("href", "")
 
     $(".dropdown-toggle").dropdown();
