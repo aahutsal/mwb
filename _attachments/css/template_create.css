@@ -280,12 +280,12 @@
     
     /* --  Panel Styles  -- */
     
-    #panel-wrap					{background-color:#fcfcfc;}
-    #panel-block				{margin-top:18px;padding:0 20px;float:left;}
-    #panel-block img			{margin-right:18px;float:left;}
-    #panel-info					{padding-top:18px;}
-    #panel-info h4				{color:#0066ff;font-weight:500;line-height:24px;}
-    #panel-toolbar 				{
+    .panel-wrap					{background-color:#fcfcfc;}
+    .panel-block				{margin-top:18px;padding:0 20px;float:left;}
+    .panel-block img			{margin-right:18px;float:left;}
+    .panel-info					{padding-top:18px;}
+    .panel-info h4				{color:#0066ff;font-weight:500;line-height:24px;}
+    .panel-toolbar 				{
     							margin:0;
     							background: #fcfcfc;
 								background: -moz-linear-gradient(top, #fcfcfc 0%, #f9f9f9 100%);
