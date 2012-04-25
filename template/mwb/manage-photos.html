@@ -17,39 +17,7 @@
   </form>
 </div>  <!-- /upload-photo-wrap span7 -->
 
-<div class="sidebar span5">
-  <div class="alert-block alert-info well">
-    <a class="close" data-dismiss="alert" href="#">&times;</a>
-    <h5 class="alert-heading">Dazzle prospects with your work.</h5>
-    <p>Talk is cheap. Show your potential clients that you know your stuff by uploading a few photos of your work.</p>
-  </div>
-  <div class="page-tools">
-    <h5>Page Tools</h5>
-    <img src="../images/mobile-prev-sm.png" alt="iPhone Screen Preview" />
-    <p class="page-info"><strong>Last Edited:&nbsp;&nbsp;</strong>April 16, 2012</p>
-    <p class="page-info"><strong>Status:&nbsp;&nbsp;</strong><span class="page-status online">Online</span></p>
-    <p class="page-info">You can view an interactive preview of this page in your desktop's browser by clicking the 'Preview Page' button below.</p>
-    <div id="modal-screen" class="modal hide fade">
-      <div class="modal-header">
-    	<a href="#" class="close">&times;</a>
-    	<h3>Preview - My Mobile Website</h3>
-      </div>
-      <div class="modal-body">
-    	<img src="../images/mobile-photos.png" alt="iPhone Screen Preview" />
-    	<h5>Photo Gallery</h5>
-    	<p>This is an interactive preview of your photo gallery	. Scroll up and down the page and play with the various elements to get a general idea of how they will look and work on a smartphone.</p>
-      </div>
-    </div>
-    <div class="btn-group-tools">
-      <a class="btn-flat blue square" data-controls-modal="modal-screen" data-backdrop="true" data-keyboard="true"><i class="icon-search icon-white"></i></a>
-      <a href="#" class="btn-flat blue large do-save-page"><i class="icon-ok icon-white"></i> Save Page</a>
-    </div>
-    <div class="btn-group">
-      <a href="manage.html" class="btn-flat sidebar hash"><i class="icon-home"></i> Back to Manager</a>
-    </div><!-- /btn-group -->
-  </div>
-</div><!-- /sidebar -->
-
+{{ template['sidebar']['manage-photos'] }}
 
 <script>
   var fileUploadErrors = {
