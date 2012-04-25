@@ -68,6 +68,10 @@ createWebsiteModel = function(wsName){
 $(window).bind("hashchange", new_hash)
 
 
+var path = unescape(document.location.pathname).split('/');
+ddoc = path[3], dbname = path[1]
+
+
 $(function(){
     // FIXME dirty hack
     // redirecting back to manage.html if hash is does not start with #!
@@ -89,8 +93,8 @@ $(function(){
 
     // Fill this with your database information.                                                                                           // `ddoc_name` is the name of your couchapp project.
 
-    Backbone.couch_connector.config.db_name = "mwb"
-    Backbone.couch_connector.config.ddoc_name = "mwb"
+    Backbone.couch_connector.config.db_name = dbname;
+    Backbone.couch_connector.config.ddoc_name = ddoc;
 
     // If set to true, the connector will listen to the changes feed
     // and will provide your models with real time remote updates.
@@ -141,7 +145,7 @@ $(function(){
             "click .do-save-page": function(e){
                 var model = Websites.where({_id: websiteId(website_name)})[0];
                 if(model){
-                    var form = $(e.target).parents("div.tab-pane").find("form").serializeForms();
+                    var form = $(e.target).parents("div.tab-pane,section").find("form").serializeForms();
                     _.each(form, function(val, key){
                         model.set(key, _.extend(model.get(key) || {}, val));
                     })
