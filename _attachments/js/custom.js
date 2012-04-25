@@ -13,7 +13,7 @@ $(function () {
         }
     })
 
-    $("a[href$=#]").attr("href", "")
+    $("a[href=#]").attr("href", "")
 
     $(".dropdown-toggle").dropdown();
     $("a[data-controls-modal]").click(function(){
@@ -73,6 +73,7 @@ $(function () {
             });
         }
     });
+    // add-remove service buttons
 
     $("input[rel=popover]")
         .popover({
@@ -110,4 +111,5 @@ $(function () {
 	    }
 	}
     })
+
 });
