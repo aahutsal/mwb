@@ -67,7 +67,6 @@ createWebsiteModel = function(wsName){
 
 $(window).bind("hashchange", new_hash)
 
-
 var path = unescape(document.location.pathname).split('/');
 ddoc = path[3], dbname = path[1]
 
@@ -77,7 +76,7 @@ $(function(){
     // redirecting back to manage.html if hash is does not start with #!
     var parts = window.location.href.split(/\//),
     file = parts[parts.length - 1]
-    if(['register.html', 'create.html', 'manage.html'].indexOf(file) == -1  
+    if(['index.html', 'register.html', 'create.html', 'manage.html'].indexOf(file) == -1  
        && window.location.hash.indexOf("#!") == -1){
         window.location.href = "manage.html"
     }
@@ -89,7 +88,6 @@ $(function(){
             $.ajaxSetup({ async: true }) // workaround. _session does not accept async:false option
         }
     })
-
 
     // Fill this with your database information.                                                                                           // `ddoc_name` is the name of your couchapp project.
 
