@@ -2,9 +2,20 @@ function(doc, req) {
     // !json template
     // !code vendor/couchapp/lib/underscore.js
 
-//    if(!req.userCtx.name)
-//        throw (['error', 'not_found', 'Some message like Page not found'])
-    _ = this._
+    var path = require("vendor/couchapp/lib/path").init(req);
+    var redirect = require("vendor/couchapp/lib/redirect");
+
+    // if user is not found,
+    // redirecting to manage.html
+    if((req.userCtx.name == null) && (req.path[req.path.length - 1] != 'manage.html'))
+        return {
+            code : 302, // temporarily
+            headers : {
+                "Location" : "manage.html"
+            }
+        };
+
+        _ = this._
     // Enables Mustache.js-like templating.    
      _.templateSettings = {
          interpolate : /\{\{(.+?)\}\}/g
