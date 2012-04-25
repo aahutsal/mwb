@@ -216,6 +216,10 @@ $(function(){
 
         deleteRow: function(model){
             console.log("deleteRow", this)
+            var model_id = model.id.split(":");
+            var name = model_id[1];
+            $("#site-manager-dropdown li > a[href$='" + getHash(name) + "']").parent().remove();
+
         },
         reseted: function(model){
             console.log("reseted", this)
@@ -236,22 +240,29 @@ $(function(){
             });
         }
     });
-
-    // Booststrap app after delay to avoid continuous activity spinner
-    _.delay(function(){
-
-        // Destroy the current session on unload
-        $(window).unload(function(){
-            $.ajaxSetup({
-                async : false
+    $("#login_form").couchLogin({
+        loggedIn: function(session){
+            username = session.userCtx.name
+            // Destroy the current session on unload
+            $(window).unload(function(){
+                $.ajaxSetup({
+                    async : false
+                });
             });
-        });
 
-        // Includes the couchlogin
-        // check it out here: <a href="https://github.com/couchapp/couchdb-login-jquery">https://github.com/couchapp/couchdb-login-jquery</a>
-        // Bootstrapping
-        new WebsiteView({model: Websites });
-        new App();
+            // Includes the couchlogin
+            // check it out here: <a href="https://github.com/couchapp/couchdb-login-jquery">https://github.com/couchapp/couchdb-login-jquery</a>
+            // Bootstrapping
+            new WebsiteView({model: Websites });
+            new App();
 
-    }, 100);
+        },
+        loggedOut: function(data){
+            username = null
+            if(window.location.hash){
+                window.location.hash = null
+            }
+            Websites.remove(Websites.models);
+        }
+    })
 })

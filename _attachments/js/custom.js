@@ -1,18 +1,5 @@
 $(function () {
 
-    $("#login_form").couchLogin({
-        loggedIn: function(user){
-            $("#topbar-user-toggle").text("Login")
-                .on("click", function(){
-                    
-                });
-
-        },
-        loggedOut: function(data){
-            $("#topbar-user-toggle").text("<NONE>")
-        }
-    })
-
     $(".do-next").live("click", function(){
         // if Next: button clicked, emulating tab click
         $("ul[data-tabs] li > a[href=" + $(this).attr("href") + "]").click();
