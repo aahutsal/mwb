@@ -22,6 +22,14 @@ var fix_link_hrefs = function(){
     });
 }
 
+$("a.hash").live("click", function(e){
+    if(/#!/.test($(this).attr("href")) == false){
+        $("#alert-select-website").fadeIn();
+        e.preventDefault();
+        return true;
+    }
+})
+
 new_hash = function(){
     hash = window.location.hash;
     website_name = hash.replace(/#!/g,'');
@@ -36,6 +44,8 @@ new_hash = function(){
     $("#site-manager-dropdown .divider:first").prevAll().removeClass("active");
     $("#site-manager-dropdown a[href$='" + hash + "']").parent().addClass('active')
     $("#site-toggle").text("Currently editing:" + website_name) // FIXME template should be used
+    $("#alert-select-website").fadeOut();
+
 }
 
 createWebsiteModel = function(wsName){                
