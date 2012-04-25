@@ -10,21 +10,23 @@ websiteId = function(val){
     return String.format("com.scanshowsell.website:{0}", val || window.location.hash.replace(/#!/g,''));
 }
 
-new_hash = function(){
-    hash = window.location.hash;
-    website_name = hash.replace(/#!/g,'');
-
+var fix_link_hrefs = function(){
     $("a.hash").each(function(idx, a){
         var href = $(a).attr("href")
         if(href) 
-            href = href.replace(/#!.*/g, '');
+            href = href.replace(/#![^$]*/g, ''); // removing #!.... part
         else 
             href = ""
 
         $(a).attr("href", href + hash);
-
     });
+}
 
+new_hash = function(){
+    hash = window.location.hash;
+    website_name = hash.replace(/#!/g,'');
+
+    fix_link_hrefs();
     // filling up forms
     var model = Websites.where({_id: websiteId(website_name)})[0]
     if(model){
