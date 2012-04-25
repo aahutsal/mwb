@@ -13,7 +13,7 @@ $(function () {
         }
     })
 
-    $("a[href=#]").attr("href", "")
+    $("a[href$=#]").attr("href", "")
 
     $(".dropdown-toggle").dropdown();
     $("a[data-controls-modal]").click(function(){
