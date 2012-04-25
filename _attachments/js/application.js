@@ -138,10 +138,10 @@ $(function(){
             },
 
             // TESTME: this block of the code require more testing
-            "click .do-save-page": function(){
+            "click .do-save-page": function(e){
                 var model = Websites.where({_id: websiteId(website_name)})[0];
                 if(model){
-                    var form = $("form").serializeForms();
+                    var form = $(e.target).parents("div.tab-pane").find("form").serializeForms();
                     _.each(form, function(val, key){
                         model.set(key, _.extend(model.get(key) || {}, val));
                     })
