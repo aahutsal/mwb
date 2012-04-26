@@ -94,6 +94,8 @@
 
     #navbar-requests-toggle							{padding-left:10px !important;}
     #navbar-requests-toggle .requests-indicator		{margin-right:10px;padding:5px 10px;background:#66cc33;color:#f3f3f3;border-radius:20px;box-shadow:0 0 2px rgba(0,0,0,0.45);}
+
+    #navbar-requests-toggle .requests-indicator.active		{margin-right:10px;padding:5px 10px;background:red;color:#f3f3f3;border-radius:20px;box-shadow:0 0 2px rgba(0,0,0,0.45);}
     
     #requests-menu								{margin-top:5px;margin-left:46px;}	
     	
