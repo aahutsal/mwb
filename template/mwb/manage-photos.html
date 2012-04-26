@@ -1,8 +1,28 @@
 <link rel="stylesheet" href="../css/jquery.fileupload-ui.css">
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->  
 
+<section id="section-head" class="row">
+  <h1 class="section-header">Manage&nbsp;:&nbsp;<span class="current">Photos</span></h1>
+  <div id="site-manager" class="span4">
+    <ul id="site-manager-menu" class="nav pull-right">
+      <li class="dropdown" data-dropdown="dropdown">
+        <a href="#" id="site-toggle" class="dropdown-toggle website-name" style="font-size:1em;font-weight:600;">Currently Editing:<span class="caret"></span></a>
+        <ul id="site-manager-dropdown" class="dropdown-menu">
+          <li class="divider"></li>
+          <li><a class="link-site manage" href="create.html">+&nbsp;&nbsp;Add another site...</a></li>
+          <li><a class="link-site add" href="sites.html">Manage sites...</a></li>
+          <li class="divider"></li>
+          <li><a class="link-site send" href="#">Send Link to Phone</a></li>
+    <li><a class="link-site generate" href="#">View/Generate QR code</a></li>
+    <li><a class="link-site preview" href="#">Preview Site in Phone Simulator</a></li>
+          </ul><!-- /site-manager-dropdown -->
+        </li>
+    </ul><!-- /site-manager-menu -->
+  </div><!-- /span4 -->
+</section><!-- /section-head -->
+
 <!-- MANAGE PICTURES -->
-<div id="upload-photo-wrap" class="span8">
+<section id="upload-photo-wrap" class="span8">
   <!--  =====  UPLOAD BUTTON BAR  =====  -->
   <form id="fileupload" method="POST" enctype="multipart/form-data">
     <div class="fileupload-buttonbar">
@@ -15,7 +35,7 @@
     <br>
     <div class="files" data-toggle="modal-gallery" data-target="#modal-gallery"></div>
   </form>
-</div>  <!-- /upload-photo-wrap span7 -->
+</section>  <!-- /upload-photo-wrap span8 -->
 
 {{ template[sidebar_mode]['manage-photos'] }}
 

@@ -1,5 +1,25 @@
+<section id="section-head" class="row">
+  <h1 class="section-header">Manage&nbsp;:&nbsp;<span class="current">Submit Testimonial</span></h1>
+  <div id="site-manager" class="span4">
+    <ul id="site-manager-menu" class="nav pull-right">
+      <li class="dropdown" data-dropdown="dropdown">
+        <a href="#" id="site-toggle" class="dropdown-toggle website-name" style="font-size:1em;font-weight:600;">Currently Editing:<span class="caret"></span></a>
+        <ul id="site-manager-dropdown" class="dropdown-menu">
+          <li class="divider"></li>
+          <li><a class="link-site manage" href="create.html">+&nbsp;&nbsp;Add another site...</a></li>
+          <li><a class="link-site add" href="sites.html">Manage sites...</a></li>
+          <li class="divider"></li>
+          <li><a class="link-site send" href="#">Send Link to Phone</a></li>
+    <li><a class="link-site generate" href="#">View/Generate QR code</a></li>
+    <li><a class="link-site preview" href="#">Preview Site in Phone Simulator</a></li>
+          </ul><!-- /site-manager-dropdown -->
+        </li>
+    </ul><!-- /site-manager-menu -->
+  </div><!-- /span4 -->
+</section><!-- /section-head -->
+
 <!-- OPTIONAL PAGES -->
-<div id="optional-pages" class="span8">
+<section id="optional-pages" class="span8">
   <form id="optional-pages-form" name="optional-pages" class="form-stacked" method="POST">
     <div class="clearfix">
       <label id="optionsRadio">Would you like to place a "Submit Testimonial" button on your mobile site's home page?</label>
@@ -15,6 +35,6 @@
       </div><!-- /input -->
     </div><!-- /clearfix -->
   </form>
-</div>  <!--/span8 -->
+</section>  <!--/span8 -->
 
 {{ template[sidebar_mode]['submit-testimonial'] }}
