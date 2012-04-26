@@ -1,6 +1,6 @@
 {
     "env": {
-        "default": {"db": "http://admin:secret9022@vm1:5984/mwb"},
+        "default": {"db": "http://admin:secret9022@vm3:5984/mwb"},
         "prod": {"db": "http://dee:dee@sss.iriscouch.com/mwb"},
         "sss": {"db": "http://admin:dee9022@scanshowsell.com:5984/mwb"},
 	"sam": {"db": "http://admin:admin@sqg.iriscouch.com/mwb"}
