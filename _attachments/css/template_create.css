@@ -112,6 +112,7 @@
     	a.navbar-service:hover						{background:url('../images/sprite-menu-requests.png') left 10px no-repeat;}			
     	a.navbar-estimate:hover						{background:url('../images/sprite-menu-requests.png') left 10px no-repeat;}
     	a.navbar-message:hover						{background:url('../images/sprite-menu-requests.png') left 10px no-repeat;}
+        #requests-menu li > a.unread { background-color: gray }
     
     #user-menu  								{margin-top:5px;}
     #navbar-user-toggle			{padding:5px 10px 0 50px;background:url('../images/icn-user.png')left 7px no-repeat;}

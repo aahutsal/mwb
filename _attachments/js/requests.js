@@ -23,10 +23,13 @@ $(function(){
             "click": function(){
                 this.$el.find(".requests-indicator.active").removeClass("active")
             },
-            "click li": function(e){
+            "click li a": function(e){
                 var id = $(e.target).data("id")
+                console.log(id);
+                $(e.target).removeClass("unread");
                 var model = Requests.where({_id: id})
                 model = model[0]
+                console.log(model);
                 var header = $("#request-screen").find("div.modal-header")
                 var body = $("#request-screen").find("div.modal-body")
 
@@ -57,6 +60,7 @@ $(function(){
             var a = $("<a href=#/>").addClass("navbar-" + docTypes[1]).append($("<strong/>").text(docTypes[1])).append(" by " + model.get('by'))
             a.attr("data-controls-modal", "request-screen");
             a.attr("data-id", model.get("_id"))
+            $(a).addClass("unread");
             li.append(a);
             this.$el.find("#requests-menu").prepend(li);
         },
