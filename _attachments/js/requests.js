@@ -22,7 +22,18 @@ $(function(){
         events: {
             "click": function(){
                 this.$el.find(".requests-indicator.active").removeClass("active")
+            },
+            "click li": function(e){
+                var id = $(e.target).data("id")
+                var model = Requests.where({_id: id})
+                model = model[0]
+                var header = $("#request-screen").find("div.modal-header")
+                var body = $("#request-screen").find("div.modal-body")
+
+                header.find("h3").text(String.format("Request: {0}"), id)
+                body.find("code").text(JSON.stringify(model.toJSON()));
             }
+
         },
 
         initialize : function(){
@@ -44,6 +55,8 @@ $(function(){
             var docTypes = model.get("_id").split(":")
             var li = $("<li/>")
             var a = $("<a href=#/>").addClass("navbar-" + docTypes[1]).append($("<strong/>").text(docTypes[1])).append(" by " + model.get('by'))
+            a.attr("data-controls-modal", "request-screen");
+            a.attr("data-id", model.get("_id"))
             li.append(a);
             this.$el.find("#requests-menu").prepend(li);
         },

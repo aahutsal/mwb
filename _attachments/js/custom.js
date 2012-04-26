@@ -8,7 +8,7 @@ $(function () {
     $("a[href$=#]").attr("href", "")
 
     $(".dropdown-toggle").dropdown();
-    $("a[data-controls-modal]").click(function(){
+    $("a[data-controls-modal]").live("click", function(){
         var modalClass = $(this).attr("data-controls-modal");
         $("#" + modalClass).modal();
     })
@@ -19,7 +19,6 @@ $(function () {
 
 
     $("#dialog").dialog({ 
-        
         autoOpen: true,
         modal: true,
         draggable: false,
