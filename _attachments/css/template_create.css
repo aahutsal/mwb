@@ -266,20 +266,20 @@
     /* --  Manage Styles --  */
     #manage						{margin-left:0;padding-top:18px;background-color:#f9f9f9;}
     #manage ul					{margin:18px 0 36px -10px;float:left;}
-    #manage ul li				{margin-bottom:36px;margin-left:33px;padding:0;height:160px;border:1px solid #d3d3d3;box-shadow:0pt 0px 0px 4px rgba(161, 161, 161, 0.15);border-radius:2px;float:left;display:inline;position:relative;}
-    #manage ul li:hover			{border:1px solid #00aaff;box-shadow:0pt 0px 0px 4px #00aaff;}
+    #manage ul li				{margin-bottom:36px;margin-left:35px;padding:0;height:160px;box-shadow:0pt 0px 0px 4px rgba(161, 161, 161, 0.35);float:left;display:inline;position:relative;-moz-transition:all 0.2s ease;}
+    #manage ul li:hover			{box-shadow:0pt 0px 0px 4px #00aaff;}
     
     
     /* --  Panel Styles  -- */
     
     .panel-wrap					{background-color:#fcfcfc;}
-    .panel-block				{margin-top:18px;padding:0 20px;float:left;}
+    .panel-block				{margin-top:18px;padding:0 20px;width:260px;float:left;}
     .panel-block img			{margin-right:18px;float:left;}
-    .panel-info					{padding-top:18px;}
-    .panel-info h4				{color:#0066ff;font-weight:500;line-height:24px;}
+    .panel-info a				{color:#0066cc;text-decoration:none;}
+    .panel-info a:hover         {color:#0066ff;}
+    .panel-info a h4			{font-weight:500;font-size:18px;line-height:24px;}
     .panel-toolbar 				{
     							margin:0;
-    							background: #fcfcfc;
 								background: -moz-linear-gradient(top, #fcfcfc 0%, #f9f9f9 100%);
 								background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#f9f9f9));
 								background: -webkit-linear-gradient(top, #fcfcfc 0%,#f9f9f9 100%);
@@ -291,15 +291,19 @@
 								border-bottom-left-radius: 4px;
     							width:100%;
     							height:36px;
-    							border-top:1px solid #e3e3e3;
     							text-align:center;
     							float:left;
     							position:absolute;
     							bottom:0;
     							}
-    a.panel-add-page			{font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
-    a.panel-edit-page			{font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
-    a.panel-remove-page			{font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
+    .panel-toolbar a            {border-top:1px solid #d3d3d3;color:#292929;float:left;display:block;text-align:center;height:36px;-moz-transition:all 0.5s ease;}
+    .panel-toolbar a:hover      {background:#f1f1f1;color:#0066ff;cursor:pointer;}
+    a.panel-add-page			{width:100%;border-bottom-right-radius: 4px;border-bottom-left-radius: 4px;font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
+    a.panel-edit-page			{width:49%;border-bottom-left-radius: 4px;border-right:1px solid #e3e3e3;font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
+    a.panel-remove-page			{width:50%;border-bottom-right-radius: 4px;font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
+    a.panel-upgrade             {color:#00cc00;border-bottom-right-radius: 4px;border-bottom-left-radius: 4px;width:100%;font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
+
+    .panel-toolbar a [class^="icon-"]      {margin-top:2px;}
 
     .added						{background-color:#3399ff;border:1px solid #1282f2;color:#f3f3f3;box-shadow:0 1px 5px rgba(0,0,0,0.45);}
     .added h4					{color:#f3f3f3;}
