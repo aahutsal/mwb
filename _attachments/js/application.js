@@ -194,7 +194,7 @@ $(function(){
             var hash = getHash()
             var model_id = model.id.split(":");
             var name = model_id[1];
-            var li = $("<li/>").append($("<a/>").attr("href", getHash(name)).text(name));
+            var li = $("<li/>").append($("<a/>").attr("href", getHash(name)).text(name).addClass("do-site-select"));
             // making li active
             if(name === getHash()){
                 li.addClass("active")

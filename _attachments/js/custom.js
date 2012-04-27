@@ -5,7 +5,7 @@ $(function () {
         $("ul[data-tabs] li > a[href=" + $(this).attr("href") + "]").click();
     })
 
-    $("a[href$=#]").attr("href", "")
+    $("a:not(.do-site-select):regex(href,#.*)").live("click", function(e){ e.preventDefault();return true })
 
     $(".dropdown-toggle").dropdown();
     $("a[data-controls-modal]").live("click", function(){
