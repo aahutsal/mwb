@@ -5,9 +5,11 @@ $(function () {
         $("ul[data-tabs] li > a[href=" + $(this).attr("href") + "]").click();
     })
 
-    $("a:regex(href,#([^!].*)?)").live("click", function(e){ 
-        e.preventDefault();
-        return true 
+    $("a:regex(href,#.*)").live("click", function(e){ 
+        if(/#!/.test($(this).attr("href")) == false){
+            e.preventDefault();
+            return true 
+        }
     })
 
     $(".dropdown-toggle").dropdown();
