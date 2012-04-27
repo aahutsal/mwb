@@ -85,6 +85,7 @@
     a.navbar-support:active		{background:url('../images/sprite-topbar.png') -346px -39px no-repeat;color:#f3f3f3;}
 
     #navbar-requests-toggle							{padding-left:10px !important;}
+    #navbar-requests-toggle .dropdown-toggle        {padding-right:20px;padding-left:0 !important;}
     #navbar-requests-toggle .requests-indicator		{margin-right:10px;padding:5px 10px;background:#66cc33;color:#f3f3f3;border-radius:20px;box-shadow:0 0 2px rgba(0,0,0,0.45);}
 
     #navbar-requests-toggle .requests-indicator.active		{margin-right:10px;padding:5px 10px;background:red;color:#f3f3f3;border-radius:20px;box-shadow:0 0 2px rgba(0,0,0,0.45);}
@@ -391,12 +392,16 @@
     #template-picker				{padding-bottom:36px;width:980px;display:inline;float:left;}
     #template-picker > h4			{margin:18px 20px;}
     #templateSlider					{margin:0 !important;}
-    #templates  					{margin-top:18px;margin-bottom:18px;padding:18px 0;}
-    #templates li 					{background-color:#f3f3f3;margin:0 0 36px 48px;padding:10px;border:1px solid #737373;box-shadow:0 0 2px rgba(0,0,0,0.55);} 	
-    #templates li:hover 			{background-color:#fcfcfc;border:1px solid #434343;box-shadow:0 0 4px rgba(0,0,0,0.75);}
-    #templates li.active 			{background-color:#fcfcfc;border:1px solid #00AAFF;box-shadow:0 0 4px rgba(0,0,0,0.75);}
-    #templates li img				{margin-bottom:14px;}
-    .btnContainer					{margin-left:18px;}
+
+    #theme-picker-wrapper  			{margin-left:0;padding:18px 0;border-bottom:1px solid #d3d3d3;}
+    #theme-picker                   {margin:0;}
+    #theme-picker li 				{background-color:#f3f3f3;margin:0 0 0 10px;padding:10px;box-shadow:0pt 0px 0px 2px rgba(161, 161, 161, 0.35);} 	
+    #theme-picker li:hover 			{background-color:#fcfcfc;box-shadow:0 0 2px #00AAFF;}
+    #theme-picker li.active 		{background-color:#fcfcfc;box-shadow:0 0 2px #00AAFF;}
+    #theme-picker li img			{margin-bottom:14px;}
+    .btnContainer a					{margin-right:3px;}
+
+    #theme-preview-wrapper          {margin-left:0;padding:18px 0;background:#fcfcfc;}
     #go-prev						{margin-top:-25px;margin-left:150px;}
     #go-next						{margin-top:-25px;margin-right:150px;}
               
