@@ -87,8 +87,10 @@
     #navbar-requests-toggle							{padding-left:10px !important;}
     #navbar-requests-toggle .requests-indicator		{margin-right:10px;padding:5px 10px;background:#66cc33;color:#f3f3f3;border-radius:20px;box-shadow:0 0 2px rgba(0,0,0,0.45);}
     
-    #requests-menu								{margin-top:5px;margin-left:46px;}	
+    #requests-menu								{margin-top:5px;margin-left:6px;}	
+    #requests-menu li > a                       {padding-left:10px;}
     	
+    /*  -----   Using Glyphicons instead   -----
     	a.navbar-testimonial,
     	a.navbar-survey								{background:url('../images/sprite-menu-requests.png') -229px 10px no-repeat;}
     	
@@ -102,7 +104,8 @@
     	a.navbar-service:hover						{background:url('../images/sprite-menu-requests.png') left 10px no-repeat;}			
     	a.navbar-estimate:hover						{background:url('../images/sprite-menu-requests.png') left 10px no-repeat;}
     	a.navbar-message:hover						{background:url('../images/sprite-menu-requests.png') left 10px no-repeat;}
-    
+    */
+
     #user-menu  								{margin-top:5px;}
     #navbar-user-toggle			{padding:5px 10px 0 50px;background:url('../images/icn-user.png')left 7px no-repeat;}
     #navbar-user-toggle:hover	{color:#f3f3f3;}
