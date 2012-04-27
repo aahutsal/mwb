@@ -1,8 +1,27 @@
-<div id="manage" class="span15">
-<div class="alert hide" id="alert-select-website">
-  <button class="close" data-dismiss="alert">×</button>
-  <strong>Warning!</strong> Please, login and select the website first!
-</div>
+<section id="section-head" class="row">
+  <h1 class="section-header">Manage Your Mobile Site</h1>
+  <div id="site-manager" class="span4">
+    <ul id="site-manager-menu" class="nav pull-right">
+      <li class="dropdown" data-dropdown="dropdown">
+        <a href="#" id="site-toggle" class="dropdown-toggle website-name" style="font-size:1em;font-weight:600;">Currently Editing:<span class="caret"></span></a>
+        <ul id="site-manager-dropdown" class="dropdown-menu">
+          <li><a class="link-site manage" href="create.html"><i class="icon-plus"></i>&nbsp;Add Site</a></li>
+          <li><a class="link-site add" href="sites.html"><i class="icon-th-large"></i>&nbsp;Manage Sites</a></li>
+          <li class="divider"></li>
+          <li><a class="link-site send" href="#"><i class="icon-share-alt"></i>&nbsp;Send to Phone</a></li>
+          <li><a class="link-site generate" href="#"><i class="icon-qrcode"></i>&nbsp;View/Generate QR code</a></li>
+          <li><a class="link-site preview" href="#"><i class="icon-eye-open"></i>&nbsp;Preview Phone Simulator</a></li>
+          </ul><!-- /site-manager-dropdown -->
+        </li>
+    </ul><!-- /site-manager-menu -->
+  </div><!-- /span4 -->
+</section><!-- /section-head -->
+
+<section id="manage" class="span15">
+  <div class="alert alert-error hide" id="alert-select-website">
+    <button class="close" data-dismiss="alert">×</button>
+    <strong>Please selet a website using the menu to the top right.</strong>
+  </div>
 
   <ul class="thumbnails">
     <li class="panel-wrap span4">
@@ -14,7 +33,8 @@
     	</div><!-- /panel-info -->
       </div><!-- /panel-block -->
       <div class="panel-toolbar">
-  	<a href="profile.html" class="panel-edit-page hash">Edit</a>&nbsp;&nbsp;&nbsp;<a class="panel-remove-page">Remove&nbsp;&times;</a>
+      	<a href="profile.html" class="panel-edit-page hash"><i class="icon-pencil"></i>&nbsp;&nbsp;Edit</a>
+        <a class="panel-remove-page"><i class="icon-remove"></i>&nbsp;&nbsp;Remove</a>
       </div><!-- /panel-toolbar -->
     </li><!-- /panel-wrap -->
     <li class="panel-wrap span4">
@@ -26,7 +46,7 @@
     	</div><!-- /panel-info -->
       </div><!-- /panel-block -->
       <div class="panel-toolbar">
-  	<a href="manage-photos.html" class="panel-add-page hash">Add Page</a>
+      	<a href="manage-photos.html" class="panel-add-page hash"><i class="icon-plus"></i>&nbsp;&nbsp;Add Page</a>
       </div>
     </li>
     <li class="panel-wrap span4">
@@ -38,7 +58,8 @@
     	</div><!-- /panel-info -->
       </div><!-- /panel-block -->
       <div class="panel-toolbar">
-  	<a href="services.html" class="panel-edit-page hash">Edit</a>&nbsp;&nbsp;&nbsp;<a class="panel-remove-page">Remove&nbsp;&times;</a>
+        <a href="services.html" class="panel-edit-page hash"><i class="icon-pencil"></i>&nbsp;&nbsp;Edit</a>
+        <a class="panel-remove-page"><i class="icon-remove"></i>&nbsp;&nbsp;Remove</a>
       </div><!-- /panel-toolbar -->
     </li><!-- /panel-wrap -->
     <li class="panel-wrap span4">
@@ -50,7 +71,7 @@
     	</div><!-- /panel-info -->
       </div><!-- /panel-block -->
       <div class="panel-toolbar">
-  	<a href="service-areas.html" class="panel-add-page hash">Add Page</a>
+        <a href="service-areas.html" class="panel-add-page hash"><i class="icon-plus"></i>&nbsp;&nbsp;Add Page</a>
       </div>
     </li>
     <li class="panel-wrap span4">
@@ -62,7 +83,7 @@
     	</div><!-- /panel-info -->
       </div><!-- /panel-block -->
       <div class="panel-toolbar">
-  	<a href="special-offers.html" class="panel-add-page hash">Add Page</a>
+        <a href="special-offers.html" class="panel-add-page hash"><i class="icon-plus"></i>&nbsp;&nbsp;Add Page</a>
       </div>
     </li>
     <li class="panel-wrap span4">
@@ -74,7 +95,7 @@
     	</div><!-- /panel-info -->
       </div><!-- /panel-block -->
       <div class="panel-toolbar">
-  	<a href="testimonials.html" class="panel-add-page">Add Page</a>
+        <a href="testimonials.html" class="panel-add-page hash"><i class="icon-plus"></i>&nbsp;&nbsp;Add Page</a>
       </div>
     </li>
     <li class="panel-wrap span4">
@@ -86,7 +107,7 @@
     	</div><!-- /panel-info -->
       </div><!-- /panel-block -->
       <div class="panel-toolbar">
-  	<a href="credentials.html" class="panel-add-page hash">Add Page</a>
+        <a href="credentials.html" class="panel-add-page hash"><i class="icon-plus"></i>&nbsp;&nbsp;Add Page</a>
       </div>
     </li>
     <li class="panel-wrap span4">
@@ -98,7 +119,8 @@
     	</div><!-- /panel-info -->
       </div><!-- /panel-block -->
       <div class="panel-toolbar">
-  	<a href="request-service.html" class="panel-edit-page hash">Edit</a>&nbsp;&nbsp;&nbsp;<a class="panel-remove-page">Remove&nbsp;&times;</a>
+        <a href="request-service.html" class="panel-edit-page hash"><i class="icon-pencil"></i>&nbsp;&nbsp;Edit</a>
+        <a class="panel-remove-page"><i class="icon-remove"></i>&nbsp;&nbsp;Remove</a>
       </div>
     </li>
     <li class="panel-wrap span4">
@@ -110,7 +132,8 @@
     	</div><!-- /panel-info -->
       </div><!-- /panel-block -->
       <div class="panel-toolbar">
-  	<a href="request-estimate.html" class="panel-edit-page hash">Edit</a>&nbsp;&nbsp;&nbsp;<a class="panel-remove-page">Remove&nbsp;&times;</a>
+        <a href="request-estimate.html" class="panel-edit-page hash"><i class="icon-pencil"></i>&nbsp;&nbsp;Edit</a>
+        <a class="panel-remove-page"><i class="icon-remove"></i>&nbsp;&nbsp;Remove</a>
       </div>
     </li>
     <li class="panel-wrap span4">
@@ -122,7 +145,7 @@
     	</div><!-- /panel-info -->
       </div><!-- /panel-block -->
       <div class="panel-toolbar">
-  	<a href="request-consultation.html" class="panel-add-page hash">Add Page</a>
+        <a href="request-consultation.html" class="panel-add-page hash"><i class="icon-plus"></i>&nbsp;&nbsp;Add Page</a>
       </div>
     </li>
     <li class="panel-wrap span4">
@@ -134,7 +157,8 @@
     	</div><!-- /panel-info -->
       </div><!-- /panel-block -->
       <div class="panel-toolbar">
-  	<a href="submit-survey.html" class="panel-edit-page hash">Edit</a>&nbsp;&nbsp;&nbsp;<a class="panel-remove-page">Remove&nbsp;&times;</a>
+        <a href="submit-survey.html" class="panel-edit-page hash"><i class="icon-pencil"></i>&nbsp;&nbsp;Edit</a>
+        <a class="panel-remove-page"><i class="icon-remove"></i>&nbsp;&nbsp;Remove</a>
       </div>
     </li>
     <li class="panel-wrap span4">
@@ -146,7 +170,8 @@
     	</div><!-- /panel-info -->
       </div><!-- /panel-block -->
       <div class="panel-toolbar">
-  	<a href="submit-testimonial.html" class="panel-edit-page hash">Edit</a>&nbsp;&nbsp;&nbsp;<a class="panel-remove-page">Remove&nbsp;&times;</a>
+        <a href="submit-testimonial.html" class="panel-edit-page hash"><i class="icon-pencil"></i>&nbsp;&nbsp;Edit</a>
+        <a class="panel-remove-page"><i class="icon-remove"></i>&nbsp;&nbsp;Remove</a>
       </div>
     </li>
     <li class="panel-wrap span4">
@@ -158,7 +183,7 @@
     	</div><!-- /panel-info -->
       </div><!-- /panel-block -->
       <div class="panel-toolbar">
-    	<a href="pricing.html" class="panel-upgrade hash">Upgrade your account to add this page.</a>
+      <a href="pricing.html" class="panel-upgrade hash"><i class="icon-arrow-up"></i>&nbsp;&nbsp;Upgrade to add this page.</a>
       </div>
     </li>
     <li class="panel-wrap span4">
@@ -170,8 +195,8 @@
     	</div><!-- /panel-info -->
       </div><!-- /panel-block -->
       <div class="panel-toolbar">
-    	<a href="pricing.html" class="panel-upgrade hash">Upgrade your account to add this page.</a>
+    	<a href="pricing.html" class="panel-upgrade hash"><i class="icon-arrow-up"></i>&nbsp;&nbsp;Upgrade to add this page.</a>
       </div>
     </li>
   </ul><!-- /thumbnails -->
-</div><!-- /manage -->
+</section><!-- /manage -->

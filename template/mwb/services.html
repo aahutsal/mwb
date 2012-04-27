@@ -1,5 +1,24 @@
+<section id="section-head" class="row">
+  <h1 class="section-header">Manage&nbsp;:&nbsp;<span class="current">Services</span></h1>
+  <div id="site-manager" class="span4">
+    <ul id="site-manager-menu" class="nav pull-right">
+      <li class="dropdown" data-dropdown="dropdown">
+        <a href="#" id="site-toggle" class="dropdown-toggle website-name" style="font-size:1em;font-weight:600;">Currently Editing:<span class="caret"></span></a>
+        <ul id="site-manager-dropdown" class="dropdown-menu">
+          <li><a class="link-site manage" href="create.html"><i class="icon-plus"></i>&nbsp;Add Site</a></li>
+          <li><a class="link-site add" href="sites.html"><i class="icon-th-large"></i>&nbsp;Manage Sites</a></li>
+          <li class="divider"></li>
+          <li><a class="link-site send" href="#"><i class="icon-share-alt"></i>&nbsp;Send to Phone</a></li>
+          <li><a class="link-site generate" href="#"><i class="icon-qrcode"></i>&nbsp;View/Generate QR code</a></li>
+          <li><a class="link-site preview" href="#"><i class="icon-eye-open"></i>&nbsp;Preview Phone Simulator</a></li>
+          </ul><!-- /site-manager-dropdown -->
+        </li>
+    </ul><!-- /site-manager-menu -->
+  </div><!-- /span4 -->
+</section><!-- /section-head -->
+
 <!-- SERVICES -->
-<div id="services" class="span8">
+<section id="services" class="span8">
   <form id="services-form" name="services">
     <ul class="listServices">
       <li>
@@ -85,7 +104,7 @@
     </ul>
     <a href="#" class="btn-flat blue do-clone-widget">Add Service</a>
   </form><!-- /services-form -->
-</div>  <!--/services span7 -->
+</section>  <!--/services span8 -->
 
 {{ template[sidebar_mode]['services'] }}
 

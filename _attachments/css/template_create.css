@@ -41,11 +41,9 @@
 	Header
 	-------------------------------------------------- */
 
-	header						{ padding:40px 40px 38px;background-color:#fcfcfc;border-bottom:1px solid #d3d3d3;}
-	.call-us					{padding:10px;background-color:#e3e3e3;border-radius:2px;color:#494949;font-weight:600;font-size:1.05em;text-decoration:none;display:block;}
-    .call-us:hover				{background-color:#393939;color:#f3f3f3;text-decoration:none;}
-
-	
+	header						{ padding:40px 40px 38px;background-color:#fcfcfc;}
+    	.call-us					{padding:10px;background-color:#e3e3e3;border-radius:2px;color:#494949;font-weight:600;font-size:1.05em;text-decoration:none;display:block;}
+        .call-us:hover				{background-color:#393939;color:#f3f3f3;text-decoration:none;}
 
 /*	--------------------------------------------------
 	Lists
@@ -53,11 +51,7 @@
 	
 	#sitemap-1					{margin:0;padding:0;float:left;list-style:none;}
 	#sitemap-2					{margin:0 0 0 40px;float:left;list-style:none;}
-	
 	.breadcrumb					{margin-top:12px;}
-
-	
-
 
 /*    --------------------------------------------------
     Typography
@@ -65,8 +59,6 @@
     
     .hint-inline				{padding:0;color:#848484;max-width:700px;}
     .register					{font-size:1.5em !important;color:#696969 !important;}
-    
-    
     
 /*  --------------------------------------------------
     Navigation 
@@ -97,8 +89,10 @@
 
     #navbar-requests-toggle .requests-indicator.active		{margin-right:10px;padding:5px 10px;background:red;color:#f3f3f3;border-radius:20px;box-shadow:0 0 2px rgba(0,0,0,0.45);}
     
-    #requests-menu								{margin-top:5px;margin-left:46px;}	
+    #requests-menu								{margin-top:5px;margin-left:6px;}	
+    #requests-menu li > a                       {padding-left:10px;}
     	
+    /*  -----   Using Glyphicons instead   -----
     	a.navbar-testimonial,
     	a.navbar-survey								{background:url('../images/sprite-menu-requests.png') -229px 10px no-repeat;}
     	
@@ -112,8 +106,12 @@
     	a.navbar-service:hover						{background:url('../images/sprite-menu-requests.png') left 10px no-repeat;}			
     	a.navbar-estimate:hover						{background:url('../images/sprite-menu-requests.png') left 10px no-repeat;}
     	a.navbar-message:hover						{background:url('../images/sprite-menu-requests.png') left 10px no-repeat;}
+
         #requests-menu li > a.unread { background-color: gray }
     
+
+    */
+
     #user-menu  								{margin-top:5px;}
     #navbar-user-toggle			{padding:5px 10px 0 50px;background:url('../images/icn-user.png')left 7px no-repeat;}
     #navbar-user-toggle:hover	{color:#f3f3f3;}
@@ -242,7 +240,7 @@
     Content Blocks
     -------------------------------------------------- */ 
     
-    #body						{margin-left:0;background:url('../images/bg_grid-dark.png') left top repeat, #e3e3e3;border-top:1px solid #d3d3d3;}
+    #body						{margin-left:0;background:url('../images/bg_grid-dark.png') left top repeat, #e3e3e3;}
     #instructions				{margin:18px 0;padding:20px;background-color:#e3e3e3;z-index:9999;}
     #information				{margin-top:18px;margin-bottom:18px;}
     .sidebar					{padding-top:18px;width:340px;float:left;}
@@ -267,7 +265,7 @@
     
     
     /* --  Section Header -- */
-    #section-head				{margin:0 20px;padding:36px 0 36px 0;}
+    #section-head				{background-color:#f9f9f9;border-top:1px solid #d3d3d3;border-bottom:1px solid #d3d3d3;margin-left:0;padding:36px 20px;}
     .section-header				{display:inline;}
     .section-header a			{color:#c3c3c3;text-decoration:none;}
     .seciton-header a:hover		{color:#c3c3c3 !important;text-decoration:none;}
@@ -277,20 +275,22 @@
     /* --  Manage Styles --  */
     #manage						{margin-left:0;padding-top:18px;background-color:#f9f9f9;}
     #manage ul					{margin:18px 0 36px -10px;float:left;}
-    #manage ul li				{margin-bottom:36px;margin-left:33px;padding:0;height:160px;border:1px solid #d3d3d3;box-shadow:0pt 0px 0px 4px rgba(161, 161, 161, 0.15);border-radius:2px;float:left;display:inline;position:relative;}
-    #manage ul li:hover			{border:1px solid #00aaff;box-shadow:0pt 0px 0px 4px #00aaff;}
+    #manage ul li				{margin-bottom:36px;margin-left:35px;padding:0;height:160px;box-shadow:0pt 0px 0px 4px rgba(161, 161, 161, 0.35);float:left;display:inline;position:relative;-moz-transition:all 0.2s ease;}
+    #manage ul li:hover			{box-shadow:0pt 0px 0px 4px #00aaff;}
+
+    #alert-select-website       {margin-top:-18px;}
     
     
     /* --  Panel Styles  -- */
     
     .panel-wrap					{background-color:#fcfcfc;}
-    .panel-block				{margin-top:18px;padding:0 20px;float:left;}
+    .panel-block				{margin-top:18px;padding:0 20px;width:260px;float:left;}
     .panel-block img			{margin-right:18px;float:left;}
-    .panel-info					{padding-top:18px;}
-    .panel-info h4				{color:#0066ff;font-weight:500;line-height:24px;}
+    .panel-info a				{color:#0066cc;text-decoration:none;}
+    .panel-info a:hover         {color:#0066ff;}
+    .panel-info a h4			{font-weight:500;font-size:18px;line-height:24px;}
     .panel-toolbar 				{
     							margin:0;
-    							background: #fcfcfc;
 								background: -moz-linear-gradient(top, #fcfcfc 0%, #f9f9f9 100%);
 								background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#f9f9f9));
 								background: -webkit-linear-gradient(top, #fcfcfc 0%,#f9f9f9 100%);
@@ -298,19 +298,21 @@
 								background: -ms-linear-gradient(top, #fcfcfc 0%,#f9f9f9 100%);
 								background: linear-gradient(top, #fcfcfc 0%,#f9f9f9 100%);
 								filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#f9f9f9',GradientType=0 );
-								border-bottom-right-radius: 4px;
-								border-bottom-left-radius: 4px;
     							width:100%;
     							height:36px;
-    							border-top:1px solid #e3e3e3;
     							text-align:center;
     							float:left;
     							position:absolute;
     							bottom:0;
     							}
-    a.panel-add-page			{font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
-    a.panel-edit-page			{font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
-    a.panel-remove-page			{font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
+    .panel-toolbar a            {border-top:1px solid #d3d3d3;color:#292929;float:left;display:block;text-align:center;height:36px;-moz-transition:all 0.5s ease;}
+    .panel-toolbar a:hover      {background:#f1f1f1;color:#0066ff;cursor:pointer;}
+    a.panel-add-page			{width:100%;font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
+    a.panel-edit-page			{width:49%;border-right:1px solid #e3e3e3;font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
+    a.panel-remove-page			{width:50%;font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
+    a.panel-upgrade             {color:#00cc00;width:100%;font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
+
+    .panel-toolbar a [class^="icon-"]      {margin-top:2px;}
 
     .added						{background-color:#3399ff;border:1px solid #1282f2;color:#f3f3f3;box-shadow:0 1px 5px rgba(0,0,0,0.45);}
     .added h4					{color:#f3f3f3;}
@@ -329,8 +331,9 @@
     
     /* -- Company Profile -- */
     #profile					{margin-left:0;padding:18px 0 18px 20px;background-color:#fcfcfc;border-right:1px solid #d3d3d3;float:left;}
+    #contact-information        {margin-top:18px;padding-top:18px;border-top:1px solid #d3d3d3;}
     #company-profile-form		{margin-top:18px;}
-    #contact-information-form	{padding-top:18px;border-top:1px solid #d3d3d3;}
+    #contact-information-form	{padding-top:18px;}
     
     
     /* -- Photo Uploader -- */
@@ -451,6 +454,7 @@
 	  line-height: 24px;
 	  text-decoration: none;
 	  font-size: 1.25em;
+      width:200px;
 	}
 	#site-manager .nav a:hover {
 	  text-decoration: none;
@@ -478,6 +482,7 @@
 	#site-manager-dropdown {
 	  right: 0;
 	  border: 0;
+      margin-top:-5px;
 	}
 	#site-manager .nav .menu-dropdown li a,
 	#site-manager .nav .dropdown-menu li a {
