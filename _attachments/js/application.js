@@ -73,7 +73,7 @@ $(function(){
     // redirecting back to manage.html if hash is does not start with #!
     var parts = window.location.href.split(/\//),
     file = parts[parts.length - 1]
-    if(['index.html', 'register.html', 'create.html', 'manage.html'].indexOf(file) == -1  
+    if(['index.html', 'register.html', 'create.html', 'manage.html', 'themes.html'].indexOf(file) == -1  
        && window.location.hash.indexOf("#!") == -1){
         window.location.href = "manage.html"
     }
