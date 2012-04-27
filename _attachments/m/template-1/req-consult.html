@@ -12,7 +12,7 @@
 	<!-- Set the viewport width to device width for mobile -->
 	<meta name="viewport" content="width=device-width" />
 	
-	<title>Submit Testimonial | Atlanta Electric</title>
+	<title>Atlanta Electric</title>
   
 	<!-- Included CSS Files -->
 	<!-- Combine and Compress These CSS Files -->
@@ -75,8 +75,8 @@
 <body> 
 <div class="container">
 <div class="row">
-<!-- Start of page: #sub-testimonial -->
-<div id="sub-testimonial">
+<!-- Start of page: #req-estimate -->
+<div id="req-estimate">
 	<div id="navbar" data-role="header">
 		<div data-role="navbar">
 		<ul>
@@ -100,26 +100,44 @@
 		</div>
 	</header><!-- /header -->
 
+	
 	<div class="twelve columns" data-theme="a">
-		<h4>Submit Testimonial</h4>
-		<!-- =====  SUBMIT TESTIMONIAL FORM  ===== -->
+		<h4>Request Consultation</h4>
+		<!-- =====  REQUEST ESTIMATE FORM  ===== -->
 		<form class="nice">
-			<br />
-			<p>Thank you for taking the time to rate our service. Your feedback is extremely valuable to us.</p>
 			<fieldset>
-		    	<label for="name">Full Name</label>
-		    	<input type="text" name="name" id="niceFieldssetInput" class="input-text" value="" />
+		    <h5>Contact Information</h5>
+		    	<label for="first-name">Full Name</label>
+		    	<input type="text" name="first-name" id="niceFieldssetInput" class="input-text" value="" />
+		    	<label for="tel">Phone</label>
+		    	<input type="text" name="tel-primary" id="niceFieldssetInput" class="input-text" value="" />
 		    	<label for="email">Email</label>
 		    	<input type="text" name="email" id="niceFieldssetInput" class="input-text" value="" />
+		    <!--
+		    <h5>Your Location</h5>
+		    	<label for="address">Street Address</label>
+		    	<input type="text" name="address" id="niceFieldssetInput" class="input-text" value="" />
 		    	<label for="city">City</label>
 		    	<input type="text" name="city" id="niceFieldssetInput" class="input-text" value="" />
-		    	<label for="textarea-a">Comments:</label>
-		    	<textarea name="textarea" id="niceFieldssetTextarea" placeholder="What would you like to say?"></textarea>
+		    	<label for="zip">Zip</label>
+		    	<input type="text" name="zip" id="niceFieldssetInput" class="input-text" value="" />
+		    -->
+			<h5>Describe Work</h5>
+		    	<label for="textarea-a">Reason for Consultation:</label>
+		    	<textarea name="textarea" id="niceFieldssetTextarea" placeholder="Please describe your request."></textarea>
+		    	<label for="contact-method" class="select">Preferred Contact Method:</label>
+				<select name="contact-method" id="contact-method" data-theme="a">
+				   <option value="primary-phone" data-content-theme="d">Phone</option>
+				   <option value="email" data-content-theme="d">Email</option>
+				</select>
+				<label for="contact-method" class="select">Preferred Contact Time:</label>
+				<select name="contact-method" id="contact-method" data-theme="a">
+				   <option value="primary-phone" data-content-theme="d">Phone</option>
+				   <option value="email" data-content-theme="d">Email</option>
+				</select>
 		    </fieldset>
-		    <br />
-		    <p><em>Your email address will not be published.</em></p>
 		    <hr />
-		    <p><a href="#" data-role="button" data-icon="check" data-transition="none" data-theme="d">Submit Testimonial</a></p>
+		    <p><a href="#" data-role="button" data-icon="check" data-transition="none" data-theme="d">Request Estimate</a></p>
 		    <p><a href="index.html" data-role="button" data-icon="arrow-l" data-transition="none" data-theme="a">Cancel</a></p>
 		</form>
 		
