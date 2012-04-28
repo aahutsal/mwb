@@ -272,7 +272,12 @@
     .seciton-header a:hover		{color:#c3c3c3 !important;text-decoration:none;}
     .section-header .current	{color:#393939;}
     
-    
+    /* --  Dashboard Styles --  */
+    #dashboard                  {margin-left:0;padding-top:18px;background-color:#f9f9f9;}
+    #dashboard ul               {margin:18px 0 36px -10px;float:left;}
+    #dashboard ul li            {margin-bottom:36px;margin-left:35px;padding:0;height:36px;box-shadow:0pt 0px 0px 4px rgba(161, 161, 161, 0.35);float:left;display:inline;position:relative;-moz-transition:all 0.2s ease;}
+    #dashboard ul li:hover      {box-shadow:0pt 0px 0px 4px #00aaff;}
+
     /* --  Manage Styles --  */
     #manage						{margin-left:0;padding-top:18px;background-color:#f9f9f9;}
     #manage ul					{margin:18px 0 36px -10px;float:left;}
