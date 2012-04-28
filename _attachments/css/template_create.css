@@ -326,6 +326,7 @@
     #create-website          	{margin-left:0;padding:36px 0 18px 0;width:1060px;background-color:#fcfcfc;}
     #create-website fieldset    {transition:all 0.2s ease;-moz-transition:all 0.2s ease;-webkit-transition:all 0.2s ease;}
     #create-website a [class^="icon-"]      {margin-top:2px;}
+    #new-btn                    {margin-right:33px;}
 
     #website-name-form          {margin-left:27px;height:150px;background:#333;border-radius:4px 0 0 4px;}
     #website-name-form:hover    {background:#0066cc;}
