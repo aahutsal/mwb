@@ -1,0 +1,86 @@
+<script type="text/javascript">
+$(document).ready(function() {
+ 
+  //ACCORDION BUTTON ACTION 
+  $('div.accordion-btn').click(function() {
+    $(this).next().slideToggle('normal');
+  });
+ 
+  //HIDE THE DIVS ON PAGE LOAD  
+  $("div.accordion-content").hide();
+ 
+});
+</script>
+<section id="section-head" class="row">
+  <nav id="dashnav" class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <ul id="dashboard-nav" class="nav">
+          <li><p class="navbar-text"><i class="icon-comment icon-white"></i>&nbsp;&nbsp;10 Messages</p></li>
+          <li><p class="navbar-text"><i class="icon-eye-open icon-white"></i>&nbsp;&nbsp;101 visitors</p></li>
+          <li><p class="navbar-text billing-date">May 03, 2012</p></li>
+          <li class="pull-right"><a href="account-settings.html"><i class="icon-user icon-white"></i>&nbsp;&nbsp;Account Settings</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <h1 class="section-header">Dashboard</h1>
+  <div id="site-manager" class="span5">
+    <ul id="site-manager-menu" class="nav pull-right">
+      <li class="dropdown" data-dropdown="dropdown">
+        <a href="#" id="site-toggle" class="dropdown-toggle website-name" style="font-size:1em;font-weight:600;">Currently Editing:<span class="caret"></span></a>
+        <ul id="site-manager-dropdown" class="dropdown-menu">
+          <li class="divider"></li>
+          <li><a class="link-site manage" href="create.html"><i class="icon-plus"></i>&nbsp;Create New Site</a></li>
+          <li><a class="link-site add" href="sites.html"><i class="icon-th-large"></i>&nbsp;Manage Sites</a></li>
+          </ul><!-- /site-manager-dropdown -->
+        </li>
+    </ul><!-- /site-manager-menu -->
+  </div><!-- /span5 -->
+</section><!-- /section-head -->
+
+<section id="dashboard" class="span15">
+  <ul class="site-list-head">
+    <li class="span4 site-name"><p>Site Name</p></li>
+    <li class="span1 site-active"><p>Active?</p></li>
+    <li class="span1 site-pages"><p>Pages</p></li>
+    <li class="span3 site-visitors"><p>Visitors this Month</p></li>
+  </ul>
+  <div id="get-started" class="row">
+    <div class="get-started-header">
+      <h2>Get Started</h2>
+    </div> 
+    <div id="build" class="span3">
+      <h3>Build A Mobile Site</h3>
+    </div>
+    <div id="theme" class="span3">
+      <h3>Choose A Theme</h3>
+    </div>
+    <div id="preview" class="span3">
+      <h3>Preview Your Site</h3>
+    </div>
+    <div id="publish" class="span3">
+      <h3>Publish Your Mobile Site</h3>
+    </div>
+  </div><!-- /get-started -->
+  <div id="site-list" class="accordion">
+    <!--  Use id="site-xx" for dynamic list generation  -->
+    <div id="site-0" class="accordion-group">
+      <div class="span4 accordion-btn">Discount Cabinet Designs</div>
+      <div class="accordion-content">Content 1<br /><br /><br />Long Example</div>
+    </div>
+    <div id="site-1" class="accordion-group">
+      <div class="span4 accordion-btn">Long Cane Flooring</div>
+      <div class="accordion-content">Content 1<br /><br /><br /><br />Long Example</div>
+    </div>
+    <div id="site-2" class="accordion-group">
+      <div class="span4 accordion-btn">Flash Gordon Electric</div>
+      <div class="accordion-content">Content 1<br /><br /><br /><br /><br /><br /><br /><br />Long Example</div>
+    </div>
+  </div>
+  <div id="no-sites" class="span13">
+    <p>It looks like you have created any sites yet.</p>
+    <a href="create.html"><h2>Create a site</h2></a>
+  </div>
+</section><!-- /dashboard -->

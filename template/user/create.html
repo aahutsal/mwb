@@ -1,27 +1,35 @@
-<div id="start-website" class="row">
-  <div id="sidebar" class="span5">
-    <h4>Create a new website!</h4>
-    <p>Create a new website using our mobile website builder. First, you need to pick a name for your website. Choose something that is short and easy to remember.</p>
-  </div>
-  
-  <div id="create-website-block" class="span11">
-    <form id="create-form">
-      <h4>Choose a name</h4>
-      <label for="websiteName">Website name</label>
+<section id="section-head" class="span15">
+  <h1 class="section-header">Create A Mobile Site</h1>
+</section><!-- /section-head -->
+
+<section id="create-website" class="span15">
+  <form id="create-form">
+    <fieldset id="website-name-form" class="well span6">
+      <h3>Site Name</h3>
       <div class="input">
-	<input type="text" id="websiteName" name="websiteName"  class="{validate: {required: true, uniqueWebsiteName: true} }"/>
+        <span class="help-block">First, you need to pick a name for your website. Choose something that is short and easy to remember.</span>
+        <input type="text" id="websiteName" name="websiteName"  class="{validate: {required: true, uniqueWebsiteName: true} }"/>
       </div>
-      <br />
-      <label style="width:150px;">Name Preview</label>
-      <p class="name-preview">http://www.scanshowsell.com/m/yourwebsitename</p>
-      <br />
-      <p><a id="new-btn" class="btn large success" href="wizard.html">Create new &raquo;</a></p>
-    </form>
-  </div>
-  <div class="alert-message error hide" id="nameAlert">
-    <a class="close" href="#">×</a>
-    <strong>Website name</strong>
-    <p>Please give your website a name!</p>
-  </div>
-  
-</div> <!-- /row -->
+    </fieldset><!-- /website-name-form -->
+    <div class="alert-message error hide" id="name-alert">
+      <a class="close" href="#">×</a>
+      <strong>Website name</strong>
+      <p>Please give your website a name!</p>
+    </div>
+    
+    <fieldset id="website-url-form" class="well span6">
+      <h3>Site Address</h3>
+      <div class="input">
+        <span class="help-block">Now, choose a URL that will take visitors to your mobile website. Remember: short and sweet.</span>
+      	<input type="text" id="website-url" name="website-url"  class="{validate: {required: true, uniqueWebsiteName: true} }"/>
+        <span class="help-block">http://www.scanshowsell.com/m/yourwebsitename</span>
+      </div>
+    </fieldset><!-- /website-url-form -->
+    <div class="alert-message error hide" id="url-alert">
+      <a class="close" href="#">×</a>
+      <strong>Website name</strong>
+      <p>Please give your website an address!</p>
+    </div>
+    <a id="new-btn" class="btn-flat green medium pull-right" href="wizard.html">Create New Site&nbsp;&nbsp;<i class="icon-arrow-right icon-white"></i></a>
+  </form>
+</section><!-- /span15 -->

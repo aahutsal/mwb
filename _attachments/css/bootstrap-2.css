@@ -167,6 +167,9 @@ a:hover {
 .navbar-fixed-bottom .container {
   width: 1020px;
 }
+.span-half {
+  width:490px;
+}
 .span15 {
  width: 1020px;
 }

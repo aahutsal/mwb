@@ -1,52 +1,84 @@
+<link href="../css/bx_styles/bx_styles.css" rel="stylesheet">
+<script src="../js/jquery.bxSlider.js"></script>
+<script src="../js/jquery.easing.1.3.js"></script>
+<script type="text/javascript">
+      $(document).ready(function(){
+      $('#theme-picker').bxSlider({
+      auto: false,
+      infiniteLoop: true,
+      hideControlOnEnd: false,
+      pager: true,
+      controls: true
+      });
+</script>
+
+<section id="section-head" class="row">
+  <h1 class="section-header">Choose A Theme</h1>
+  <div id="site-manager" class="span4">
+    <ul id="site-manager-menu" class="nav pull-right">
+      <li class="dropdown" data-dropdown="dropdown">
+        <a href="#" id="site-toggle" class="dropdown-toggle website-name" style="font-size:1em;font-weight:600;">Currently Editing:<span class="caret"></span></a>
+        <ul id="site-manager-dropdown" class="dropdown-menu">
+          <li><a class="link-site manage" href="create.html"><i class="icon-plus"></i>&nbsp;Add Site</a></li>
+          <li><a class="link-site add" href="sites.html"><i class="icon-th-large"></i>&nbsp;Manage Sites</a></li>
+          <li class="divider"></li>
+          <li><a class="link-site send" href="#"><i class="icon-share-alt"></i>&nbsp;Send to Phone</a></li>
+          <li><a class="link-site generate" href="#"><i class="icon-qrcode"></i>&nbsp;View/Generate QR code</a></li>
+          <li><a class="link-site preview" href="#"><i class="icon-eye-open"></i>&nbsp;Preview Phone Simulator</a></li>
+          </ul><!-- /site-manager-dropdown -->
+        </li>
+    </ul><!-- /site-manager-menu -->
+  </div><!-- /span4 -->
+</section><!-- /section-head -->
+
 <!-- THEMES -->
-<div class="row">
-  <div id="template-picker">
-    <!-- TEMPLATE PANEL -->
-    <ul class="thumbnails" id="templates">
-      <li class="span4 active">
-        <img src="../images/black_sm.png"/>
-        <div class="btnContainer">
-          <a href="../images/black.png" title="Black" rel="gallery" class="btn default">Preview</a>
-          <a href="preview-and-publish.html" class="btn success">Apply</a>
-        </div>
-      </li>
-      <li class="span4">
-        <img src="../images/blueandgray_sm.png"/>
-        <div class="btnContainer">
-          <a href="#" class="btn default">Preview</a>
-          <a href="preview-and-publish.html" class="btn success">Apply</a>
-        </div>
-      </li>
-      <li class="span4">
-        <img src="../images/grayandwhite_sm.png"/>
-        <div class="btnContainer">
-          <a href="#" class="btn default">Preview</a>
-          <a href="preview-and-publish.html" class="btn success">Apply</a>
-        </div>
-      </li>
-      <li class="span4 active">
-        <img src="../images/black_sm.png"/>
-        <div class="btnContainer">
-          <a href="../images/black.png" title="Black" rel="gallery" class="btn default">Preview</a>
-          <a href="preview-and-publish.html" class="btn success">Apply</a>
-        </div>
-      </li>
-      <li class="span4">
-        <img src="../images/blueandgray_sm.png"/>
-        <div class="btnContainer">
-          <a href="#" class="btn default">Preview</a>
-          <a href="preview-and-publish.html" class="btn success">Apply</a>
-        </div>
-      </li>
-      <li class="span4">
-        <img src="../images/grayandwhite_sm.png"/>
-        <div class="btnContainer">
-          <a href="#" class="btn default">Preview</a>
-          <a href="preview-and-publish.html" class="btn success">Apply</a>
-        </div>
-      </li>
-    </ul>
-    <a href="#" id="go-prev" class="btn primary mini pull-left">&nbsp;&larr;&nbsp;Previous</a>
-    <a href="#" id="go-next" class="btn primary mini pull-right">&nbsp;&rarr;&nbsp;Next</a>
-  </div>  <!--/template-picker -->
-</div>  <!-- /row -->
+<section id="themes" class="span15">
+    <!-- THEME PICKER -->
+  <div id="themes-wrapper" class="row">
+    <div id="theme-picker-wrapper" class="span15">
+      <ul id="theme-picker" class="thumbnails">
+        <li class="span3 active">
+          <img src="http://placehold.it/220"/>
+          <div class="btnContainer">
+            <a href="../images/black.png" title="Black" rel="gallery" class="btn-flat dark-grey"><i class="icon-search icon-white"></i>&nbsp;&nbsp;Preview</a>
+            <a href="preview-and-publish.html" class="btn-flat green"><i class="icon-ok icon-white"></i>&nbsp;&nbsp;Apply</a>
+          </div>
+        </li>
+        <li class="span3">
+          <img src="http://placehold.it/220"/>
+          <div class="btnContainer">
+            <a href="../images/black.png" title="Black" rel="gallery" class="btn-flat dark-grey"><i class="icon-search icon-white"></i>&nbsp;&nbsp;Preview</a>
+            <a href="preview-and-publish.html" class="btn-flat green"><i class="icon-ok icon-white"></i>&nbsp;&nbsp;Apply</a>
+          </div>
+        </li>
+        <li class="span3">
+          <img src="http://placehold.it/220"/>
+          <div class="btnContainer">
+            <a href="../images/black.png" title="Black" rel="gallery" class="btn-flat dark-grey"><i class="icon-search icon-white"></i>&nbsp;&nbsp;Preview</a>
+            <a href="preview-and-publish.html" class="btn-flat green"><i class="icon-ok icon-white"></i>&nbsp;&nbsp;Apply</a>
+          </div>
+        </li>
+        <li class="span3">
+          <img src="http://placehold.it/220"/>
+          <div class="btnContainer">
+            <a href="../images/black.png" title="Black" rel="gallery" class="btn-flat dark-grey"><i class="icon-search icon-white"></i>&nbsp;&nbsp;Preview</a>
+            <a href="preview-and-publish.html" class="btn-flat green"><i class="icon-ok icon-white"></i>&nbsp;&nbsp;Apply</a>
+          </div>
+        </li>
+      </ul>
+    </div><!-- /theme-picker-wrapper -->
+
+    <div id="theme-preview-wrapper" class="span15">
+      <div class="span7">
+        <img src="../images/mobile-photos.png" alt="Theme Preview" />
+      </div>
+      <div class="span5">
+        <h4>Theme Name</h4>
+        <p>Creator:&nbsp;<a href="">Mobius Labs</a></p>
+    </div><!-- /theme-preview-wrapper -->
+  </div>
+  <!-- Slider Controls
+    <a href="#" id="go-prev" class="btn-flat blue pull-left">&nbsp;&larr;&nbsp;Previous</a>
+    <a href="#" id="go-next" class="btn-flat blue pull-right">&nbsp;&rarr;&nbsp;Next</a>
+  -->
+</section>  <!-- /template-picker -->
