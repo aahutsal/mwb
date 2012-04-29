@@ -297,6 +297,7 @@
                                 padding:20px;
                                 float:left;
                                 color:#e3e3e3;
+                                border-radius:4px 4px 0 0;
                                 text-shadow:1px 1px 1px rgba(0,0,0,0.25);
                                 font-size:16px;
                                 font-weight:600;
@@ -311,6 +312,7 @@
                                 width:940px;
                                 float:left;
                                 background:#e9e9e9;
+                                border-radius:0 0 4px 4px;
                                 display:none;
                                 }
 
