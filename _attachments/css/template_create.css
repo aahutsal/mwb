@@ -277,6 +277,10 @@
     #dashnav                    {margin:-18px 0 36px 0;}
     #dashboard-nav li           {padding:0 20px;}
 
+    #get-started                {margin:36px 0 36px 20px;height:200px;width:980px;background:#0066cc;}
+    #get-started > div          {padding-top:18px;}
+    #get-started h2, h3         {color:#e3e3e3;text-shadow:1px 1px 1px rgba(0,0,0,0.25);}
+    .get-started-header         {margin:0 0 10px 20px;padding:0 0 10px 0;width:940px;border-bottom:1px solid #c3c3c3;}
     .site-list-head             {margin-left:20px;padding:0;list-style:none;}
     .site-list-head li          {margin-right:10px;padding:0;float:left;display:block;color:#999;font-weight:600;}
 
@@ -317,7 +321,7 @@
                                 display:none;
                                 }
 
-    #no-sites                   {margin:18px 0 36px 20px;padding-top:54px;height:100px;background:#e9e9e9;border:4px dashed #e1e1e1;border-radius:8px;color:#999;text-align:center;}
+    #no-sites                   {margin:18px 0 36px 20px;padding-top:54px;height:100px;background:#e9e9e9;border:4px dashed #e1e1e1;border-radius:2px;color:#999;text-align:center;}
     #no-sites a                 {color:#999;}
     #no-sites a:hover           {color:#0066ff;text-decoration:none;}
     #no-sites p                 {font-size:14px;}
