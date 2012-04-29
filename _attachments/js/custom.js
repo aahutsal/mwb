@@ -34,7 +34,7 @@ $(function () {
     });
 
     var slider = $('#templateSlider').bxSlider({
-        controls: false,
+        controls: true,
         auto: false,
         infiniteLoop: false,
         hideControlOnEnd: true,

@@ -271,16 +271,43 @@
     .section-header a			{color:#c3c3c3;text-decoration:none;}
     .seciton-header a:hover		{color:#c3c3c3 !important;text-decoration:none;}
     .section-header .current	{color:#393939;}
+
+    #btn-create                 {
+                                margin-bottom:0;
+                                padding:9px 20px;
+                                color:#e3e3e3;
+                                background:#ff6600;
+                                font-size:1.25em;
+                                font-weight:500;
+                                text-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+                                }
+    #btn-create:hover           {
+                                color:#f3f3f3;
+                                background:#FF4C00;
+                                text-shadow: 1px 1px 1px rgba(0,0,0,0.25);
+                                text-decoration:none;
+                                }
+    #btn-create .icon-plus      {background-position:-408px -94px;} 
     
     /* --  Dashboard Styles --  */
     #dashboard                  {margin-left:0;padding-top:18px;background-color:#f9f9f9;}
     #dashnav                    {margin:-18px 0 36px 0;}
     #dashboard-nav li           {padding:0 20px;}
 
-    #get-started                {margin:36px 0 36px 20px;height:200px;width:980px;background:#0066cc;}
+    .wrap-new-user              {width:auto;height:auto;float:left;display:block;}
+    .wrap-current-user          {width:auto;height:auto;float:left;display:block;}
+
+    #get-started                {margin:36px 0 36px 20px;padding:0;border-radius:0;border:4px solid #0066cc !important;height:200px;width:980px;background:#0066cc;}
+    #get-started .close         {top:-75px;right:5px;}
     #get-started > div          {padding-top:18px;}
-    #get-started h2, h3         {color:#e3e3e3;text-shadow:1px 1px 1px rgba(0,0,0,0.25);}
+    #get-started h2, h3         {color:#e3e3e3;text-shadow:1px 1px 1px rgba(0,0,0,0.15);}
     .get-started-header         {margin:0 0 10px 20px;padding:0 0 10px 0;width:940px;border-bottom:1px solid #c3c3c3;}
+
+    #no-sites                   {margin:0 0 36px 20px;padding-top:54px;height:100px;background:#e9e9e9;border:4px dashed #e1e1e1;border-radius:2px;color:#999;text-align:center;}
+    #no-sites a                 {color:#999;}
+    #no-sites a:hover           {color:#0066ff;text-decoration:none;}
+    #no-sites p                 {font-size:14px;}
+
     .site-list-head             {margin-left:20px;padding:0;list-style:none;}
     .site-list-head li          {margin-right:10px;padding:0;float:left;display:block;color:#999;font-weight:600;}
 
@@ -297,6 +324,9 @@
                                 -webkit-transition:all 0.2s ease;
                                 }
     .accordion-group:hover      {background:#0066ff;border:4px solid #0066cc;}
+        .accordion-group > a        {margin:12px 10px 0 0;}
+        .accordion-group > a:last-child        {margin-right:0;}
+
     .accordion-btn              {  
                                 margin-left:0;
                                 padding:20px;
@@ -320,11 +350,6 @@
                                 /*border-radius:0 0 4px 4px;*/
                                 display:none;
                                 }
-
-    #no-sites                   {margin:18px 0 36px 20px;padding-top:54px;height:100px;background:#e9e9e9;border:4px dashed #e1e1e1;border-radius:2px;color:#999;text-align:center;}
-    #no-sites a                 {color:#999;}
-    #no-sites a:hover           {color:#0066ff;text-decoration:none;}
-    #no-sites p                 {font-size:14px;}
 
     /* --  Manage Styles --  */
     #manage						{margin-left:0;padding-top:18px;background-color:#f9f9f9;}
@@ -656,6 +681,14 @@
 		color:#f3f3f3;
 		background:#ff3019;
 	}
+    btn-flat.orange {
+        color:#e3e3e3;
+        background:#ff6600;
+    }
+    btn-flat.orange:hover {
+        color:#f3f3f3;
+        background:#ff6633;
+    }
     .square {
         width:16px;
         height:18px;
