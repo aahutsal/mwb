@@ -324,12 +324,13 @@
                                 -webkit-transition:all 0.2s ease;
                                 }
     .accordion-group:hover      {background:#0066ff;border:4px solid #0066cc;}
-        .accordion-group > a        {margin:12px 10px 0 0;}
-        .accordion-group > a:last-child        {margin-right:0;}
+        .accordion-group a.btn-flat                   {margin:12px 10px 0 0;}
+        .accordion-group a.btn-flat:last-child        {margin-right:0 !important;}
 
     .accordion-btn              {  
                                 margin-left:0;
                                 padding:20px;
+                                width:760px;
                                 float:left;
                                 color:#e3e3e3;
                                 /*border-radius:4px 4px 0 0;*/

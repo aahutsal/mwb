@@ -71,11 +71,11 @@ $(function () {
     });
     // add-remove service buttons
 
-    $("input[rel=popover]")
-        .popover({
-            offset: 10,
-            placement: 'right',
-            trigger: 'focus'
+    $("a[rel=tooltip]")
+        .tooltip({
+            delay: 0,
+            placement: 'top',
+            trigger: 'hover'
         })
         .click(function(e) {
             e.preventDefault()

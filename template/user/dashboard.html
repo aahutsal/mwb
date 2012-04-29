@@ -3,15 +3,15 @@ $(document).ready(function() {
  
   //ACCORDION BUTTON ACTION 
   $('div#site-toggle-0').click(function() {
-    $('div#site-info-0').slideToggle('normal');
+    $('div#site-info-0').slideToggle(500);
   });
 
   $('div#site-toggle-1').click(function() {
-    $('div#site-info-1').slideToggle('normal');
+    $('div#site-info-1').slideToggle(500);
   });
 
   $('div#site-toggle-2').click(function() {
-    $('div#site-info-2').slideToggle('normal');
+    $('div#site-info-2').slideToggle(500);
   });
  
   //HIDE THE DIVS ON PAGE LOAD  
@@ -73,10 +73,12 @@ $(document).ready(function() {
       <div id="site-0" class="accordion-group">
         <div id="site-toggle-0" class="span9 accordion-btn">Discount Cabinet Designs
           <i class="icon-chevron-down icon-white"></i></div>
-        <a class="btn-flat light-grey" href="manage.html" rel="tooltip" title="Edit Site">
-          <i class="icon-pencil"></i>&nbsp;Edit</a>
-        <a class="btn-flat light-grey" href="site-settings.html" rel="tooltip" title="Site Settings">
-          <i class="icon-cog"></i>&nbsp;Settings</a>
+        <a class="btn-flat light-grey square" href="manage.html" rel="tooltip" title="Edit Site">
+          <i class="icon-pencil"></i></a>
+        <a class="btn-flat light-grey square" href="themes.html" rel="tooltip" title="Theme Site">
+          <i class="icon-tint"></i></a>
+        <a class="btn-flat light-grey square" href="site-settings.html" rel="tooltip" title="Site Settings">
+          <i class="icon-cog"></i></a>
         <div id="site-info-0" class="accordion-content">
           <ul class="site-list-head">
             <li class="span4 site-name"><p>Site Name</p></li>
@@ -91,9 +93,11 @@ $(document).ready(function() {
         <div id="site-toggle-1" class="span9 accordion-btn">Long Cane Flooring
           <i class="icon-chevron-down icon-white"></i></div>
         <a class="btn-flat light-grey" href="manage.html" rel="tooltip" title="Edit Site">
-          <i class="icon-pencil"></i>&nbsp;Edit</a>
+          <i class="icon-pencil"></i></a>
+        <a class="btn-flat light-grey" href="themes.html" rel="tooltip" title="Theme Site">
+          <i class="icon-tint"></i></a>
         <a class="btn-flat light-grey" href="site-settings.html" rel="tooltip" title="Site Settings">
-          <i class="icon-cog"></i>&nbsp;Settings</a>
+          <i class="icon-cog"></i></a>
         <div id="site-info-1" class="accordion-content">Content 1 Long Example</div>
       </div><!-- /accordion-group -->
 
@@ -101,12 +105,14 @@ $(document).ready(function() {
         <div id="site-toggle-2" class="span9 accordion-btn">Flash Gordon Electric
           <i class="icon-chevron-down icon-white"></i></div>
         <a class="btn-flat light-grey" href="manage.html" rel="tooltip" title="Edit Site">
-          <i class="icon-pencil"></i>&nbsp;Edit</a>
+          <i class="icon-pencil"></i></a>
+        <a class="btn-flat light-grey" href="themes.html" rel="tooltip" title="Theme Site">
+          <i class="icon-tint"></i></a>
         <a class="btn-flat light-grey" href="site-settings.html" rel="tooltip" title="Site Settings">
-          <i class="icon-cog"></i>&nbsp;Settings</a>
+          <i class="icon-cog"></i></a>
         <div id="site-info-2" class="accordion-content">Content 1<br /><br /><br /><br /><br /><br /><br /><br />Long Example</div>
       </div><!-- /accordion-group -->
-      
+
     </div><!-- /site-list -->
   </div><!-- /wrap-current-user -->
 </section><!-- /dashboard -->
