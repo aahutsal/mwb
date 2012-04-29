@@ -342,6 +342,7 @@
                                 -webkit-transition:all 0.2s ease;
                                 }
     .accordion-btn:hover        {color:#f3f3f3;font-size:16px;font-weight:600;text-shadow:1px 1px 1px rgba(0,0,0,0.5);}
+        .accordion-btn .icon-chevron-down {margin-left:10px;background-position:-313px -116px;}
     .accordion-content          { 
                                 padding:20px;
                                 width:940px;

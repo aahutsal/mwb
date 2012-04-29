@@ -2,12 +2,22 @@
 $(document).ready(function() {
  
   //ACCORDION BUTTON ACTION 
-  $('div.accordion-btn').click(function() {
-    $(this).next().slideToggle('normal');
+  $('div#site-toggle-0').click(function() {
+    $('div#site-info-0').slideToggle('normal');
+  });
+
+  $('div#site-toggle-1').click(function() {
+    $('div#site-info-1').slideToggle('normal');
+  });
+
+  $('div#site-toggle-2').click(function() {
+    $('div#site-info-2').slideToggle('normal');
   });
  
   //HIDE THE DIVS ON PAGE LOAD  
-  $("div.accordion-content").hide();
+  $("div#site-info-0").hide();
+  $("div#site-info-1").hide();
+  $("div#site-info-2").hide();
  
 });
 </script>
@@ -57,28 +67,46 @@ $(document).ready(function() {
   </div>
 
   <div class="wrap-current-user">
-    <ul class="site-list-head">
-      <li class="span4 site-name"><p>Site Name</p></li>
-      <li class="span1 site-active"><p>Active?</p></li>
-      <li class="span1 site-pages"><p>Pages</p></li>
-      <li class="span3 site-visitors"><p>Visitors this Month</p></li>
-    </ul>
     <div id="site-list" class="accordion">
+
       <!--  Use id="site-xx" for dynamic list generation  -->
       <div id="site-0" class="accordion-group">
-        <div id="site-accordion-toggle" class="span9 accordion-btn">Discount Cabinet Designs</div>
-        <a class="btn-flat light-grey" href="manage.html" rel="tooltip" title="Edit Site"><i class="icon-pencil"></i>&nbsp;Edit</a>
-        <a class="btn-flat light-grey" href="site-settings.html" rel="tooltip" title="Site Settings"><i class="icon-cog"></i>&nbsp;Settings</a>
-        <div class="accordion-content">Content 1<br /><br /><br />Long Example</div>
-      </div>
+        <div id="site-toggle-0" class="span9 accordion-btn">Discount Cabinet Designs
+          <i class="icon-chevron-down icon-white"></i></div>
+        <a class="btn-flat light-grey" href="manage.html" rel="tooltip" title="Edit Site">
+          <i class="icon-pencil"></i>&nbsp;Edit</a>
+        <a class="btn-flat light-grey" href="site-settings.html" rel="tooltip" title="Site Settings">
+          <i class="icon-cog"></i>&nbsp;Settings</a>
+        <div id="site-info-0" class="accordion-content">
+          <ul class="site-list-head">
+            <li class="span4 site-name"><p>Site Name</p></li>
+            <li class="span1 site-active"><p>Active?</p></li>
+            <li class="span1 site-pages"><p>Pages</p></li>
+            <li class="span3 site-visitors"><p>Visitors this Month</p></li>
+          </ul>
+        </div>
+      </div><!-- /accordion-group -->
+
       <div id="site-1" class="accordion-group">
-        <div class="span4 accordion-btn">Long Cane Flooring</div>
-        <div class="accordion-content">Content 1<br /><br /><br /><br />Long Example</div>
-      </div>
+        <div id="site-toggle-1" class="span9 accordion-btn">Long Cane Flooring
+          <i class="icon-chevron-down icon-white"></i></div>
+        <a class="btn-flat light-grey" href="manage.html" rel="tooltip" title="Edit Site">
+          <i class="icon-pencil"></i>&nbsp;Edit</a>
+        <a class="btn-flat light-grey" href="site-settings.html" rel="tooltip" title="Site Settings">
+          <i class="icon-cog"></i>&nbsp;Settings</a>
+        <div id="site-info-1" class="accordion-content">Content 1 Long Example</div>
+      </div><!-- /accordion-group -->
+
       <div id="site-2" class="accordion-group">
-        <div class="span4 accordion-btn">Flash Gordon Electric</div>
-        <div class="accordion-content">Content 1<br /><br /><br /><br /><br /><br /><br /><br />Long Example</div>
-      </div>
-    </div>
-  </div>
+        <div id="site-toggle-2" class="span9 accordion-btn">Flash Gordon Electric
+          <i class="icon-chevron-down icon-white"></i></div>
+        <a class="btn-flat light-grey" href="manage.html" rel="tooltip" title="Edit Site">
+          <i class="icon-pencil"></i>&nbsp;Edit</a>
+        <a class="btn-flat light-grey" href="site-settings.html" rel="tooltip" title="Site Settings">
+          <i class="icon-cog"></i>&nbsp;Settings</a>
+        <div id="site-info-2" class="accordion-content">Content 1<br /><br /><br /><br /><br /><br /><br /><br />Long Example</div>
+      </div><!-- /accordion-group -->
+      
+    </div><!-- /site-list -->
+  </div><!-- /wrap-current-user -->
 </section><!-- /dashboard -->
