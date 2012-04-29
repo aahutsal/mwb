@@ -1,11 +1,24 @@
+<script type="text/javascript">
+$(document).ready(function() {
+ 
+  //ACCORDION BUTTON ACTION 
+  $('div.accordion-btn').click(function() {
+    $(this).next().slideToggle('normal');
+  });
+ 
+  //HIDE THE DIVS ON PAGE LOAD  
+  $("div.accordion-content").hide();
+ 
+});
+</script>
 <section id="section-head" class="row">
-  <nav class="navbar">
+  <nav id="dashnav" class="navbar">
     <div class="navbar-inner">
       <div class="container">
         <ul id="dashboard-nav" class="nav">
-          <li><p class="navbar-text">10 Messages</p></li>
-          <li><p class="navbar-text">101 visistors</p></li>
-          <li><p class="navbar-text">May 03, 2012</p></li>
+          <li><p class="navbar-text"><i class="icon-comment icon-white"></i>&nbsp;&nbsp;10 Messages</p></li>
+          <li><p class="navbar-text"><i class="icon-eye-open icon-white"></i>&nbsp;&nbsp;101 visitors</p></li>
+          <li><p class="navbar-text billing-date">May 03, 2012</p></li>
           <li class="pull-right"><a href="account-settings.html"><i class="icon-user icon-white"></i>&nbsp;&nbsp;Account Settings</a></li>
         </ul>
       </div>
@@ -28,9 +41,24 @@
 </section><!-- /section-head -->
 
 <section id="dashboard" class="span15">
-  <ul class="site-list">
-    <li class="panel-wrap span12">
-          <a href="manage.html" class="hash"><h4>Discount Cabinet Designs</h4></a>
-    </li><!-- /panel-wrap -->
+  <ul class="site-list-head">
+    <li class="span4 site-name"><p>Site Name</p></li>
+    <li class="span1 site-active"><p>Active?</p></li>
+    <li class="span1 site-pages"><p>Pages</p></li>
+    <li class="span3 site-visitors"><p>Visitors this Month</p></li>
   </ul>
+  <div id="site-list" class="accordion">
+    <div id="site-0" class="accordion-group">
+      <div class="span4 accordion-btn">Discount Cabinet Designs</div>
+      <div class="accordion-content">Content 1<br /><br /><br />Long Example</div>
+    </div>
+    <div id="site-1" class="accordion-group">
+      <div class="span4 accordion-btn">Long Cane Flooring</div>
+      <div class="accordion-content">Content 1<br /><br /><br /><br />Long Example</div>
+    </div>
+    <div id="site-2" class="accordion-group">
+      <div class="span4 accordion-btn">Flash Gordon Electric</div>
+      <div class="accordion-content">Content 1<br /><br /><br /><br /><br /><br /><br /><br />Long Example</div>
+    </div>
+  </div>
 </section><!-- /dashboard -->
