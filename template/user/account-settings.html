@@ -1,0 +1,83 @@
+<section id="section-head" class="row">
+  <nav id="dashnav" class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <ul id="dashboard-nav" class="nav">
+          <li><p class="navbar-text"><i class="icon-comment icon-white"></i>&nbsp;&nbsp;10 Messages</p></li>
+          <li><p class="navbar-text"><i class="icon-eye-open icon-white"></i>&nbsp;&nbsp;101 visitors</p></li>
+          <li><p class="navbar-text billing-date">May 03, 2012</p></li>
+          <li class="pull-right"><a href="account-settings.html"><i class="icon-user icon-white"></i>&nbsp;&nbsp;Account Settings</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <h1 class="section-header">Account Settings</h1>
+  <a href="dashboard.html" class="btn-flat light-grey medium pull-right"><i class="icon-arrow-left"></i>&nbsp;&nbsp;Dashboard</a>
+</section><!-- /section-head -->
+
+<section id="account-settings" class="span15">
+  <form id="account-info-form" class="span13 form-inline account-settings-form" name="account-info">
+    <h3>Personal Information</h3>
+    <ul id="form-list">
+      <li>
+        <!-- ===== Personal Information ====== -->
+        <div class="clearfix">
+          <div class="input">
+            <input type="text" class="span5 {validate: {required:true}}" id="first-name" size="30" name="first-name" placeholder="First Name"></input>
+            <input type="text" class="span5 {validate: {required:true}}" id="last-name" size="30" name="last-name" placeholder="Last Name"></input>
+          </div>
+        </div><!-- /clearfix -->
+      </li> 
+    </ul>
+  </form>
+  
+  <form id="account-email-form" class="span13 form-inline account-settings-form" name="account-email">
+    <h3>Email Settings</h3>
+    <ul id="form-list">
+      <li>
+        <!-- ===== EMAIL ADDRESS ====== -->
+        <div class="clearfix">
+          <div class="input">
+            <input type="text" id="primary-email-address" size="30" name="primary-email-address" class="span5 {validate: {required:true, email:true}}" placeholder="you@youremail.com"></input>
+
+            <input type="text" id="second-email-address" size="30" name="second-email-address" class="span5 {validate: {required:true, email:true}}" placeholder="you@youremailtoo.com"></input>
+          </div>
+          <p class="hint-inline">You can add another email address. This is helpful in case you lose access to your main email account.</p>
+        </div><!-- /clearfix -->
+      </li>
+    </ul>
+  </form>
+      
+  <form id="account-password-form" class="span13 form-inline account-settings-form" name="account-password">
+    <h3>Password Settings</h3>
+    <ul id="form-list">
+      <li>
+        <!-- ===== PASSWORD ====== -->
+        <div class="clearfix">
+          <div class="input">
+            <label for="password">Current Password</label>
+            <input type="password" id="password" size="30" name="password" class="span5 {validate: {required:true,minlength:6}}"></input>
+          </div>
+
+          <div class="input">
+            <label for="passwordConfirm">Confirm Password</label>
+            <input type="password" id="passwordConfirm" size="30" name="passwordConfirm" class="span5 {validate: {required:true, equalTo:'#password'}}"></input>
+          </div>
+        </div><!-- /clearfix -->
+        <p class="hint-inline">Password must be at least 6 characters long, numbers and letters only (no spaces, or special symbols).</p>
+      </li>
+      <li>
+          <!-- ===== Change Password ====== -->
+          <div class="clearfix">
+            <p><a id="change-password" href="">Would you like to change your password?</a></p>
+            <p><a id="recover-password" href="">Forget your password?</a></p>
+          </div>
+        </li>
+    </ul>
+  </form>
+
+  <div class="span13">
+    <a id="delete-account" class="btn-flat red span13" href=""><i class="icon-warning-sign icon-white"></i>&nbsp;&nbsp;Delete Account</a>
+  </div>
+</section><!-- /dashboard -->
