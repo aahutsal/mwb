@@ -65,14 +65,6 @@
 
     <script src="js/jquery.metadata.js"></script>
     <script src="js/jquery.validate.js"></script>
-
-    <script src="js/utils.js"></script>
-    <script src="js/validation.js"></script>
-    <script src="js/jquery.formserializer.js"></script>
-    <script src="js/models.js" type="text/javascript"></script>
-    <script src="js/application.js" type="text/javascript"></script>
-    <script src="js/custom.js" type="text/javascript"></script>
-
     <script type="text/javascript">
       $(document).ready(function(){
       $('#slider1').bxSlider({
@@ -85,8 +77,8 @@
       
       $("form").submit(function(e){
       var wsName = $(this).find("input")
-       wsName.valid();
-        window.location.href = "register.html#!" + wsName.val();
+      wsName.valid();
+      window.location.href = "register.html#!" + wsName.val();
       e.stopPropagation();
       e.preventDefault();
       return true;
@@ -96,9 +88,7 @@
     </script>
 
   </head>
-
   <body>
-
     <div class="topbar">
       <div class="fill">
         <div class="container">
@@ -352,7 +342,5 @@
         </div>
       </div>
     </footer>
-
-
   </body>
 </html>

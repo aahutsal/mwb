@@ -1,5 +1,5 @@
 <section id="section-head" class="row">
-  <h1 class="section-header">Manage&nbsp;:&nbsp;<span class="current">Request Estimate</span></h1>
+  <h1 class="section-header">Manage&nbsp;:&nbsp;<span class="current">Optional Pages</span></h1>
   <div id="site-manager" class="span4">
     <ul id="site-manager-menu" class="nav pull-right">
       <li class="dropdown" data-dropdown="dropdown">
@@ -19,22 +19,37 @@
 
 <!-- OPTIONAL PAGES -->
 <section id="optional-pages" class="span8">
-  <img class="illustration" src="../images/iphone-req-est.png" alt="iPhone illustration: Request Estimate" />
-  <form id="optional-pages-form" name="optional-pages" class="form-stacked" method="POST">
-    <div class="clearfix">
-      <label id="optionsRadio">Would you like to place a "Request Estimate" button on your mobile site's home page?</label>
-      <div class="input">
-  	<ul class="inputs-list">
-  	  <li>
-  	    <label><input type="radio" checked name="request-estimate" value="yes" /><span>Yes</span></label>
-  	  </li>
-  	  <li>
-  	    <label><input type="radio" name="request-estimate" value="no" /><span>No</span></label>
-  	  </li>
-  	</ul>
-      </div><!-- /input -->
-    </div><!-- /clearfix -->
-  </form>
+  <h4>Optional Pages</h4>
+  <!-- =====  OPTIONAL PAGES FORM  ===== -->
+  <form name="optional-pages">
+    <ul class="inputs-list">
+      <li>
+	<label>
+          <input type="checkbox" name="request-service"/>
+          <span>Request Service</span>
+        </label>
+      </li>
+      <li>
+	<label>
+          <input type="checkbox" name="request-estimate"/>
+          <span>Request Estimate</span>
+        </label>
+      </li>
+      <li>
+	<label>
+          <input type="checkbox" name="submit-survey"/>
+          <span>Submit Survey</span>
+        </label>
+      </li>
+      <li>
+	<label>
+          <input type="checkbox" name="submit-testimonial"/>
+          <span>Submit Testimonial</span>
+        </label>
+      </li>
+    </ul>
+  </form><!-- /optionalPagesForm -->
 </section>  <!--/span8 -->
 
-{{ template[sidebar_mode]['request-estimate'] }}
+{{ sidebar['optional-pages'] }}
+

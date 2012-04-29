@@ -1,5 +1,5 @@
 <section id="section-head" class="row">
-  <h1 class="section-header">Manage&nbsp;:&nbsp;<span class="current">Request Consultation</span></h1>
+  <h1 class="section-header">Manage&nbsp;:&nbsp;<span class="current">Submit Testimonial</span></h1>
   <div id="site-manager" class="span4">
     <ul id="site-manager-menu" class="nav pull-right">
       <li class="dropdown" data-dropdown="dropdown">
@@ -19,17 +19,16 @@
 
 <!-- OPTIONAL PAGES -->
 <section id="optional-pages" class="span8">
-  <img class="illustration" src="../images/iphone-req-consult.png" alt="iPhone illustration: Request Consultation" />
   <form id="optional-pages-form" name="optional-pages" class="form-stacked" method="POST">
     <div class="clearfix">
-      <label id="optionsRadio">Would you like to place a "Request Consultation" button on your mobile site's home page?</label>
+      <label id="optionsRadio">Would you like to place a "Submit Testimonial" button on your mobile site's home page?</label>
       <div class="input">
   	<ul class="inputs-list">
   	  <li>
-  	    <label><input type="radio" checked name="request-consultation" value="yes" /><span>Yes</span></label>
+  	    <label><input type="radio" checked name="submit-testimonial" value="yes" /><span>Yes</span></label>
   	  </li>
   	  <li>
-  	    <label><input type="radio" name="request-consultation" value="no" /><span>No</span></label>
+  	    <label><input type="radio" name="submit-testimonial" value="no" /><span>No</span></label>
   	  </li>
   	</ul>
       </div><!-- /input -->
@@ -37,4 +36,4 @@
   </form>
 </section>  <!--/span8 -->
 
-{{ template[sidebar_mode]['request-consultation'] }}
+{{ sidebar['submit-testimonial'] }}

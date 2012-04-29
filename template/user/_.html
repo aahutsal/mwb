@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  {{ template['_head'] }}
+  {{ processTemplate(template.user._head) }}
   <body>
-    {{ template['_topbar'] }}
+    {{ processTemplate(template.user._topbar) }}
     <div id="page-wrap" class="container">  <!--  Page Wrap  -->
 	    <header>
 			<a href="http://www.scanshowsell.com"><img src="../images/title_sm.png" alt="ScanShowSell.com" /></a>
@@ -18,7 +18,7 @@
 	    </div>
     </div> <!-- /.container -->
     
-    {{ template['_footer'] }}
+    {{ processTemplate(template.user._footer) }}
     
   </body>
 </html>

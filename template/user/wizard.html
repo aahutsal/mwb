@@ -11,28 +11,29 @@
 </div>
 
 <div id="wizard" class="tab-content">
+
   <div class="tab-pane active" id="profile-pane">
-    {{ processTemplate('profile') }}
+    {{ processTemplate(context['profile']) }}
   </div>  <!-- /tab-pane -->
   
   <div class="tab-pane" id="upload-photos-pane">
-    {{ processTemplate('manage-photos') }} 
+    {{ processTemplate(context['manage-photos']) }} 
   </div>
 
   <div class="tab-pane" id="services-pane">
-    {{ processTemplate('services') }} 
+    {{ processTemplate(context['services']) }} 
   </div>  <!-- /tab-pane -->
 
   <div class="tab-pane" id="service-area-pane">
-    {{ processTemplate('service-areas') }} 
+    {{ processTemplate(context['service-areas']) }} 
   </div>  <!-- /tab-pane -->
 
   <div class="tab-pane" id="optional-pages-pane">
-    {{ processTemplate('optional-pages') }} 
+    {{ processTemplate(context['optional-pages']) }} 
   </div>  <!-- /tab-pane -->
 
   <div class="tab-pane" id="choose-theme-pane">
-    {{ processTemplate('choose-theme') }} 
+    {{ processTemplate(context['choose-theme']) }} 
   </div>  <!-- /tab-pane -->
 
   <div class="tab-pane" id="prevpub-pane">

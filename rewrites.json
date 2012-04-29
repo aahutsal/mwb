@@ -37,13 +37,25 @@
         "to": "_view/*"
     },
     {
+        "from": "mwb/",
+        "to": "../../"
+    },    
+    {
+        "from": "_users/*",
+        "to": "../../_users/*"
+    },    
+    {
+        "from": "",
+        "to": "index.html"
+    },
+    {
         "from": "index.html",
         "to": "index.html"
     },
     {
-        "from": "register.html",
-        "to": "register.html"
-    },
+        "from": "mwb/*",
+        "to": "../../*"
+    },    
     {
         "from": "*",
         "to": "_show/_/*"

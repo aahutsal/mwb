@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{ processTemplate(context['_head']) }}
+<body>
+  <!--  TOPBAR
+        <div class="topbar">  
+          <div class="fill">
+            <div class="container">
+       	      <ul class="nav">
+       	        <li class="dropdown" data-dropdown="dropdown"><a href="#" id="requests" class="dropdown-toggle">Requests</a>
+       	   	  <ul class="dropdown-menu">
+       	   	    <li><a href="#"><b>Testimonial Added</b> by Jenny G.</a></li>
+       	   	    <li><a href="#"><b>Service Request</b> from Michael A.</a></li>
+       	   	    <li><a href="#"><b>Service Request</b> from Dee G.</a></li>
+       	   	    <li><a href="#"><b>Estimate Request</b> from Samuel G.</a></li>
+       	   	    <li class="divider"></li>
+       	   	    <li><a href="inbox.html" class="btnInbox">Go to Inbox&nbsp;&nbsp;&rarr;</a></li>
+       	   	  </ul>
+       	        </li>
+       	        <li class="divider-vertical"></li>
+       	        <li><a href="manage.html">Manage</a></li>
+       	        <li><a href="themes.html">Themes</a></li>
+       	        <li><a href="stats.html">Stats</a></li>
+       	      </ul>
+       	      <ul class="secondary-nav">
+       	        <li class="dropdown" data-dropdown="dropdown"><a href="#" class="dropdown-toggle">Dee Giarratano</a>
+       	   	  <ul class="dropdown-menu">
+       	   	    <li><a href="../settings.html">Settings</a></li>
+       	   	    <li><a href="../account.html">Account</a></li>
+       	   	    <li><a href="../billing.html">Billing</a></li>
+       	   	    <li class="divider"></li>
+       	   	    <li><a href="logout">Logout</a></li>
+       	   	  </ul>
+       	        </li>
+       	        <li class="divider-vertical"></li>
+       	        <li><a href="support.html">Support</a></li>
+       	      </ul>
+            </div>  <!--  Container
+                          </div>  <!--  Fill
+                                        </div> 
+   	/Topbar  -->
+
+          <div class="container">
+            <div id="panel-wrap">
+              <div id="panel">
+	        <header>
+	          <a href="http://www.scanshowsell.com"><img src="images/title_sm.png" alt="ScanShowSell.com" border="0" /></a>
+	          <a href="#" class="call-us pull-right">
+		    1-855-722-6746 ( 855-SCANSHOWSELL )
+		    <br />
+		    We're just a phone call away!</a>
+	        </header>
+
+                <div id="wizard-nav" class="span15">
+                  <ul class="tabs" data-tabs="">
+                    <li class="active"><a href="#profile-pane">1.&nbsp;Company Profile</a></li>
+                    <li><a href="#upload-photos-pane">2.&nbsp;Upload Photos</a></li>
+                    <li><a href="#services-pane">3.&nbsp;Services/Products</a></li>
+                    <li><a href="#service-area-pane">4.&nbsp;Service Area</a></li>
+                    <li><a href="#optional-pages-pane">5.&nbsp;Optional Pages</a></li>
+                    <li><a href="#choose-theme-pane">6.&nbsp;Choose a Theme</a></li>
+                    <li><a href="#prevpub-pane">7.&nbsp;Preview &amp; Publish</a></li>
+                  </ul>
+                </div>
+	        
+                <div id="wizard" class="tab-content">
+                  <div class="tab-pane active" id="profile-pane">
+                    {{ processTemplate(context.user['profile']) }}
+                  </div>  <!-- /tab-pane -->
+
+                  <div class="tab-pane" id="upload-photos-pane">
+                    {{ processTemplate(context.user['manage-photos']) }}
+                  </div>
+
+                  <div class="tab-pane" id="services-pane">
+                    {{ processTemplate(context.user['services']) }}
+                  </div>  <!-- /tab-pane -->
+
+                  <div class="tab-pane" id="service-area-pane">
+                    {{ processTemplate(context.user['service-areas']) }}
+                  </div>  <!-- /tab-pane -->
+
+                  <div class="tab-pane" id="optional-pages-pane">
+                    {{ processTemplate(context.user['optional-pages']) }}
+                  </div>  <!-- /tab-pane -->
+
+                  <div class="tab-pane" id="choose-theme-pane">
+                    {{ processTemplate(context.user['choose-theme']) }}
+                  </div>  <!-- /tab-pane -->
+                  
+                  <div class="tab-pane" id="prevpub-pane">
+                    <div id="preview-publish" class="span15">
+                      <h4>Preview &amp; Publish</h4>
+                      <div id="instructions" class="span5">
+                        <h5>Your website is ready to go!</h5>
+                        <p>You're now ready to publish your mobile site. To the right is a preview of your site. Be sure to play around with it and double check your information.</p>
+                        <br />
+                        <input id="publish" class="btn-flat green span5" type="submit" value="Publish &amp; Generate QR Code"/>
+                        <br />
+                        <img src="http://placehold.it/280&amp;text=YOUR+QR+CODE+HERE" alt="QR code placeholder" />
+                      </div>
+                      
+                      <div id="emulator-wrap" class="span8 offset5">
+                        <div id="emulator">
+                          <iframe id="emulator-view" src=""></iframe>
+                        </div>
+                      </div>
+                    </div>  <!--/preview-publish -->
+                  </div>  <!-- /tab-pane -->
+                </div>  <!-- /tab-content -->
+
+              </div> <!-- /container -->
+            </div>  <!-- /row -->
+            
+            <script src="js/application.js"></script>
+</body>
+</html>
+

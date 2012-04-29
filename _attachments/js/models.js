@@ -1,6 +1,7 @@
 // trying to dynamically determine dbname and ddoc
 var path = unescape(document.location.pathname).split('/');
-var ddoc = path[3], dbname = path[1]
+//var ddoc = path[3], dbname = path[1]
+var ddoc = 'mwb', dbname = 'mwb'
 
 $(function(){
 
