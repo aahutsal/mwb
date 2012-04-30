@@ -12,6 +12,11 @@ $(function () {
         }
     })
 
+    $("section:data(main-nav~=.*)").each(function(){
+        $("#main-nav li").removeClass("active");
+        $("#main-nav li > a." + $(this).data("main-nav")).parent().addClass("active")
+    })
+
     $(".dropdown-toggle").dropdown();
     $("a[data-controls-modal]").live("click", function(){
         var modalClass = $(this).attr("data-controls-modal");
