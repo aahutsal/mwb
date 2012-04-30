@@ -388,11 +388,23 @@
     .account-settings-form h3   {margin-bottom:9px;color:#494949;text-shadow:none;}
     #form-list                  {list-style: none;margin:0;padding:0;}
     #form-list li               {margin:0 0 18px 0;padding:0;}
-    #form-list li div           {margin:0;padding:10px;border-radius:4px;background:#f3f3f3;}
-    #form-list li div > .input  {float:left;}
+    #form-list li div           {margin:0;padding:10px;background:#e9e9e9;}
     #form-list li input         {padding:10px;font-size:1.25em;}
-    #form-list li label         {padding-bottom:9px;width:200px;font-size:1.25em !important;color:#696969 !important;display:block;}
-    .hint-inline                {padding:10px 0 0 10px;color:#848484;font-size:12px;max-width:700px;}
+    #form-list li label         {margin-left:10px;padding-bottom:9px;width:200px;font-size:1.25em !important;color:#696969 !important;display:block;}
+    .hint-inline                {padding:10px 0 0 20px;color:#848484;font-size:14px;max-width:700px;}
+
+    #account-info-form #form-list li div > .input  {float:left;width:940px;}
+    #account-info-form input    {margin-left:10px;width:430px;}
+    
+    #account-password-form #form-list li div > .input  {float:left;width:auto;}
+    #account-password-form input {margin-left:10px;width:260px;}
+
+    #account-billing > div      {margin:0;padding:10px;background:#eaeaea;}
+    .billing-info               {margin-top:10px;background:#e3e3e3;color:#515151;text-align:center;float:left;}
+    .billing-info p             {font-size:14px;font-weight:600;}
+    .billing-info h1            {color:#313131;}
+
+    #delete-account             {margin:36px 0;}
 
 /*  --------------------------------------------------
     Content Blocks
@@ -720,6 +732,12 @@
         width:16px;
         height:18px;
     }
+    .full {
+        width:100%;
+        margin:18px 0;
+        padding:18px 0;
+        text-align:center;
+    }
     .large {
         width:223px;
     }
@@ -727,7 +745,10 @@
         width:150px;
         padding:10px;
     }
-
+    .small {
+        width:90px;
+        padding:10px 20px;
+    }
 
 
     

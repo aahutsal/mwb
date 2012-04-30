@@ -13,7 +13,7 @@
   </nav>
 
   <h1 class="section-header">Account Settings</h1>
-  <a href="dashboard.html" class="btn-flat light-grey medium pull-right"><i class="icon-arrow-left"></i>&nbsp;&nbsp;Dashboard</a>
+  <a href="dashboard.html" class="btn-flat light-grey medium pull-right"><i class="icon-home"></i>&nbsp;&nbsp;Dashboard</a>
 </section><!-- /section-head -->
 
 <section id="account-settings" class="span15">
@@ -24,31 +24,24 @@
         <!-- ===== Personal Information ====== -->
         <div class="clearfix">
           <div class="input">
+            <label>Your Name</label>
             <input type="text" class="span5 {validate: {required:true}}" id="first-name" size="30" name="first-name" placeholder="First Name"></input>
             <input type="text" class="span5 {validate: {required:true}}" id="last-name" size="30" name="last-name" placeholder="Last Name"></input>
           </div>
+            <br />
+          <div class="input">
+            <label>Email Address</label>
+            <input type="text" id="primary-email-address" size="30" name="primary-email-address" class="span5 {validate: {required:true, email:true}}" placeholder="you@youremail.com"></input>
+
+            <input type="text" id="second-email-address" size="30" name="second-email-address" class="span5 {validate: {required:true, email:true}}" placeholder="you@youremailtoo.com"></input>
+          </div>
+          <p class="hint-inline">You will receive noticifations about your account at this address.</p>
+          <submit id="account-email-submit" class="btn-flat green full"><i class="icon-ok icon-white"></i>Save</submit>
         </div><!-- /clearfix -->
       </li> 
     </ul>
   </form>
   
-  <form id="account-email-form" class="span13 form-inline account-settings-form" name="account-email">
-    <h3>Email Settings</h3>
-    <ul id="form-list">
-      <li>
-        <!-- ===== EMAIL ADDRESS ====== -->
-        <div class="clearfix">
-          <div class="input">
-            <input type="text" id="primary-email-address" size="30" name="primary-email-address" class="span5 {validate: {required:true, email:true}}" placeholder="you@youremail.com"></input>
-
-            <input type="text" id="second-email-address" size="30" name="second-email-address" class="span5 {validate: {required:true, email:true}}" placeholder="you@youremailtoo.com"></input>
-          </div>
-          <p class="hint-inline">You can add another email address. This is helpful in case you lose access to your main email account.</p>
-        </div><!-- /clearfix -->
-      </li>
-    </ul>
-  </form>
-      
   <form id="account-password-form" class="span13 form-inline account-settings-form" name="account-password">
     <h3>Password Settings</h3>
     <ul id="form-list">
@@ -57,27 +50,40 @@
         <div class="clearfix">
           <div class="input">
             <label for="password">Current Password</label>
-            <input type="password" id="password" size="30" name="password" class="span5 {validate: {required:true,minlength:6}}"></input>
+            <input type="password" id="password" size="30" name="password" class="span3 {validate: {required:true,minlength:6}}"></input>
           </div>
 
           <div class="input">
-            <label for="passwordConfirm">Confirm Password</label>
-            <input type="password" id="passwordConfirm" size="30" name="passwordConfirm" class="span5 {validate: {required:true, equalTo:'#password'}}"></input>
+            <label for="passwordNew">New Password</label>
+            <input type="password" id="passwordNew" size="30" name="passwordNew" class="span3 {validate: {required:true,minlength:6}}"></input>
           </div>
+
+          <div class="input">
+            <label for="passwordConfirm">Confirm New Password</label>
+            <input type="password" id="passwordConfirm" size="30" name="passwordConfirm" class="span3 {validate: {required:true, equalTo:'#password'}}"></input>
+          </div>
+          <p class="hint-inline">Password must be at least 6 characters long, numbers and letters only (no spaces, or special symbols).</p>
+          <p class="hint-inline"><a id="recover-password" href="">Forgot your password?</a></p>
+        <submit id="account-pass-submit" class="btn-flat green full"><i class="icon-ok icon-white"></i>Save</submit>
         </div><!-- /clearfix -->
-        <p class="hint-inline">Password must be at least 6 characters long, numbers and letters only (no spaces, or special symbols).</p>
       </li>
-      <li>
-          <!-- ===== Change Password ====== -->
-          <div class="clearfix">
-            <p><a id="change-password" href="">Would you like to change your password?</a></p>
-            <p><a id="recover-password" href="">Forget your password?</a></p>
-          </div>
-        </li>
     </ul>
   </form>
 
-  <div class="span13">
-    <a id="delete-account" class="btn-flat red span13" href=""><i class="icon-warning-sign icon-white"></i>&nbsp;&nbsp;Delete Account</a>
+  <div id="account-billing" class="span13 account-settings-form">
+    <h3>Billing</h3>
+    <!-- ===== BILLING ====== -->
+    <div class="clearfix">
+      <div class="billing-info full">
+        <p>Your free trial ends in</p>
+        <h1>14 days</h1>
+        <p>Subscribe now for only $10 a month.</p>
+      </div>
+      <a id="account-pass-submit" class="btn-flat blue full" href="checkout.html">Subscribe with PayPal</a>
+    </div><!-- /clearfix -->
   </div>
+
+<div class="span13">
+  <a id="delete-account" class="btn-flat red full" href=""><i class="icon-warning-sign icon-white"></i>&nbsp;&nbsp;Delete Account</a>
+</div>
 </section><!-- /dashboard -->
