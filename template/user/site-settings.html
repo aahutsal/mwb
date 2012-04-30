@@ -1,0 +1,86 @@
+<section id="section-head" class="row">
+  <nav id="dashnav" class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <ul id="dashboard-nav" class="nav">
+          <li><p class="navbar-text"><i class="icon-comment icon-white"></i>&nbsp;&nbsp;10 Messages</p></li>
+          <li><p class="navbar-text"><i class="icon-eye-open icon-white"></i>&nbsp;&nbsp;101 visitors</p></li>
+          <li><p class="navbar-text billing-date">May 03, 2012</p></li>
+          <li class="pull-right"><a href="account-settings.html"><i class="icon-user icon-white"></i>&nbsp;&nbsp;Account Settings</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <h1 class="section-header">Discount Cabinet Designs<br /><small>Site Settings</small></h1>
+  <a href="dashboard.html" class="btn-flat light-grey medium pull-right"><i class="icon-home"></i>&nbsp;&nbsp;Dashboard</a>
+</section><!-- /section-head -->
+
+<section id="site-settings" class="span15">
+  <div id="site-info"  class="row">
+    <form class="span8 form-inline site-settings-form" name="site-info-form">
+      <h3>Site Information</h3>
+      <ul id="form-list">
+        <li>
+          <!-- ===== Personal Information ====== -->
+          <div class="clearfix">
+            <div class="input">
+              <label>Site Name</label>
+              <input type="text" class="span7 {validate: {required:true}}" id="site-name" size="30" name="site-name" placeholder="Website Name"></input>
+            </div>
+            <br />
+            <div class="input">
+              <label>Site Description</label>
+              <textarea type="text" id="site-description" name="site-description" class="span7" placeholder="200 characters..."></textarea>
+            </div>
+            <br />
+            <div class="input">
+              <label>Time Zone</label>
+              <select class="span7" name="time-zone">
+                <option>[GMT-10] Hawaii</option>
+                <option>[GMT-09] Alaska</option>
+                <option>[GMT-08] Pacific Time</option>
+                <option>[GMT-07] Mountain Time</option>
+                <option>[GMT-06] Central Time</option>
+                <option>[GMT-05] Eastern Time</option>
+              </select>
+            </div>
+            <submit id="site-info-submit" class="btn-flat green full"><i class="icon-ok icon-white"></i>Save</submit>
+          </div><!-- /clearfix -->
+        </li> 
+      </ul>
+    </form>
+    <div class="span5 site-help">
+      <h4>Account Settings</h4>
+      <p>Looking for your general account settings and billing information?</p>
+      <p><a href="account-settings.html">Go to Account Settings&nbsp;&nbsp;&rarr;</a></p>
+    </div>
+  </div>
+  
+  <div id="site-domain"  class="row">
+    <form class="span8 form-inline site-settings-form" name="site-domain-form">
+      <h3>Domain Settings</h3>
+      <ul id="form-list">
+        <li>
+          <!-- ===== PASSWORD ====== -->
+          <div class="clearfix">
+            <div class="input">
+              <label>1. Set up your domain.</label>
+            </div>
+
+            <div class="input">
+              <label for="add-domain">2. Add your domain.</label>
+              <input type="text" id="add-domain" size="30" name="add-domain" class="span7 {validate: {required:true}}" placeholder="www.yourdomain.com"></input>
+            </div>
+            <submit id="site-domain-submit" class="btn-flat green full"><i class="icon-ok icon-white"></i>Save</submit>
+          </div><!-- /clearfix -->
+        </li>
+      </ul>
+    </form>
+    <div class="span5 site-help">
+      <h4>Get a Domain</h4>
+      <p>Have a domain already, but need help setting it up to work with ScanShowSell?</p>
+      <p><a href="../support/domains.html">View our help docs&nbsp;&nbsp;&rarr;</a></p>
+    </div>
+  </div>
+</section><!-- /dashboard -->

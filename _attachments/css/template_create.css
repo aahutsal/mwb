@@ -295,7 +295,7 @@
                                 -webkit-transition:all 0.2s ease;
                                 }
     .accordion-btn:hover        {color:#f3f3f3;font-size:16px;font-weight:600;text-shadow:1px 1px 1px rgba(0,0,0,0.5);}
-    .accordion-btn .icon-chevron-down {margin-left:10px;background-position:-313px -116px;}
+    .accordion-btn .icon-chevron-down {margin-right:10px;background-position:-313px -116px;}
     .accordion-content          { 
                                 padding:20px;
                                 width:940px;
@@ -403,8 +403,31 @@
     .billing-info               {margin-top:10px;background:#e3e3e3;color:#515151;text-align:center;float:left;}
     .billing-info p             {font-size:14px;font-weight:600;}
     .billing-info h1            {color:#313131;}
+    .features-list              {margin-top:5px;padding-left:13px;}
+    .features-list li:first-child  {margin-left:-13px;list-style:none;color:#393939;}
+    .features-list li           {color:#696969;}
 
     #delete-account             {margin:36px 0;}
+
+/*  --------------------------------------------------
+    Site Settings Styles
+    -------------------------------------------------- */
+
+    #site-settings              {margin-left:0;padding-top:18px;background-color:#f9f9f9;}
+    #site-info,
+    #site-domain                {margin-left:0;}
+    .site-settings-form         {margin-top:18px;}
+    .site-settings-form h3      {margin-bottom:9px;color:#494949;text-shadow:none;}
+    #form-list                  {list-style: none;margin:0;padding:0;}
+    #form-list li               {margin:0 0 18px 0;padding:0;}
+    #form-list li div           {margin:0;padding:10px;background:#e9e9e9;}
+    #form-list li input         {padding:10px;font-size:1.25em;}
+    #form-list li label         {margin-left:10px;padding-bottom:9px;width:200px;font-size:1.25em !important;color:#696969 !important;display:block;}
+    .site-help                  {margin:54px 0 0 20px;padding:10px;background:#393939;color:#d9d9d9 !important;width:340px;float:left;}
+    .site-help h4               {margin-bottom:9px;color:#f3f3f3;}
+    .site-help a                {color:#82B4FF;}
+    .site-help a:hover          {color:#0066ff;}
+    .hint-inline                {padding:10px 0 0 20px;color:#848484;font-size:14px;max-width:700px;}
 
 /*  --------------------------------------------------
     Content Blocks
