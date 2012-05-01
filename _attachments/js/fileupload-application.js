@@ -36,7 +36,11 @@ $(function () {
         .bind('fileuploaddone', function(e, data) {
             var resp = JSON.parse(data.jqXHR.responseText)
             if(resp.ok){
-                data.result = []
+                data.result = _.clone(data.files);
+                $(data.result).each(function(idx, it){
+                    it.thumbnail_url = $(data.form).attr("action") + "/" + it.name;
+                })
+                /*
                 $("p.file-name").each(function(){
                     var fileName = $(this).text()
                     data.result.push({
@@ -46,6 +50,7 @@ $(function () {
                         type:  "image/jpeg"
                     })
                 });
+                */
             }
             // FIXME complete validation of Phot caption elements
         })

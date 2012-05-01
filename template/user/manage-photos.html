@@ -23,7 +23,7 @@
 <!-- MANAGE PICTURES -->
 <section id="upload-photo-wrap" class="span8">
   <!--  =====  UPLOAD BUTTON BAR  =====  -->
-  <form id="fileupload" method="POST" enctype="multipart/form-data">
+  <form id="fileupload" name="fileupload" method="POST" enctype="multipart/form-data">
     <div class="fileupload-buttonbar">
       <span class="btn-flat green fileinput-button">
         <span><i class="icon-picture icon-white"></i>&nbsp;&nbsp;Add Photos</span>
@@ -91,7 +91,7 @@
         <div class="clearfix">
     	  <label for="caption">File name:</label>
           <p class="file-name"><%= file.name %></p>
-          <input type="hidden" name="file-name" value="<%= file.name %>" />
+          <!-- <input type="hidden" name="file-name" value="<%= file.name %>" /> -->
           <p class="file-size"> <%= formatFileSize(file.size) %></p>
     	  <label for="caption">Photo caption</label>
       	  <div class="input">

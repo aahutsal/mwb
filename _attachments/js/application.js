@@ -124,9 +124,9 @@ $(function(){
             "click a.delete:contains('Remove photo')": function(e){
                 var model = Websites.where({_id: websiteId(website_name)})[0];
                 if(model){
-                    var form = $(e.target).closest("form")
-                    var fileName = form.find("input[type=hidden][name=file-name]").val();
-                    form.closest("div.#photo-panel").remove();
+                    var div = $(e.target).parents("div.photo-panel")
+                    var fileName = div.find("p.file-name").text();
+                    div.remove();
                     delete model.get("_attachments")[fileName];
                     model.save();
                 }                
