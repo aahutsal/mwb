@@ -1,41 +1,25 @@
-<section id="section-head" class="row">
-  <h1 class="section-header">Manage&nbsp;:&nbsp;<span class="current">Contact Information</span></h1>
-  <div id="site-manager" class="span4">
-    <ul id="site-manager-menu" class="nav pull-right">
-      <li class="dropdown" data-dropdown="dropdown">
-        <a href="#" id="site-toggle" class="dropdown-toggle website-name" style="font-size:1em;font-weight:600;">Currently Editing:<span class="caret"></span></a>
-        <ul id="site-manager-dropdown" class="dropdown-menu">
-          <li class="divider"></li>
-          <li><a class="link-site manage" href="create.html"><i class="icon-plus"></i>&nbsp;Create New Site</a></li>
-        </ul><!-- /site-manager-dropdown -->
-        </li>
-    </ul><!-- /site-manager-menu -->
-  </div><!-- /span4 -->
-</section><!-- /section-head -->
-
-
-<section id="profile" class="span8">
+<section id="profile" class="span7">
   <!--  =====  COMPANY PROFILE  =====  -->
   <div id="company-profile">
-    <h4>About Us</h4>
+    <h3>About Us</h3>
     <p class="hint-inline">Required fields denoted with a ' * '.</p>
     <form id="company-profile-form" name="company-profile">
       <div class="clearfix">
         <label>Company Name *</label>
         <div class="input">
-          <input name="company-name" type="text" placeholder="Company Name" class="span6 {validate: {required:true}}" />
+          <input name="company-name" type="text" placeholder="Company Name" class="wizard-lg {validate: {required:true}}" />
         </div>
       </div><!-- /clearfix -->
       <div class="clearfix">
         <label>Slogan/Tagline</label>
         <div class="input">
-          <input name="slogan" type="text" placeholder="Slogan" title="Remember to keep it simple. Try something like 'Great service, fast'."  class="span6" />
+          <input name="slogan" type="text" placeholder="Slogan" title="Remember to keep it simple. Try something like 'Great service, fast'."  class="wizard-lg" />
         </div>
       </div><!-- /clearfix -->
       <div class="clearfix">
         <label>Description</label>
         <div class="input">
-          <textarea name="description" rows="5" placeholder="Here you can briefly describe your company."  class="span6 {validation: {maxlength:200}}" ></textarea>
+          <textarea name="description" rows="5" placeholder="Here you can briefly describe your company."  class="wizard-lg {validation: {maxlength:200}}" ></textarea>
           <p class="hint-inline">Maximum 200 characters.</p>
         </div>
       </div>  <!-- /clearfix -->
@@ -44,13 +28,13 @@
   
   <!--  =====  CONTACT INFORMATION  =====  -->
   <div id="contact-information">
-    <h4>Contact Information</h4>
+    <h3>Contact Information</h3>
     <p class="hint-inline">All fields required.</p>
     <form id="contact-information-form" name="contact-information">
       <div class="clearfix">
         <label>Street Address</label>
         <div class="input">
-          <input name="street-address" type="text" placeholder="123 Peachtree Street" title="This is the address you used when you registered your business." class="large {validate: {required:true}}"/>
+          <input name="street-address" type="text" placeholder="123 Peachtree Street" title="This is the address you used when you registered your business." class="wizard-lg {validate: {required:true}}"/>
         </div>
       </div><!-- /clearfix -->
       <div class="clearfix">
@@ -62,13 +46,13 @@
       <div class="clearfix">
         <label>City</label>
         <div class="input">
-          <input name="city" type="text" placeholder="Anytown" class="small {validate: {required:true}}"/>
+          <input name="city" type="text" placeholder="Anytown" class="wizard-lg {validate: {required:true}}"/>
         </div>
       </div><!-- /clearfix -->
       <div class="clearfix">
         <label>State</label>
         <div class="input">
-          <select class="small" name="state">
+          <select class="wizard-lg" name="state">
             <option>AL</option>
             <option>AR</option>
             <option>DE</option>
@@ -86,12 +70,12 @@
       <div class="clearfix">
         <label>Email</label>
         <div class="input">
-          <input name="email" type="text" placeholder="you@yourcompany.com" title="Who is the primary contact?"  class="large {validate: {required:true}}" />
+          <input name="email" type="text" placeholder="you@yourcompany.com" title="Who is the primary contact?"  class="wizard-lg {validate: {required:true}}" />
         </div>
       </div><!-- /clearfix -->
     </form>
   </div><!-- /contact-information -->
-</section>  <!--/profile-form span10 -->
+</section>  <!--/profile span7 -->
 
 
 {{ sidebar['profile'] }} 
