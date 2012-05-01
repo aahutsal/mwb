@@ -13,7 +13,7 @@ errWebsiteName = function(){
     $(".tabs a[href$='#start-website']").click(); // switching to manage-fields tab
     $("#nameAlert p").text("You should assign some name to your webiste");
     $("#nameAlert").fadeIn();
-    $("#websiteName").focus();
+    $("#website-name").focus();
 }
 // click BINDINGS
 var click_bindings = {
@@ -40,7 +40,7 @@ var click_bindings = {
         $.initFileUpload()
     },
     "#new-btn": function(){ 
-        websiteName = $("#websiteName").val().replace(/\s/g,'-')
+        websiteName = $("#website-name").val().replace(/\s/g,'-')
 
         if(!websiteName){
             errWebsiteName()
@@ -78,7 +78,7 @@ var click_bindings = {
             }
         })
         */
-        $("#preview-and-publish form input[name='websiteName']").val(websiteName)
+        $("#preview-and-publish form input[name='website-name']").val(websiteName)
         $("#preview-and-publish form").submit();
     }
 }

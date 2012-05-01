@@ -48,23 +48,6 @@ new_hash = function(){
 
 }
 
-createWebsiteModel = function(wsName){                
-    var id = websiteId(wsName);
-    var model = {
-        _id: id,
-        owner: username
-    }
-    Websites.create(model,{
-        success:function(model){
-            console.log('Created', model)
-        },
-        error:function(error){
-            console.log('Error', error)
-        }
-    })
-
-}
-
 $(window).bind("hashchange", new_hash)
 
 
@@ -109,21 +92,20 @@ $(function(){
         console.log("Website removed:", model.id);
     })
 
-    $("#websiteName").val(window.location.hash.replace(/#!/g,''))
 
 
     WebsiteView = Backbone.View.extend({
         el: $("body"), 
 
         events: {
-            "blur #websiteName": function(e){
+            "blur #website-name": function(e){
                 var a = $(e.target).valid();
                 if($("#new-btn").length)
                     $("#new-btn").attr("href", 
                                        $("#new-btn").attr("href").replace(/#.*/g, '') + "#!" + $(e.target).val());
             },
             "click #new-btn": function(e){
-                createWebsiteModel($("#websiteName").val())
+                createWebsiteModel($("#website-name").val())
             },
 
             // TESTME: this block of the code require more testing
@@ -138,36 +120,13 @@ $(function(){
                 }
             },
             "click button.btn.success:contains('Build')": function(e){
-                var userProfile = $(e.target).closest("form").serializeForms();
-                userProfile = userProfile['registerForm']
-                var userDoc = {
-                    name: userProfile.emailAddress.replace(/@.*/gi, ''),
-                    email: userProfile.emailAddress,
-                    roles: ["user"]
-                }
-                $.couch.signup(userDoc, userProfile.password, {
-                    success: function(){
-                        // registration successful, moving to next page
-                        $.couch.login({
-                            name: username = userDoc.name,
-                            password: userProfile.password,
-                            success: function(){
-                                createWebsiteModel(userProfile.websiteName);
-                                window.location.replace("mwb/wizard.html" + getHash($("#websiteName").val()));
-                            }
-                        })
-                    }
-                });
-                e.stopPropagation();
-                e.preventDefault();
-                return true;
             },
             "click a.delete:contains('Remove photo')": function(e){
                 var model = Websites.where({_id: websiteId(website_name)})[0];
                 if(model){
-                    var form = $(e.target).closest("form")
-                    var fileName = form.find("input[type=hidden][name=file-name]").val();
-                    form.closest("div.#photo-panel").remove();
+                    var div = $(e.target).parents("div.photo-panel")
+                    var fileName = div.find("p.file-name").text();
+                    div.remove();
                     delete model.get("_attachments")[fileName];
                     model.save();
                 }                

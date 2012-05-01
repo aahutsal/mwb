@@ -1,5 +1,33 @@
 $(function () {
 
+    $("#website-name").val(window.location.hash.replace(/#!/g,''))
+
+    // registration stuff
+    $("form#registerForm").submit(function(e){
+        var userProfile = $(this).serializeForms();
+        userProfile = userProfile['registerForm']
+        var userDoc = {
+            name: userProfile.emailAddress.replace(/@.*/gi, ''),
+            email: userProfile.emailAddress
+        }
+        $.couch.signup(userDoc, userProfile.password, {
+            success: function(){
+                // registration successful, moving to next page
+                $.couch.login({
+                    name: username = userDoc.name,
+                    password: userProfile.password,
+                    success: function(){
+                        createWebsiteModel(userProfile["website-name"]);
+                        window.location.replace($(e.target).attr("action") + getHash($("#website-name").val()));
+                    }
+                })
+            }
+        });
+        e.stopPropagation();
+        e.preventDefault();
+        return true;
+    })
+
     $(".do-next").live("click", function(){
         // if Next: button clicked, emulating tab click
         $("ul[data-tabs] li > a[href=" + $(this).attr("href") + "]").click();

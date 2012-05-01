@@ -23,7 +23,7 @@
 <!-- MANAGE PICTURES -->
 <section id="upload-photo-wrap" class="span8">
   <!--  =====  UPLOAD BUTTON BAR  =====  -->
-  <form id="fileupload" method="POST" enctype="multipart/form-data">
+  <form id="fileupload" name="fileupload" method="POST" enctype="multipart/form-data">
     <div class="fileupload-buttonbar">
       <span class="btn-flat green fileinput-button">
         <span><i class="icon-picture icon-white"></i>&nbsp;&nbsp;Add Photos</span>
@@ -91,7 +91,7 @@
         <div class="clearfix">
     	  <label for="caption">File name:</label>
           <p class="file-name"><%= file.name %></p>
-          <input type="hidden" name="file-name" value="<%= file.name %>" />
+          <!-- <input type="hidden" name="file-name" value="<%= file.name %>" /> -->
           <p class="file-size"> <%= formatFileSize(file.size) %></p>
     	  <label for="caption">Photo caption</label>
       	  <div class="input">
@@ -118,6 +118,7 @@
 <script src="../js/jquery.iframe-transport.js"></script>
 <script src="../js/jquery.fileupload.js"></script>
 <script src="../js/jquery.fileupload-ui.js"></script>
+<script src="../_show/context"></script>
 <script src="../js/fileupload-application.js"></script>
 <!-- The XDomainRequest Transport is included for cross-domain file deletion for IE8+ -->
 <!--[if gte IE 8]><script src="cors/jquery.xdr-transport.js"></script><![endif]-->

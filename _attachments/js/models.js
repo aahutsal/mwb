@@ -1,7 +1,23 @@
-// trying to dynamically determine dbname and ddoc
-var path = unescape(document.location.pathname).split('/');
-//var ddoc = path[3], dbname = path[1]
-var ddoc = 'mwb', dbname = 'mwb'
+// trying to dynamically determine dbname and ddoc, using couchapp_context
+var ddoc = document.couchapp_context.ddoc, dbname = document.couchapp_context.dbname
+
+
+createWebsiteModel = function(wsName){                
+    var id = websiteId(wsName);
+    var model = {
+        _id: id,
+        owner: username
+    }
+    Websites.create(model,{
+        success:function(model){
+            console.log('Created', model)
+        },
+        error:function(error){
+            console.log('Error', error)
+        }
+    })
+
+}
 
 $(function(){
 

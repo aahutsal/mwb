@@ -1,11 +1,10 @@
-
 <body>
   <div class="container">
     <div id="panel-wrap">
       <div id="panel">
         <div class="row">
 	  <header>
-	    <a href="http://www.scanshowsell.com"><img src="images/title_med.png" alt="ScanShowSell.com" border="0" /></a>
+	    <a href="http://www.scanshowsell.com"><img src="images/title_med.png" alt="ScanShowSell.com"/></a>
 	    <h1 class="pull-right">Register Now</h1>
 	  </header>
 	</div>
@@ -17,43 +16,30 @@
 	      <h5>Build, customize and host a beautiful mobile website with us - for free. No payment necessary, cancel anytime.</h5>
 	    </hgroup>
 	    
-	    <form id="registerForm" name="registerForm">
+	    <form id="registerForm" name="registerForm" action="wizard.html">
 	      <ul id="formList">
 	        <li>
 	          <!-- ===== WEBSITE NAME ====== -->
 	          <div class="clearfix">
-	            <label for="websiteName">Website name</label>
+	            <label for="website-name">Website name</label>
 	            <div class="input">
-	              <input type="text" class="span7" id="websiteName" size="30" name="websiteName" rel="twipsy" title="This will part of your website address. Choose carefully as you will not be able to change this later." placeholder="Your Site Name"></input>
+	              <input type="text" class="span7" id="website-name" size="30" name="website-name" title="This will part of your website address. Choose carefully as you will not be able to change this later." placeholder="Your Site Name"/>
 	            </div>
 	          </div><!-- /clearfix -->
 	          <p class="hint-inline">This will also be used as your website's address. (Example: www.scanshowsell.com/m/mymobilewebsitename )</p>
 	        </li> 
-	        
-	        <!-- ===== WEBSITE URL ======
-	             <li> 
-	               <div class="clearfix">
-	                 <label for="websiteURL">Website URL</label>
-	                 <div class="input">
-	                   <input type="text" class="span7 alert" id="websiteURL" size="30" name="websiteURL" rel="twipsy" title="Example: bobsplumbing.scanshowsell.com" placeholder="yourwebsite" required></input>
-	                   <span class="help-inline">.scanshowsell.com</span>
-	                 </div>
-	               </div>
-	               <p class="hint-inline">This is your website's address. It can be 3 - 35 characters long (only numbers and letters). Once registered, you can also use your own domain name (ex: wwww.yourdomain.com) at any time.</p>
-	             </li>
-	             -->
-	        
+	        	        
 	        <li>
 	          <!-- ===== EMAIL ADDRESS ====== -->
 	          <div class="clearfix">
 	            <label for="emailAddress">Email Address</label>
 	            <div class="input">
-	              <input type="text" id="emailAddress" size="30" name="emailAddress" class="span7 {validate: {required:true, email:true}}"></input>
+	              <input type="text" id="emailAddress" size="30" name="emailAddress" class="span7 {validate: {required:true, email:true}}"/>
 	            </div>
 
 	            <label for="emailConfirm">Confirm Email</label>
 	            <div class="input">
-	              <input type="text" id="emailConfirm" size="30" name="emailConfirm" class="span7 {validate: {required:true, email:true, equalTo: '#emailAddress'}}" ></input>
+	              <input type="text" id="emailConfirm" size="30" name="emailConfirm" class="span7 {validate: {required:true, email:true, equalTo: '#emailAddress'}}" />
 	            </div>
 	          </div><!-- /clearfix -->
 	          <p class="hint-inline">Your email address will be your login ID.</p>
@@ -64,12 +50,12 @@
 	          <div class="clearfix">
 	            <label for="password">Choose Password</label>
 	            <div class="input">
-	              <input type="password" id="password" size="30" name="password" class="span7 {validate: {required:true,minlength:6}}"></input>
+	              <input type="password" id="password" size="30" name="password" class="span7 {validate: {required:true,minlength:6}}"/>
 	            </div>
 
 	            <label for="passwordConfirm">Confirm Password</label>
 	            <div class="input">
-	              <input type="password" id="passwordConfirm" size="30" name="passwordConfirm" class="span7 {validate: {required:true, equalTo:'#password'}}"></input>
+	              <input type="password" id="passwordConfirm" size="30" name="passwordConfirm" class="span7 {validate: {required:true, equalTo:'#password'}}"/>
 	            </div>
 	          </div><!-- /clearfix -->
 	          <p class="hint-inline">Password must be at least 6 characters long, numbers and letters only (no spaces, or special symbols)..</p>
@@ -78,9 +64,9 @@
 	        <li>
 	          <!-- ===== SPAM ALERT ====== -->
 	          <div class="clearfix">
-	            <label class="spamLabel" for="spamAlert">What is <span id="randomEQ" class="label warning">2&nbsp;&nbsp;+&nbsp;&nbsp;2</span>&nbsp;?</label>
+	            <label class="spamLabel" for="areYouHuman">What is <span id="randomEQ" class="label warning">2&nbsp;&nbsp;+&nbsp;&nbsp;2</span>&nbsp;?</label>
 	            <div class="input">
-	              <input type="text" id="areYouHuman" name="areYouHuman" class="mini {validate: {required:true}}"></input>
+	              <input type="text" id="areYouHuman" name="areYouHuman" class="mini {validate: {required:true}}"/>
 	            </div>
 	          </div><!-- /clearfix -->
 	          <p class="hint-inline">We're just making sure you're a human and not a spam-bot.</p>
@@ -91,7 +77,7 @@
 	          <div class="clearfix">
 	            <input type="checkbox" name="tosAgree" value="yes" class="{validate: {required:true}}"/>
 	            <span class="tosAgree">I agree to the <a href="#">Terms of Service</a></span>
-	            <a href="wizard.html" class="pull-right"><button class="btn large success">Build your mobile website&nbsp;&nbsp;&rarr;</button></a>
+	            <a href="wizard.html" class="pull-right"><button type="submit" class="btn large success">Build your mobile website&nbsp;&nbsp;&rarr;</button></a>
 	          </div><!-- /clearfix -->
 	        </li>
 	      </ul>

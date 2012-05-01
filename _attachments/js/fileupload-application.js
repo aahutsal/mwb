@@ -23,9 +23,8 @@ $(function () {
         singleFileUploads: false
     });
 
-    var path = unescape(document.location.pathname).split('/'),
-        design = path[3], dbname = path[1]
 
+    var ddoc = document.couchapp_context.ddoc, dbname = document.couchapp_context.dbname
 
     $('#fileupload')
         .bind('fileuploadsubmit', function (e, data) {
@@ -37,16 +36,10 @@ $(function () {
         .bind('fileuploaddone', function(e, data) {
             var resp = JSON.parse(data.jqXHR.responseText)
             if(resp.ok){
-                data.result = []
-                $("p.file-name").each(function(){
-                    var fileName = $(this).text()
-                    data.result.push({
-                        thumbnail_url: $(data.form).attr("action") + "/" + fileName,
-                        name: fileName,
-                        size:  parseInt($(this).siblings("p.file-size").text()),
-                        type:  "image/jpeg"
-                    })
-                });
+                data.result = _.clone(data.files);
+                $(data.result).each(function(idx, it){
+                    it.thumbnail_url = $(data.form).attr("action") + "/" + it.name;
+                })
             }
             // FIXME complete validation of Phot caption elements
         })
