@@ -17,7 +17,7 @@ $(function () {
                     name: username = userDoc.name,
                     password: userProfile.password,
                     success: function(){
-                        createWebsiteModel(userProfile.websiteName);
+                        createWebsiteModel(userProfile["website-name"]);
                         window.location.replace($(e.target).attr("action") + getHash($("#website-name").val()));
                     }
                 })
