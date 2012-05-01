@@ -40,17 +40,6 @@ $(function () {
                 $(data.result).each(function(idx, it){
                     it.thumbnail_url = $(data.form).attr("action") + "/" + it.name;
                 })
-                /*
-                $("p.file-name").each(function(){
-                    var fileName = $(this).text()
-                    data.result.push({
-                        thumbnail_url: $(data.form).attr("action") + "/" + fileName,
-                        name: fileName,
-                        size:  parseInt($(this).siblings("p.file-size").text()),
-                        type:  "image/jpeg"
-                    })
-                });
-                */
             }
             // FIXME complete validation of Phot caption elements
         })
