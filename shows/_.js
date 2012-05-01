@@ -5,19 +5,19 @@ function(doc, req) {
     // if user is not found,
     // redirecting to manage.html
     /*
-    if((req.userCtx.name == null) && (req.path[req.path.length - 2] != 'mwb'))
-        return {
-            code : 302, // temporarily
-            headers : {
-                "Location" : "/mwb/manage.html"
-            }
-        };
-        */
+      if((req.userCtx.name == null) && (req.path[req.path.length - 2] != 'mwb'))
+      return {
+      code : 302, // temporarily
+      headers : {
+      "Location" : "/mwb/manage.html"
+      }
+      };
+    */
     _ = this._
     // Enables Mustache.js-like templating.    
-     _.templateSettings = {
-         interpolate : /\{\{(.+?)\}\}/g
-     };
+    _.templateSettings = {
+        interpolate : /\{\{(.+?)\}\}/g
+    };
 
     var path = _.rest(req.path, req.path.indexOf('_') + 1)
     

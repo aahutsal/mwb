@@ -23,8 +23,8 @@ $(function () {
         singleFileUploads: false
     });
 
-    var path = unescape(document.location.pathname).split('/'),
-        design = path[3], dbname = path[1]
+    var path = unescape(document.location.pathname).split('/')
+    var ddoc = 'mwb', dbname = 'mwb'
 
 
     $('#fileupload')

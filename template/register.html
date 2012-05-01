@@ -1,4 +1,3 @@
-
 <body>
   <div class="container">
     <div id="panel-wrap">
@@ -17,32 +16,19 @@
 	      <h5>Build, customize and host a beautiful mobile website with us - for free. No payment necessary, cancel anytime.</h5>
 	    </hgroup>
 	    
-	    <form id="registerForm" name="registerForm">
+	    <form id="registerForm" name="registerForm" action="user/wizard.html">
 	      <ul id="formList">
 	        <li>
 	          <!-- ===== WEBSITE NAME ====== -->
 	          <div class="clearfix">
-	            <label for="websiteName">Website name</label>
+	            <label for="website-name">Website name</label>
 	            <div class="input">
-	              <input type="text" class="span7" id="websiteName" size="30" name="websiteName" rel="twipsy" title="This will part of your website address. Choose carefully as you will not be able to change this later." placeholder="Your Site Name"></input>
+	              <input type="text" class="span7" id="website-name" size="30" name="website-name" title="This will part of your website address. Choose carefully as you will not be able to change this later." placeholder="Your Site Name"></input>
 	            </div>
 	          </div><!-- /clearfix -->
 	          <p class="hint-inline">This will also be used as your website's address. (Example: www.scanshowsell.com/m/mymobilewebsitename )</p>
 	        </li> 
-	        
-	        <!-- ===== WEBSITE URL ======
-	             <li> 
-	               <div class="clearfix">
-	                 <label for="websiteURL">Website URL</label>
-	                 <div class="input">
-	                   <input type="text" class="span7 alert" id="websiteURL" size="30" name="websiteURL" rel="twipsy" title="Example: bobsplumbing.scanshowsell.com" placeholder="yourwebsite" required></input>
-	                   <span class="help-inline">.scanshowsell.com</span>
-	                 </div>
-	               </div>
-	               <p class="hint-inline">This is your website's address. It can be 3 - 35 characters long (only numbers and letters). Once registered, you can also use your own domain name (ex: wwww.yourdomain.com) at any time.</p>
-	             </li>
-	             -->
-	        
+	        	        
 	        <li>
 	          <!-- ===== EMAIL ADDRESS ====== -->
 	          <div class="clearfix">
@@ -91,7 +77,7 @@
 	          <div class="clearfix">
 	            <input type="checkbox" name="tosAgree" value="yes" class="{validate: {required:true}}"/>
 	            <span class="tosAgree">I agree to the <a href="#">Terms of Service</a></span>
-	            <a href="wizard.html" class="pull-right"><button class="btn large success">Build your mobile website&nbsp;&nbsp;&rarr;</button></a>
+	            <a href="wizard.html" class="pull-right"><button type="submit" class="btn large success">Build your mobile website&nbsp;&nbsp;&rarr;</button></a>
 	          </div><!-- /clearfix -->
 	        </li>
 	      </ul>
