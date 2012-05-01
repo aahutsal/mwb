@@ -13,7 +13,25 @@
 			We're just a phone call away!
 			</a>
 	    </header>
-      -->	
+	    -->	
+	    <section id="section-head" class="row">
+		  <h1 class="section-header">Manage Your Mobile Site</h1>
+		  <div id="site-manager" class="span5">
+		    <ul id="site-manager-menu" class="nav pull-right">
+		      <li class="dropdown" data-dropdown="dropdown">
+		        <a href="#" id="site-toggle" class="dropdown-toggle website-name" style="font-size:1em;font-weight:600;">Currently Editing:<span class="caret"></span></a>
+		        <ul id="site-manager-dropdown" class="dropdown-menu">
+		          <li class="divider"></li>
+		          <li><a class="link-site" href="create.html"><i class="icon-plus"></i>&nbsp;Create New Site</a></li>
+		          <li class="divider"></li>
+		          <li><a class="link-site" href="site-settings.html"><i class="icon-cog"></i>&nbsp;Site Settings</a></li>
+		          <li><a class="link-site" href="dashboard.html"><i class="icon-home"></i>&nbsp;Dashboard</a></li>
+		          </ul><!-- /site-manager-dropdown -->
+		        </li>
+		    </ul><!-- /site-manager-menu -->
+		  </div><!-- /span5 -->
+		</section><!-- /section-head -->
+		
 	    <div id="body" class="row">
 		    {{ processTemplate(file) }}
 	    </div>
