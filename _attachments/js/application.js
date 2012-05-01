@@ -48,23 +48,6 @@ new_hash = function(){
 
 }
 
-createWebsiteModel = function(wsName){                
-    var id = websiteId(wsName);
-    var model = {
-        _id: id,
-        owner: username
-    }
-    Websites.create(model,{
-        success:function(model){
-            console.log('Created', model)
-        },
-        error:function(error){
-            console.log('Error', error)
-        }
-    })
-
-}
-
 $(window).bind("hashchange", new_hash)
 
 
