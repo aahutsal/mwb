@@ -12,7 +12,7 @@
     </div>
   </nav>
 
-  <h1 class="section-header">Account Settings</h1>
+  <h1 class="section-header">Dee Giarratano<br /><small>Account Settings</small></h1>
   <a href="dashboard.html" class="btn-flat light-grey medium pull-right"><i class="icon-home"></i>&nbsp;&nbsp;Dashboard</a>
 </section><!-- /section-head -->
 
@@ -31,9 +31,9 @@
             <br />
           <div class="input">
             <label>Email Address</label>
-            <input type="text" id="primary-email-address" size="30" name="primary-email-address" class="span5 {validate: {required:true, email:true}}" placeholder="you@youremail.com"></input>
+            <input type="text" id="primary-email-address" size="30" name="primary-email-address" class="span5 {validate: {required:true, email:true}}" placeholder="you@email.com"></input>
 
-            <input type="text" id="second-email-address" size="30" name="second-email-address" class="span5 {validate: {required:true, email:true}}" placeholder="you@youremailtoo.com"></input>
+            <input type="text" id="confirm-email-address" size="30" name="confirm-email-address" class="span5 {validate: {required:true, email:true}}" placeholder="confirm email"></input>
           </div>
           <p class="hint-inline">You will receive noticifations about your account at this address.</p>
           <submit id="account-email-submit" class="btn-flat green full"><i class="icon-ok icon-white"></i>Save</submit>
@@ -74,12 +74,18 @@
     <h3>Billing</h3>
     <!-- ===== BILLING ====== -->
     <div class="clearfix">
-      <div class="billing-info full">
+      <div class="billing-info span6 well">
         <p>Your free trial ends in</p>
         <h1>14 days</h1>
         <p>Subscribe now for only $10 a month.</p>
       </div>
-      <a id="account-pass-submit" class="btn-flat blue full" href="checkout.html">Subscribe with PayPal</a>
+      <ul class="features-list span5">
+        <li><p><strong>By subscribing to a Pro account, you'll be able to:</strong></p>
+        <li>Add an unlimited number of photos</li>
+        <li>Add an unlimited number of services and products</li>
+        <li>Allow potential clients to request an estimate, a consult, or a service call</li>
+      </ul>
+      <a id="account-pass-submit" class="btn-flat blue span5" href="checkout.html">Subscribe with PayPal</a>
     </div><!-- /clearfix -->
   </div>
 
