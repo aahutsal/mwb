@@ -1,7 +1,5 @@
-// trying to dynamically determine dbname and ddoc
-var path = unescape(document.location.pathname).split('/');
-//var ddoc = path[3], dbname = path[1]
-var ddoc = 'mwb', dbname = 'mwb'
+// trying to dynamically determine dbname and ddoc, using couchapp_context
+var ddoc = document.couchapp_context.ddoc, dbname = document.couchapp_context.dbname
 
 $(function(){
 

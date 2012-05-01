@@ -23,9 +23,8 @@ $(function () {
         singleFileUploads: false
     });
 
-    var path = unescape(document.location.pathname).split('/')
-    var ddoc = 'mwb', dbname = 'mwb'
 
+    var ddoc = document.couchapp_context.ddoc, dbname = document.couchapp_context.dbname
 
     $('#fileupload')
         .bind('fileuploadsubmit', function (e, data) {
