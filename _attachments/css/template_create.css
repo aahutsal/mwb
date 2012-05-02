@@ -570,10 +570,6 @@
     .inputs-list li label input		{margin-right:10px;}
     
     /* -- Template Picker -- */
-    #template-picker				{padding-bottom:36px;width:980px;display:inline;float:left;}
-    #template-picker > h4			{margin:18px 20px;}
-    #templateSlider					{margin:0 !important;}
-
     #theme-picker-wrapper  			{margin-left:0;padding:18px 0;border-bottom:1px solid #d3d3d3;}
     #theme-picker                   {margin:0;}
     #theme-picker li 				{background-color:#f3f3f3;margin:0 0 0 10px;padding:10px;box-shadow:0pt 0px 0px 2px rgba(161, 161, 161, 0.35);} 	

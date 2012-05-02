@@ -23,46 +23,75 @@
 
         <div id="wizard" class="tab-content">
           <div class="tab-pane active" id="profile-pane">
+            <hgroup>
+              <h2 class="step">1</h2>
+              <h2>Contact Information</h2>
+            </hgroup>
             {{ processTemplate(context.user['profile']) }}
           </div>  <!-- /tab-pane -->
 
           <div class="tab-pane" id="upload-photos-pane">
+            <hgroup>
+              <h2 class="step">2</h2>
+              <h2>Upload Photos</h2>
+            </hgroup>
             {{ processTemplate(context.user['manage-photos']) }}
           </div>
 
           <div class="tab-pane" id="services-pane">
+            <hgroup>
+              <h2 class="step">3</h2>
+              <h2>Services &amp; Products</h2>
+            </hgroup>
             {{ processTemplate(context.user['services']) }}
           </div>  <!-- /tab-pane -->
 
           <div class="tab-pane" id="service-area-pane">
+            <hgroup>
+              <h2 class="step">4</h2>
+              <h2>Service Areas</h2>
+            </hgroup>
             {{ processTemplate(context.user['service-areas']) }}
           </div>  <!-- /tab-pane -->
 
           <div class="tab-pane" id="optional-pages-pane">
+            <hgroup>
+              <h2 class="step">5</h2>
+              <h2>Optional Pages</h2>
+            </hgroup>
             {{ processTemplate(context.user['optional-pages']) }}
           </div>  <!-- /tab-pane -->
 
           <div class="tab-pane" id="choose-theme-pane">
+            <hgroup>
+              <h2 class="step">6</h2>
+              <h2>Choose A Theme</h2>
+            </hgroup>
             {{ processTemplate(context.user['choose-theme']) }}
           </div>  <!-- /tab-pane -->
           
           <div class="tab-pane" id="prevpub-pane">
             <div id="preview-publish" class="span12">
-              <h4>Preview &amp; Publish</h4>
-              <div id="instructions" class="span5">
-                <h5>Your website is ready to go!</h5>
-                <p>You're now ready to publish your mobile site. To the right is a preview of your site. Be sure to play around with it and double check your information.</p>
-                <br />
-                <input id="publish" class="btn-flat green span5" type="submit" value="Publish &amp; Generate QR Code"/>
-                <br />
-                <img src="http://placehold.it/280&amp;text=YOUR+QR+CODE+HERE" alt="QR code placeholder" />
-              </div>
-              
-              <div id="emulator-wrap" class="span8 offset5">
+              <hgroup>
+                <h2 class="step">7</h2>
+                <h2>Preview &amp; Publish</h2>
+              </hgroup>
+              <div id="emulator-wrap" class="span7">
                 <div id="emulator">
                   <iframe id="emulator-view" src=""></iframe>
                 </div>
               </div><!--/emulator -->
+
+              <div class="sidebar row">
+                <div class="page-tools span3">
+                  <h3>Your website is ready to go!</h3>
+                  <p>You're now ready to publish your mobile site. To the right is a preview of your site. Be sure to play around with it and double check your information.</p>
+                  <br />
+                  <input id="publish" class="btn-flat green span4" type="submit" value="Publish &amp; Generate QR Code"/>
+                  <br />
+                  <img src="http://placehold.it/280&amp;text=YOUR+QR+CODE+HERE" alt="QR code placeholder" />
+                </div>
+              </div><!--/sidebar -->
             </div>  <!--/preview-publish -->
           </div>  <!-- /tab-pane -->
         </div>  <!-- /tab-content -->
