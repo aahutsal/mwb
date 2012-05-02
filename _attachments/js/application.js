@@ -49,6 +49,7 @@ new_hash = function(){
 }
 
 $(window).bind("hashchange", new_hash)
+$(window).bind("pjax:complete", new_hash)
 
 
 $(function(){
