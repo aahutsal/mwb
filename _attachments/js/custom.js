@@ -1,7 +1,7 @@
 $(function () {
     
-    $('a[data-pjax]').pjax({fragment:"#body"});
-    $('#body').live('pjax:error', function(e, xhr, err) {
+    $("a.pjax").pjax({fragment:"#body"});
+    $("#body").live("pjax:error", function(e, xhr, err) {
         //.text('Something went wrong: ' + err)
     })
 
