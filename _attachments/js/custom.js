@@ -1,31 +1,43 @@
 $(function () {
+    
+    $("a.pjax").pjax({fragment:"#body"});
+    $("#body").live("pjax:error", function(e, xhr, err) {
+        //.text('Something went wrong: ' + err)
+    })
+
 
     $("#website-name").val(window.location.hash.replace(/#!/g,''))
 
     // registration stuff
     $("form#registerForm").submit(function(e){
         var userProfile = $(this).serializeForms();
+        if(!userProfile){
+            e.preventDefault();
+            return false;
+        }
         userProfile = userProfile['registerForm']
         var userDoc = {
             name: userProfile.emailAddress.replace(/@.*/gi, ''),
             email: userProfile.emailAddress
         }
         $.couch.signup(userDoc, userProfile.password, {
+            async: false,
             success: function(){
                 // registration successful, moving to next page
                 $.couch.login({
                     name: username = userDoc.name,
                     password: userProfile.password,
                     success: function(){
-                        createWebsiteModel(userProfile["website-name"]);
-                        window.location.replace($(e.target).attr("action") + getHash($("#website-name").val()));
+                        createWebsiteModel(userProfile["website-name"], function(){
+                            window.location.href = $(e.target).attr("action") + getHash($("#website-name").val());
+                        });
                     }
                 })
             }
         });
-        e.stopPropagation();
+
         e.preventDefault();
-        return true;
+        return false;
     })
 
     $(".do-next").live("click", function(){

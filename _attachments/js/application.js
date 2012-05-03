@@ -46,9 +46,17 @@ new_hash = function(){
     $("#site-toggle").text("Currently editing:" + website_name) // FIXME template should be used
     $("#alert-select-website").fadeOut();
 
+    // FIXME this should be uncommented
+    //var dbname = document.couchapp_context.dbname;
+    var dbname = "service"
+    var uri = String.format("http://{0}.scanshowsell.com/m/com.scanshowsell.website:{1}/index.html", dbname, website_name);
+    $("#prevpub-pane img").attr("src", String.format("http://qrcode.kaywa.com/img.php?s=8&d={0}", encodeURIComponent(uri)));
+    $("#emulator-view, #emulator-view-0").attr("src", uri)
+
 }
 
 $(window).bind("hashchange", new_hash)
+$(window).bind("pjax:complete", new_hash)
 
 
 $(function(){

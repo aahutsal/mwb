@@ -2,21 +2,27 @@
 var ddoc = document.couchapp_context.ddoc, dbname = document.couchapp_context.dbname
 
 
-createWebsiteModel = function(wsName){                
+createWebsiteModel = function(wsName, complete){
     var id = websiteId(wsName);
     var model = {
         _id: id,
         owner: username
     }
     Websites.create(model,{
+        async: false,
         success:function(model){
             console.log('Created', model)
+            if(_.isFunction(complete)){
+                complete(model)
+            }
         },
         error:function(error){
             console.log('Error', error)
+            if(_.isFunction(complete)){
+                complete(error)
+            }
         }
     })
-
 }
 
 $(function(){
