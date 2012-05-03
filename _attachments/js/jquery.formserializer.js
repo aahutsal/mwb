@@ -38,8 +38,9 @@ $.fn.extend({
                     result[$(this).attr("name")] = resultMap;
                 }
             });
-
             return result;
+        } else {
+            return null;
         }
     },
     deserializeForms: function(model){
