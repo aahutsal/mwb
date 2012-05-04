@@ -206,10 +206,9 @@
 	.page-tools > h4			{margin-top:-10px;margin-bottom:18px;}
 	.page-tools .page-info		{float:left;width:180px;}
 
-    .btn-group-tools                        {margin-top:9px;padding-top:18px;display:block;float:left;}
-    .btn-group-tools:last-child             {padding:0;border:none;}
-    .btn-group-tools .btn-flat              {margin:0;position:relative;display:block;float:left;}
-    .btn-group-tools .btn-flat:first-child  {margin-right:5px;}
+    .btn-group-tools                        {margin-top:18px;display:block;float:left;}
+    .btn-group-tools .btn-flat              {margin-top:9px;position:relative;display:block;float:left;}
+    .btn-group-tools .btn-flat:first-child  {margin-top:0;}
 	
 	#modal-screen				{top:40% !important;}
 	#modal-screen .modal-body > img			{float:left;margin-right:20px;}
@@ -231,7 +230,7 @@
     
     
     /* -- Photo Uploader -- */
-    #upload-photo-wrap			{margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;border-right:1px solid #d3d3d3;float:left;}
+    #upload-photo-wrap			{margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;float:left;}
     #fileupload					{padding:18px 0;border-bottom:1px solid #d3d3d3;}
     .photo-panel				{margin:18px 0;padding:10px;padding-top:15px;background-color:#e3e3e3;width:540px;display:block;position:relative;float:left;}
     .thumb-wrap					{width:220px;display:inline;float:left;}
@@ -240,12 +239,12 @@
     .photo-buttons				{margin:18px 0;width:100%;display:block;position:relative;}
     
     /* -- Services -- */
-    #services						{margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;border-right:1px solid #d3d3d3;float:left;}
+    #services						{margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;float:left;}
     #services-form					{padding-top:18px;}
     .listServices					{margin:0;list-style:none;}
     
     /* -- Service Areas -- */
-    #service-areas					{margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;border-right:1px solid #d3d3d3;float:left;}
+    #service-areas					{margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;float:left;}
     #service-areas-form				{padding-top:18px;padding-left:0;}
     #service-areas-form input		{margin-top:7px;}
     .listServiceArea				{margin:0;list-style:none;}
@@ -253,23 +252,23 @@
     
     
     /* -- Special Offers -- */
-    #special-offers					{margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;border-right:1px solid #d3d3d3;float:left;}
+    #special-offers					{margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;float:left;}
     #special-offers-form			{padding-top:18px;}
     .listSpecialOffers				{margin:0;list-style:none;}
     
     /* -- Testimonials -- */
-    #testimonials					{margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;border-right:1px solid #d3d3d3;float:left;}
+    #testimonials					{margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;float:left;}
     #testimonials-form				{padding-top:18px;}
     .listFeedback					{margin:0;list-style:none;}
     
     /* -- Credentials -- */
-    #credentials 					{margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;border-right:1px solid #d3d3d3;float:left;}
+    #credentials 					{margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;float:left;}
     #credentials-form				{padding-top:18px;}
     .listCredentials				{margin:0;list-style:none;}
     .listCredentials li				{margin-bottom:18px;}
     
     /* -- Optional Pages -- */
-    #optional-pages					{margin-left:0;padding:18px 0 18px 20px;background-color:#fcfcfc;border-right:1px solid #d3d3d3;float:left;}
+    #optional-pages					{margin-left:0;padding:18px 0 18px 20px;background-color:#fcfcfc;float:left;}
     #optional-pages-form-0			{padding-top:18px;width:560px;float:left;}
     .inputs-list-0					{margin:18px 0;list-style:none;}
     .inputs-list-0 li				{margin-bottom:18px;padding:18px 10px !important;width:540px;border:1px solid #e3e3e3;border-radius:4px;background:#ececec;list-style:none;}
@@ -284,12 +283,15 @@
     /* -- Template Picker -- */
     #themes 						{margin-left:0;}
     #theme-picker-wrapper  			{margin-left:0;padding:18px 0;}
+    #theme-picker-wrapper > .sidebar {margin-left:-10px;margin-bottom:18px;}
+    #theme-picker-wrapper > .sidebar > .page-tools 		{width:400px;}
     #theme-picker                   {margin-left:-30px;}
-    #theme-picker li 				{background-color:#f3f3f3;width:190px;margin:0 0 18px 30px;padding:10px;float:left;box-shadow:0 0 0 3px rgba(161, 161, 161, 0.35);} 	
+    #theme-picker li 				{background-color:#f3f3f3;width:190px;margin:0 0 18px 20px;padding:10px;float:left;box-shadow:0 0 0 3px rgba(161, 161, 161, 0.35);} 	
     #theme-picker li:hover 			{background-color:#fcfcfc;box-shadow:0 0 0 3px #00AAFF;}
     #theme-picker li.active 		{background-color:#fcfcfc;box-shadow:0 0 0 3px #00AAFF;}
     #theme-picker li img			{margin-bottom:14px;}
-    .btnContainer a					{margin-top:9px;padding:18px 0;width:100%;text-align:center;}
+    .btnContainer a					{margin:9px 10px 9px 0;padding:18px 0;width:88px;text-align:center;}
+    .btnContainer a:last-child 		{margin-right:0;}
 
     #theme-preview-wrapper          {padding:18px 0;background:#fcfcfc;}
     #go-prev						{margin-top:-25px;margin-left:150px;}
@@ -307,13 +309,15 @@
         height:980px;
       }
 
-      #emulator-view {
+      #emulator-view-0,
+      #emulator-view-1 {
         position:relative;
         top: 165px;
         left:45px;
         width: 395px;
         height: 592px;
       }
+      .qr-wrap 						{max-width:280px;float:left;}
 
     /* -- Footer -- */
     footer				{margin:0;padding:36px 0;background:#232323;}
@@ -364,7 +368,7 @@
 	  -moz-opacity: 0.65;
 	  opacity: 0.65;
 	}
-	.btn-flat.sidebar	{ text-align:center;width:272px; }
+	.btn-flat.sidebar	{ text-align:left;width:280px;padding:18px 10px; margin-bottom:10px; }
 	.btn-flat.dark-grey {
 	  color:#e3e3e3;
 	  background: #262626;
@@ -456,6 +460,7 @@
     -------------------------------------------------- */ 
     
     #content			{margin-top:54px;margin-left:45px !important;}
+    .skip 				{margin-top:18px;}
     .inline				{margin-left:20px;display:inline;}
     
     
