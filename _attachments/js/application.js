@@ -47,9 +47,7 @@ new_hash = function(){
     $("#alert-select-website").fadeOut();
 
     // FIXME this should be uncommented
-    //var dbname = document.couchapp_context.dbname;
-    var dbname = "service"
-    var uri = String.format("http://{0}.scanshowsell.com/m/com.scanshowsell.website:{1}/index.html", dbname, website_name);
+    var uri = String.format("http://{0}/m/com.scanshowsell.website:{1}/index.html", window.location.host, website_name);
     $("#prevpub-pane img").attr("src", String.format("http://qrcode.kaywa.com/img.php?s=8&d={0}", encodeURIComponent(uri)));
     $("#emulator-view, #emulator-view-0").attr("src", uri)
 
