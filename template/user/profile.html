@@ -1,78 +1,107 @@
 <section id="profile" class="span7">
   <!--  =====  COMPANY PROFILE  =====  -->
   <div id="company-profile">
-    <h3>About Us</h3>
-    <p class="hint-inline">Required fields denoted with a ' * '.</p>
     <form id="company-profile-form" name="company-profile">
+      <p>Required fields denoted with a ' * '.</p>
+      <fieldset id="company-info">
       <div class="clearfix">
-        <label>Company Name *</label>
+        <label>*&nbsp;Company Name</label>
         <div class="input">
           <input name="company-name" type="text" placeholder="Company Name" class="wizard-lg {validate: {required:true}}" />
         </div>
       </div><!-- /clearfix -->
+
       <div class="clearfix">
-        <label>Slogan/Tagline</label>
+        <label>Tagline</label>
         <div class="input">
-          <input name="slogan" type="text" placeholder="Slogan" title="Remember to keep it simple. Try something like 'Great service, fast'."  class="wizard-lg" />
+          <input name="slogan" type="text" placeholder="Slogan" rel="tooltip" title="Remember to keep it simple. Try something like 'Great service, fast'."  class="wizard-lg" />
         </div>
       </div><!-- /clearfix -->
+
       <div class="clearfix">
-        <label>Description</label>
+        <label>*&nbsp;About Us</label>
         <div class="input">
-          <textarea name="description" rows="5" placeholder="Here you can briefly describe your company."  class="wizard-lg {validation: {maxlength:200}}" ></textarea>
-          <p class="hint-inline">Maximum 200 characters.</p>
+          <textarea name="description" rows="5" placeholder="Here you can briefly describe your company."  class="wizard-lg {validation: {maxlength:500}}" ></textarea>
+          <p class="hint-inline">Maximum 500 characters.</p>
         </div>
       </div>  <!-- /clearfix -->
-    </form>
-  </div><!-- /company-profile -->
-  
-  <!--  =====  CONTACT INFORMATION  =====  -->
-  <div id="contact-information">
-    <h3>Contact Information</h3>
-    <p class="hint-inline">All fields required.</p>
-    <form id="contact-information-form" name="contact-information">
+      </fieldset>
+
+      <fieldset id="contact-information">
       <div class="clearfix">
-        <label>Street Address</label>
         <div class="input">
-          <input name="street-address" type="text" placeholder="123 Peachtree Street" title="This is the address you used when you registered your business." class="wizard-lg {validate: {required:true}}"/>
+          <label>Street Address</label>
+          <input name="street-address" type="text" placeholder="123 Peachtree Street" rel="tooltip" title="This is the address you used when you registered your business." class="wizard-lg {validate: {required:true}}"/>
         </div>
       </div><!-- /clearfix -->
+
       <div class="clearfix">
-        <label>Suite Number</label>
+        <div class="row">
+          <div class="input span2">
+            <label>City</label>
+            <input name="city" type="text" placeholder="Anytown" class="span3 {validate: {required:true}}"/>
+          </div>
+          <div class="input span2">
+            <label>State</label>
+            <select class="span2" name="state">
+              <option>AL</option>
+              <option>AR</option>
+              <option>DE</option>
+              <option>FL</option>
+              <option>GA</option>
+            </select>
+          </div>
+          <div class="input span1">
+            <label>ZIP</label>
+            <input name="zip" type="text" class="span1 zip"/>
+          </div>
+        </div><!-- /row -->
+      </div><!-- /clearfix -->
+
+      <div class="clearfix">
         <div class="input">
-          <input class="small" name="suite" type="text" placeholder="13B" />
+          <label>Number Prospects Should Call</label>
+          <input name="telephone-call" type="text" placeholder="(123) 555-6789" rel="tooltip" title="This can be either a landline or mobile number. This can be the same as the number to text." class="wizard-lg {validate: {required:true}}"/>
         </div>
       </div><!-- /clearfix -->
+
       <div class="clearfix">
-        <label>City</label>
         <div class="input">
-          <input name="city" type="text" placeholder="Anytown" class="wizard-lg {validate: {required:true}}"/>
+          <label>Number Prospects Should Text</label>
+          <input name="telephone-text" type="text" placeholder="(123) 555-6789" rel="tooltip" title="A mobile number is prefered. This way, interested parties can either call or send you a text message." class="wizard-lg {validate: {required:true}}"/>
         </div>
       </div><!-- /clearfix -->
-      <div class="clearfix">
-        <label>State</label>
-        <div class="input">
-          <select class="wizard-lg" name="state">
-            <option>AL</option>
-            <option>AR</option>
-            <option>DE</option>
-            <option>FL</option>
-            <option>GA</option>
-          </select>
-        </div>
-      </div><!-- /clearfix -->
-      <div class="clearfix">
-        <label>Telephone</label>
-        <div class="input">
-          <input name="telephone" type="text" placeholder="(123) 555-6789" title="A mobile number is prefered. This way, interested parties can either call or send you a text message." class="small {validate: {required:true}}"/>
-        </div>
-      </div><!-- /clearfix -->
+
       <div class="clearfix">
         <label>Email</label>
         <div class="input">
-          <input name="email" type="text" placeholder="you@yourcompany.com" title="Who is the primary contact?"  class="wizard-lg {validate: {required:true}}" />
+          <input name="email" type="text" placeholder="you@yourcompany.com" rel="tooltip" title="Who is the primary contact?"  class="wizard-lg {validate: {required:true}}" />
         </div>
       </div><!-- /clearfix -->
+      </fieldset>
+      <br />
+      <fieldset id="social-media">
+        <h4>Social Media</h4>
+        <p>If your company has Facebook, Twitter, or YouTube pages, you can place the links here. They will show up as buttons on your <strong>Share</strong> page.</p>
+        <div class="clearfix">
+        <label>Facebook URL</label>
+        <div class="input">
+          <input name="facebook-url" type="text" placeholder="Facebook URL" class="wizard-lg" />
+        </div>
+      </div><!-- /clearfix -->
+      <div class="clearfix">
+        <label>Twitter URL</label>
+        <div class="input">
+          <input name="twitter-url" type="text" placeholder="Twitter URL" class="wizard-lg" />
+        </div>
+      </div><!-- /clearfix -->
+      <div class="clearfix">
+        <label>YouTube URL</label>
+        <div class="input">
+          <input name="youtube-url" type="text" placeholder="YouTube URL" class="wizard-lg" />
+        </div>
+      </div><!-- /clearfix -->
+    </fieldset>
     </form>
   </div><!-- /contact-information -->
 </section>  <!--/profile span7 -->

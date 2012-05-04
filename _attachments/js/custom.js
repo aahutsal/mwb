@@ -126,6 +126,16 @@ $(function () {
             e.preventDefault()
         })
 
+    $("input[rel=tooltip]")
+        .tooltip({
+            delay: 400,
+            placement: 'right',
+            trigger: 'hover'
+        })
+        .click(function(e) {
+            e.preventDefault()
+        })
+
     $('.do-clone-widget').click(function() {
         $(this).parents("form").find("ul > li:last").clone().appendTo($(this).parents("form").find("ul"));
 
