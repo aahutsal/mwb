@@ -60,7 +60,7 @@
 	header h1						{padding-top:24px;}	
 	hgroup 							{margin:24px 20px 18px 20px;}
     hgroup h2 						{display:inline;}
-    h2.step 						{margin-right:10px;padding:10px 20px;width:20px;height:20px;border-radius:40px;background:#494949;color:#f3f3f3;}
+    h2.step 						{margin-right:10px;padding:10px 20px;width:20px;height:20px;border-radius:40px;background:#313131;color:#f3f3f3;}
 
 /*	--------------------------------------------------
 	Forms
@@ -231,7 +231,9 @@
     
     /* -- Photo Uploader -- */
     #upload-photo-wrap			{margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;float:left;}
-    #fileupload					{padding:18px 0;border-bottom:1px solid #d3d3d3;}
+    #fileupload					{margin-top:20px;padding:18px 20px 0 20px;background:rgba(130,180,255,0.5);transition:all 0.5s ease;-moz-transition:all 0.5s ease;-webkit-transition:all 0.5s ease;}
+    #fileupload:hover			{background:rgba(130,180,255,1);}
+
     .photo-panel				{margin:18px 0;padding:10px;padding-top:15px;background-color:#e3e3e3;width:540px;display:block;position:relative;float:left;}
     .thumb-wrap					{width:220px;display:inline;float:left;}
     .photo-form					{margin-left:10px;width:310px;display:inline;float:left;}
