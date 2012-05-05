@@ -118,11 +118,18 @@ $(function(){
             "click .do-save-page": function(e){
                 var model = Websites.where({_id: websiteId(website_name)})[0];
                 if(model){
-                    var form = $(e.target).parents("div.tab-pane,#body.row").find("form").serializeForms();
-                    _.each(form, function(val, key){
-                        model.set(key, _.extend(model.get(key) || {}, val));
-                    })
-                    model.save();
+                    var form = $(e.target).parents("div.tab-pane.active,#body.row").find("form").serializeForms();
+                    if(form){
+                        _.each(form, function(val, key){
+                            model.set(key, _.extend(model.get(key) || {}, val));
+                        })
+                            model.save();
+                    } else {
+                        // form is not valid. Cancelling operation
+                        e.stopPropagation();
+                        e.preventDefault()
+                        return true;
+                    }
                 }
             },
             "click button.btn.success:contains('Build')": function(e){
