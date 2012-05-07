@@ -1,10 +1,9 @@
-<section id="section-head" class="span15">
-  <h1 class="section-header">Create A Mobile Site</h1>
-</section><!-- /section-head -->
-
-<section id="create-website" class="span15">
+<section id="create-website" class="span12">
+  <hgroup>
+    <h2>Create A New Website</h2>
+  </hgroup>
   <form id="create-form">
-    <fieldset id="website-name-form" class="well span6">
+    <fieldset id="website-name-form" class="span11">
       <h3>Site Name</h3>
       <div class="input">
         <span class="help-block">First, you need to pick a name for your website. Choose something that is short and easy to remember.</span>
@@ -17,12 +16,12 @@
       <p>Please give your website a name!</p>
     </div>
     
-    <fieldset id="website-url-form" class="well span6">
+    <fieldset id="website-url-form" class="span11">
       <h3>Site Address</h3>
       <div class="input">
         <span class="help-block">Now, choose a URL that will take visitors to your mobile website. Remember: short and sweet.</span>
-      	<input type="text" id="website-url" name="website-url"  class="{validate: {required: true, uniqueWebsiteName: true} }"/>
-        <span class="help-block">http://www.scanshowsell.com/m/yourwebsitename</span>
+        <label class="site-url">www.scanshowsell.com/m/</label>
+      	<input type="text" id="website-url" name="website-url"  class="uneditable-input {validate: {required: true, uniqueWebsiteName: true} }"/>
       </div>
     </fieldset><!-- /website-url-form -->
     <div class="alert-message error hide" id="url-alert">

@@ -225,21 +225,22 @@
     Create Website Styles
     -------------------------------------------------- */
 
-    #create-website             {margin-left:0;padding:36px 0 18px 0;width:1060px;background-color:#fcfcfc;}
+    #create-website             {margin-left:0;padding:36px 0;background-color:#fcfcfc;}
     #create-website fieldset    {transition:all 0.2s ease;-moz-transition:all 0.2s ease;-webkit-transition:all 0.2s ease;}
     #create-website a [class^="icon-"]      {margin-top:2px;}
-    #new-btn                    {margin-right:33px;}
+    #new-btn                    {margin-right:20px;}
 
-    #website-name-form          {margin-left:27px;height:150px;background:#333;border-radius:4px 0 0 4px;}
+    #website-name-form          {margin-bottom:18px;padding:20px;height:150px;background:#393939;}
     #website-name-form:hover    {background:#0066cc;}
     #website-name-form > h3     {color:#e3e3e3;}
-    #website-name-form input    {padding:10px;}
+    #website-name-form input    {padding:10px;width:440px;}
     #website-name-form .help-block  {color:#e3e3e3;}
 
-    #website-url-form           {margin-left:0;height:150px;background:#333;border-radius:0 4px 4px 0;}
+    #website-url-form           {padding:20px;height:150px;background:#393939;}
     #website-url-form:hover     {background:#0066cc;}
-    #website-url-form > h3      {color:#e3e3e3;}   
-    #website-url-form input     {padding:10px;}
+    #website-url-form > h3      {color:#e3e3e3;}
+    #website-url-form label     {margin:10px;color:#999;font-size:14px;position:absolute;display:inline;}   
+    #website-url-form input     {padding:10px;padding-left:180px;width:270px;}
     #website-url-form .help-block  {color:#e3e3e3;}
 
 /*  --------------------------------------------------
