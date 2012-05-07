@@ -244,53 +244,6 @@
     #website-url-form .help-block  {color:#e3e3e3;}
 
 /*  --------------------------------------------------
-    Page Manager Styles
-    -------------------------------------------------- */
-
-    #manage                     {margin-left:0;padding-top:18px;background-color:#f9f9f9;}
-    #manage ul                  {margin:18px 0 36px -10px;float:left;}
-    #manage ul li               {margin-bottom:36px;margin-left:35px;padding:0;height:160px;box-shadow:0pt 0px 0px 4px rgba(161, 161, 161, 0.35);float:left;display:inline;position:relative;-moz-transition:all 0.2s ease;}
-    #manage ul li:hover         {box-shadow:0pt 0px 0px 4px #00aaff;}
-
-    #alert-select-website       {margin-top:-18px;}
-    
-    
-    /* --  Panel Styles  -- */
-    
-    .panel-wrap                 {background-color:#fcfcfc;}
-    .panel-block                {margin-top:18px;padding:0 20px;width:260px;float:left;}
-    .panel-block img            {margin-right:18px;float:left;}
-    .panel-info a               {color:#0066cc;text-decoration:none;}
-    .panel-info a:hover         {color:#0066ff;}
-    .panel-info a h4            {font-weight:500;font-size:18px;line-height:24px;}
-    .panel-toolbar              {
-                                margin:0;
-                                background: #fcfcfc;
-                                width:100%;
-                                height:36px;
-                                text-align:center;
-                                float:left;
-                                position:absolute;
-                                bottom:0;
-                                }
-    .panel-toolbar a            {border-top:1px solid #d3d3d3;color:#292929;float:left;display:block;text-align:center;height:36px;-moz-transition:all 0.5s ease;}
-    .panel-toolbar a:hover      {background:#f1f1f1;color:#0066ff;cursor:pointer;}
-    a.panel-add-page            {width:100%;font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
-    a.panel-edit-page           {width:49%;border-right:1px solid #e3e3e3;font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
-    a.panel-remove-page         {width:50%;font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
-    a.panel-upgrade             {color:#00cc00;width:100%;font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
-
-    .panel-toolbar a [class^="icon-"]      {margin-top:2px;}
-
-    .added                      {background-color:#3399ff;border:1px solid #1282f2;color:#f3f3f3;box-shadow:0 1px 5px rgba(0,0,0,0.45);}
-    .added h4                   {color:#f3f3f3;}
-    .added a                    {color:#f3f3f3;}
-    
-    .disabled                   {color:#b3b3b3;}
-    .disabled a                 {text-decoration:none;}
-    .disabled h4                {color:#b3b3b3;}
-
-/*  --------------------------------------------------
     Stats Styles
     -------------------------------------------------- */
 
@@ -372,10 +325,62 @@
     .hint-inline                {padding:10px 0 0 20px;color:#848484;font-size:14px;max-width:700px;}
 
 /*  --------------------------------------------------
+    Page Manager Styles
+    -------------------------------------------------- */
+
+    #manage                     {margin-left:0;padding-top:18px;background-color:#f9f9f9;}
+    #manage ul                  {margin:18px 0 36px -10px;float:left;}
+    #manage ul li               {margin-bottom:36px;margin-left:35px;padding:0;height:160px;box-shadow:0pt 0px 0px 4px rgba(161, 161, 161, 0.35);float:left;display:inline;position:relative;-moz-transition:all 0.2s ease;}
+    #manage ul li:hover         {box-shadow:0pt 0px 0px 4px #00aaff;}
+
+    #alert-select-website       {margin-top:-18px;}
+    
+    
+    /* --  Panel Styles  -- */
+    
+    .panel-wrap                 {background-color:#fcfcfc;}
+    .panel-block                {margin-top:18px;padding:0 20px;width:260px;float:left;}
+    .panel-block img            {margin-right:18px;float:left;}
+    .panel-info a               {color:#0066cc;text-decoration:none;}
+    .panel-info a:hover         {color:#0066ff;}
+    .panel-info a h4            {font-weight:500;font-size:18px;line-height:24px;}
+    .panel-toolbar              {
+                                margin:0;
+                                background: #fcfcfc;
+                                width:100%;
+                                height:36px;
+                                text-align:center;
+                                float:left;
+                                position:absolute;
+                                bottom:0;
+                                }
+    .panel-toolbar a            {border-top:1px solid #d3d3d3;color:#292929;float:left;display:block;text-align:center;height:36px;-moz-transition:all 0.5s ease;}
+    .panel-toolbar a:hover      {background:#f1f1f1;color:#0066ff;cursor:pointer;}
+    a.panel-add-page            {width:100%;font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
+    a.panel-edit-page           {width:49%;border-right:1px solid #e3e3e3;font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
+    a.panel-remove-page         {width:50%;font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
+    a.panel-upgrade             {color:#00cc00;width:100%;font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
+
+    .panel-toolbar a [class^="icon-"]      {margin-top:2px;}
+
+    .added                      {background-color:#3399ff;border:1px solid #1282f2;color:#f3f3f3;box-shadow:0 1px 5px rgba(0,0,0,0.45);}
+    .added h4                   {color:#f3f3f3;}
+    .added a                    {color:#f3f3f3;}
+    
+    .disabled                   {color:#b3b3b3;}
+    .disabled a                 {text-decoration:none;}
+    .disabled h4                {color:#b3b3b3;}
+
+/*  --------------------------------------------------
     Content Blocks
     -------------------------------------------------- */ 
     
     #body						{margin-left:0;background:#f9f9f9;}
+    #manager-page               {margin-left:0;padding:0 0 54px 20px;background-color:#fcfcfc;float:left;}
+    #manager-page hgroup        {margin-left:0 !important;}
+    #manager-page input[type="text"] {padding:10px;}
+    #manager-page input.wizard-lg,
+    #manager-page textarea.wizard-lg {padding:10px;width:570px;}
     #instructions				{margin:18px 0;padding:20px;background-color:#e3e3e3;z-index:9999;}
     #information				{margin-top:18px;margin-bottom:18px;}
     .sidebar					{padding-top:18px;width:340px;float:left;}
@@ -432,15 +437,14 @@
     
     /* -- Contact Information -- */
     #profile                    {margin-left:0;padding:18px 0 18px 20px;background-color:#fcfcfc;float:left;}
-    #profile input[type="text"] {padding:10px;}
-    #profile input.wizard-lg,
-    #profile textarea.wizard-lg {padding:10px;width:570px;}
     .zip                        {width:90px !important;}
+    #company-info,
+    #contact-information,
     #social-media               {margin-top:18px;float:left;}
     
     
     /* -- Photo Uploader -- */
-    #upload-photo-wrap          {margin-left:0;padding:0 0 54px 20px;background-color:#fcfcfc;border-right:1px solid #d3d3d3;float:left;}
+    #upload-photo-wrap          {margin-left:0;padding:0 0 54px 20px;background-color:#fcfcfc;float:left;}
     #fileupload                 {margin:18px 20px 0 0;padding:18px 0 0 20px;background:rgba(173,206,255,0.5);transition:all 0.2s ease;-moz-transition:all 0.2s ease;-webkit-transition:all 0.2s ease;-o-transition:all 0.2s ease;}
     #fileupload:hover           {background:rgba(173,206,255,1);}
     .photo-panel                {margin:18px 0;padding:10px;padding-top:15px;background-color:#e3e3e3;width:540px;display:block;position:relative;float:left;}
@@ -456,12 +460,12 @@
             #no-photos p                 {font-size:14px;}
     
     /* -- Services -- */
-    #services                       {margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;border-right:1px solid #d3d3d3;float:left;}
+    #services                       {margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;float:left;}
     #services-form                  {padding-top:18px;}
     .listServices                   {margin:0;list-style:none;}
     
     /* -- Service Areas -- */
-    #service-areas                  {margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;border-right:1px solid #d3d3d3;float:left;}
+    #service-areas                  {margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;float:left;}
     #service-areas-form             {padding-top:18px;padding-left:0;}
     #service-areas-form input       {margin-top:7px;}
     .listServiceArea                {margin:0;list-style:none;}
@@ -469,23 +473,23 @@
     
     
     /* -- Special Offers -- */
-    #special-offers                 {margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;border-right:1px solid #d3d3d3;float:left;}
+    #special-offers                 {margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;float:left;}
     #special-offers-form            {padding-top:18px;}
     .listSpecialOffers              {margin:0;list-style:none;}
     
     /* -- Testimonials -- */
-    #testimonials                   {margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;border-right:1px solid #d3d3d3;float:left;}
+    #testimonials                   {margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;float:left;}
     #testimonials-form              {padding-top:18px;}
     .listFeedback                   {margin:0;list-style:none;}
     
     /* -- Credentials -- */
-    #credentials                    {margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;border-right:1px solid #d3d3d3;float:left;}
+    #credentials                    {margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;float:left;}
     #credentials-form               {padding-top:18px;}
     .listCredentials                {margin:0;list-style:none;}
     .listCredentials li             {margin-bottom:18px;}
     
     /* -- Optional Pages -- */
-    #optional-pages                 {margin-left:0;padding:18px 0 18px 20px;background-color:#fcfcfc;border-right:1px solid #d3d3d3;float:left;}
+    #optional-pages                 {margin-left:0;padding:18px 0 18px 20px;background-color:#fcfcfc;float:left;}
     #optional-pages-form-0          {padding-top:18px;width:560px;float:left;}
     .inputs-list-0                  {margin:18px 0;list-style:none;}
     .inputs-list-0 li               {margin-bottom:18px;padding:18px 10px !important;width:540px;border:1px solid #e3e3e3;border-radius:4px;background:#ececec;list-style:none;}
@@ -732,7 +736,6 @@
       -moz-opacity: 0.65;
       opacity: 0.65;
     }
-    .btn-flat.sidebar   { text-align:left;width:280px;padding:18px 10px; margin-bottom:10px; }
     .btn-flat.dark-grey {
       color:#e3e3e3;
       background: #262626;
@@ -799,6 +802,7 @@
         color:#f3f3f3;
         background:#ff6633;
     }
+    .btn-flat.sidebar   { text-align:left;width:280px;padding:12px 10px; margin-bottom:10px; }
     .full {
         width:100%;
         margin:18px 0;
