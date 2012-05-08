@@ -519,7 +519,7 @@
     #preview-publish                {margin-left:0px;padding-bottom:36px;background-color:#fcfcfc;float:left;}
     #preview-publish input          {border:none;box-shadow:none;}    
     #emulator {
-        background-image:url('../images/iphone_bck.png');
+        background-image:url('../images/mobile-frame.png');
         background-repeat:no-repeat;
         background-attachment:inherit;
         background-position:0px 0px; 
