@@ -16,6 +16,10 @@
 	Page Styles
 	-------------------------------------------------- */
 	
+label.error {
+    color: red;
+    font-weight: bolder;
+}
 	body {
 			background: url('../images/bg_grid-light.png') left top repeat, url('../images/bg_hilite.png') center top no-repeat, rgb(1,50,135);
 			background: url('../images/bg_grid-light.png') left top repeat, url('../images/bg_hilite.png') center top no-repeat, -moz-linear-gradient(top, rgba(1,50,135,1) 0%, rgba(1,30,63,1) 100%);
