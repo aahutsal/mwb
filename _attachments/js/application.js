@@ -111,7 +111,14 @@ $(function(){
                                        $("#new-btn").attr("href").replace(/#.*/g, '') + "#!" + $(e.target).val());
             },
             "click #new-btn": function(e){
-                createWebsiteModel($("#website-name").val())
+                createWebsiteModel($("#website-name").val(), function(model){
+                    if(model.id){
+                        // succesfully created
+                        window.location.hash = "!" + $("#website-name").val()
+                    }                    
+                })
+                e.preventDefault()
+                return true;
             },
 
             // TESTME: this block of the code require more testing
