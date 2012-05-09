@@ -40,10 +40,33 @@
         "from": "_show/*",
         "to": "_show/*"
     },
+
     {
-        "from": "mwb/",
+        "from": "service/",
         "to": "../../"
     },    
+    {
+        "from": "service/*",
+        "to": "../../*"
+    },
+    {
+        "from": "legal/",
+        "to": "../../"
+    },    
+    {
+        "from": "legal/*",
+        "to": "../../*"
+    },
+    {
+        "from": "restaurant/",
+        "to": "../../"
+    },    
+    {
+        "from": "restaurant/*",
+        "to": "../../*"
+    },
+
+
     {
         "from": "_users/*",
         "to": "../../_users/*"
@@ -56,10 +79,6 @@
         "from": "index.html",
         "to": "index.html"
     },
-    {
-        "from": "mwb/*",
-        "to": "../../*"
-    },    
     {
         "from": "*",
         "to": "_show/_/*"
