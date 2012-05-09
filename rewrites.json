@@ -46,7 +46,11 @@
     },
     {
         "from": "",
-        "to": "../../"
+        "to": "index.html"
+    },
+    {
+        "from": "index.html",
+        "to": "index.html"
     },
     {
         "from": "*",
