@@ -23,7 +23,7 @@ $.validator.addMethod("uniqueWebsiteName", function(value, element) {
 $.validator.addMethod("uniqueUserName", function(value, element) { 
     var isSuccess = false;
     $.ajax({
-        url: "/_users/org.couchdb.user:" + value,
+        url: String.format("/_users/org.couchdb.user:{0}", value.split("@")[0]),
         async: false,
         success: function(doc){
             isSuccess = false;
@@ -34,7 +34,6 @@ $.validator.addMethod("uniqueUserName", function(value, element) {
     })
     return this.optional(element) || isSuccess;
 }, "User name is already taken");
-
 
 $.validator.addMethod(
     "regex",
