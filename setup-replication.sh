@@ -1,0 +1,3 @@
+curl -X POST http://admin:secret9022@vm3:5984/_replicate  -d '{"source":"common", "target":"service", "continuous":true}' -H "Content-Type: application/json"
+curl -X POST http://admin:secret9022@vm3:5984/_replicate  -d '{"source":"common", "target":"legal", "continuous":true}' -H "Content-Type: application/json"
+curl -X POST http://admin:secret9022@vm3:5984/_replicate  -d '{"source":"common", "target":"restaurant", "continuous":true}' -H "Content-Type: application/json"
