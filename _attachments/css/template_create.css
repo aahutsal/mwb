@@ -225,69 +225,23 @@
     Create Website Styles
     -------------------------------------------------- */
 
-    #create-website             {margin-left:0;padding:36px 0 18px 0;width:1060px;background-color:#fcfcfc;}
+    #create-website             {margin-left:0;padding:36px 0;background-color:#fcfcfc;}
     #create-website fieldset    {transition:all 0.2s ease;-moz-transition:all 0.2s ease;-webkit-transition:all 0.2s ease;}
     #create-website a [class^="icon-"]      {margin-top:2px;}
-    #new-btn                    {margin-right:33px;}
+    #new-btn                    {margin-right:20px;}
 
-    #website-name-form          {margin-left:27px;height:150px;background:#333;border-radius:4px 0 0 4px;}
+    #website-name-form          {margin-bottom:18px;padding:20px;height:150px;background:#393939;}
     #website-name-form:hover    {background:#0066cc;}
     #website-name-form > h3     {color:#e3e3e3;}
-    #website-name-form input    {padding:10px;}
+    #website-name-form input    {padding:10px;width:440px;}
     #website-name-form .help-block  {color:#e3e3e3;}
 
-    #website-url-form           {margin-left:0;height:150px;background:#333;border-radius:0 4px 4px 0;}
+    #website-url-form           {padding:20px;height:150px;background:#393939;}
     #website-url-form:hover     {background:#0066cc;}
-    #website-url-form > h3      {color:#e3e3e3;}   
-    #website-url-form input     {padding:10px;}
+    #website-url-form > h3      {color:#e3e3e3;}
+    #website-url-form label     {margin:10px;color:#999;font-size:14px;position:absolute;display:inline;}   
+    #website-url-form input     {padding:10px;padding-left:180px;width:270px;}
     #website-url-form .help-block  {color:#e3e3e3;}
-
-/*  --------------------------------------------------
-    Page Manager Styles
-    -------------------------------------------------- */
-
-    #manage                     {margin-left:0;padding-top:18px;background-color:#f9f9f9;}
-    #manage ul                  {margin:18px 0 36px -10px;float:left;}
-    #manage ul li               {margin-bottom:36px;margin-left:35px;padding:0;height:160px;box-shadow:0pt 0px 0px 4px rgba(161, 161, 161, 0.35);float:left;display:inline;position:relative;-moz-transition:all 0.2s ease;}
-    #manage ul li:hover         {box-shadow:0pt 0px 0px 4px #00aaff;}
-
-    #alert-select-website       {margin-top:-18px;}
-    
-    
-    /* --  Panel Styles  -- */
-    
-    .panel-wrap                 {background-color:#fcfcfc;}
-    .panel-block                {margin-top:18px;padding:0 20px;width:260px;float:left;}
-    .panel-block img            {margin-right:18px;float:left;}
-    .panel-info a               {color:#0066cc;text-decoration:none;}
-    .panel-info a:hover         {color:#0066ff;}
-    .panel-info a h4            {font-weight:500;font-size:18px;line-height:24px;}
-    .panel-toolbar              {
-                                margin:0;
-                                background: #fcfcfc;
-                                width:100%;
-                                height:36px;
-                                text-align:center;
-                                float:left;
-                                position:absolute;
-                                bottom:0;
-                                }
-    .panel-toolbar a            {border-top:1px solid #d3d3d3;color:#292929;float:left;display:block;text-align:center;height:36px;-moz-transition:all 0.5s ease;}
-    .panel-toolbar a:hover      {background:#f1f1f1;color:#0066ff;cursor:pointer;}
-    a.panel-add-page            {width:100%;font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
-    a.panel-edit-page           {width:49%;border-right:1px solid #e3e3e3;font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
-    a.panel-remove-page         {width:50%;font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
-    a.panel-upgrade             {color:#00cc00;width:100%;font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
-
-    .panel-toolbar a [class^="icon-"]      {margin-top:2px;}
-
-    .added                      {background-color:#3399ff;border:1px solid #1282f2;color:#f3f3f3;box-shadow:0 1px 5px rgba(0,0,0,0.45);}
-    .added h4                   {color:#f3f3f3;}
-    .added a                    {color:#f3f3f3;}
-    
-    .disabled                   {color:#b3b3b3;}
-    .disabled a                 {text-decoration:none;}
-    .disabled h4                {color:#b3b3b3;}
 
 /*  --------------------------------------------------
     Stats Styles
@@ -371,10 +325,62 @@
     .hint-inline                {padding:10px 0 0 20px;color:#848484;font-size:14px;max-width:700px;}
 
 /*  --------------------------------------------------
+    Page Manager Styles
+    -------------------------------------------------- */
+
+    #manage                     {margin-left:0;padding-top:18px;background-color:#f9f9f9;}
+    #manage ul                  {margin:18px 0 36px -10px;float:left;}
+    #manage ul li               {margin-bottom:36px;margin-left:35px;padding:0;height:160px;box-shadow:0pt 0px 0px 4px rgba(161, 161, 161, 0.35);float:left;display:inline;position:relative;-moz-transition:all 0.2s ease;}
+    #manage ul li:hover         {box-shadow:0pt 0px 0px 4px #00aaff;}
+
+    #alert-select-website       {margin-top:-18px;}
+    
+    
+    /* --  Panel Styles  -- */
+    
+    .panel-wrap                 {background-color:#fcfcfc;}
+    .panel-block                {margin-top:18px;padding:0 20px;width:260px;float:left;}
+    .panel-block img            {margin-right:18px;float:left;}
+    .panel-info a               {color:#0066cc;text-decoration:none;}
+    .panel-info a:hover         {color:#0066ff;}
+    .panel-info a h4            {font-weight:500;font-size:18px;line-height:24px;}
+    .panel-toolbar              {
+                                margin:0;
+                                background: #fcfcfc;
+                                width:100%;
+                                height:36px;
+                                text-align:center;
+                                float:left;
+                                position:absolute;
+                                bottom:0;
+                                }
+    .panel-toolbar a            {border-top:1px solid #d3d3d3;color:#292929;float:left;display:block;text-align:center;height:36px;-moz-transition:all 0.5s ease;}
+    .panel-toolbar a:hover      {background:#f1f1f1;color:#0066ff;cursor:pointer;}
+    a.panel-add-page            {width:100%;font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
+    a.panel-edit-page           {width:49%;border-right:1px solid #e3e3e3;font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
+    a.panel-remove-page         {width:50%;font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
+    a.panel-upgrade             {color:#00cc00;width:100%;font-size:1.25em;font-weight:600;line-height:2.25em;text-decoration:none;}
+
+    .panel-toolbar a [class^="icon-"]      {margin-top:2px;}
+
+    .added                      {background-color:#3399ff;border:1px solid #1282f2;color:#f3f3f3;box-shadow:0 1px 5px rgba(0,0,0,0.45);}
+    .added h4                   {color:#f3f3f3;}
+    .added a                    {color:#f3f3f3;}
+    
+    .disabled                   {color:#b3b3b3;}
+    .disabled a                 {text-decoration:none;}
+    .disabled h4                {color:#b3b3b3;}
+
+/*  --------------------------------------------------
     Content Blocks
     -------------------------------------------------- */ 
     
-    #body						{margin-left:0;background:url('../images/bg_grid-dark.png') left top repeat, #e3e3e3;}
+    #body						{margin-left:0;background:#f9f9f9;}
+    #manager-page               {margin-left:0;padding:0 0 54px 20px;background-color:#fcfcfc;float:left;}
+    #manager-page hgroup        {margin-left:0 !important;}
+    #manager-page input[type="text"] {padding:10px;}
+    #manager-page input.wizard-lg,
+    #manager-page textarea.wizard-lg {padding:10px;width:570px;}
     #instructions				{margin:18px 0;padding:20px;background-color:#e3e3e3;z-index:9999;}
     #information				{margin-top:18px;margin-bottom:18px;}
     .sidebar					{padding-top:18px;width:340px;float:left;}
@@ -384,15 +390,16 @@
     .sidebar .btn-group			{margin-top:9px;display:inline;float:left;}
     .sidebar .btn-group a 		{margin:0 0 10px 0;display:block;}
 	
-	.page-tools					{margin:0 0 18px 0;padding:20px;width:300px;background:#fcfcfc;border-radius:2px;/*box-shadow:0pt 3px 3px rgba(0, 0, 0, 0.25);*/float:left;display:block;}
-	.page-tools > img			{margin:0 20px 10px 0;float:left;}
-	.page-tools > h5			{margin-top:-10px;margin-bottom:18px;border-bottom:1px solid #c3c3c3;}
+	.page-tools					{margin:0 0 18px 0;padding:20px;width:300px;background:rgba(221,225,226,1);border:4px solid rgba(89,89,89,0.25);color:#414141;opacity: 0.7;-moz-opacity: 0.7;-webkit-opacity: 0.7;filter:alpha(opacity=7);transition:all 0.2s ease;-moz-transition:all 0.2s ease;-webkit-transition:all 0.2s ease;-o-transition:all 0.2s ease;float:left;display:block;}
+	.page-tools:hover           {background:rgba(241,245,246,1);border:4px solid rgba(173,206,255,0.75);color:#393939;opacity: 1;-moz-opacity: 1;-webkit-opacity: 1;filter:alpha(opacity=10);}
+    .page-tools > img			{margin:0 20px 10px 0;float:left;}
+	.page-tools > h5			{margin-top:-10px;margin-bottom:18px;padding-bottom:9px;color:#313131;border-bottom:1px solid #d3d3d3;}
 	.page-tools .page-info		{float:left;width:180px;}
 
     .btn-group-tools                        {margin-top:9px;padding-top:18px;border-top:1px solid #c3c3c3;display:block;float:left;}
-    .btn-group-tools:last-child             {padding:0;border:none;}
-    .btn-group-tools .btn-flat              {margin:0;position:relative;display:block;float:left;}
-    .btn-group-tools .btn-flat:first-child  {margin-right:5px;}
+    .btn-group-tools:last-child             {margin-top:5px;padding:0;border:none;}
+    .btn-group-tools .btn-flat              {padding:12px 10px;position:relative;display:block;float:left;}
+    .btn-group-tools > a + a                {margin-left:-5px;padding:12px 18px !important;}
 	
 	#modal-screen				{top:40% !important;}
 	#modal-screen .modal-body > img			{float:left;margin-right:20px;}
@@ -430,29 +437,35 @@
     
     /* -- Contact Information -- */
     #profile                    {margin-left:0;padding:18px 0 18px 20px;background-color:#fcfcfc;float:left;}
-    #profile input[type="text"] {padding:10px;}
-    #profile input.wizard-lg,
-    #profile textarea.wizard-lg {padding:10px;width:570px;}
     .zip                        {width:90px !important;}
+    #company-info,
+    #contact-information,
     #social-media               {margin-top:18px;float:left;}
     
     
     /* -- Photo Uploader -- */
-    #upload-photo-wrap          {margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;border-right:1px solid #d3d3d3;float:left;}
-    #fileupload                 {padding:18px 0;border-bottom:1px solid #d3d3d3;}
+    #upload-photo-wrap          {margin-left:0;padding:0 0 54px 20px;background-color:#fcfcfc;float:left;}
+    #fileupload                 {margin:18px 20px 0 0;padding:18px 0 0 20px;background:rgba(173,206,255,0.5);transition:all 0.2s ease;-moz-transition:all 0.2s ease;-webkit-transition:all 0.2s ease;-o-transition:all 0.2s ease;}
+    #fileupload:hover           {background:rgba(173,206,255,1);}
     .photo-panel                {margin:18px 0;padding:10px;padding-top:15px;background-color:#e3e3e3;width:540px;display:block;position:relative;float:left;}
     .thumb-wrap                 {width:220px;display:inline;float:left;}
     .photo-form                 {margin-left:10px;width:310px;display:inline;float:left;}
     .photo-form > .form-stacked     {padding-left:0 !important;}
     .photo-buttons              {margin:18px 0;width:100%;display:block;position:relative;}
+
+            /* --  No Photos Conditional Panel  -- */
+            #no-photos                   {margin:36px 0;padding:108px 25px 0 25px;height:150px;background:#e9e9e9;border:4px dashed #e1e1e1;color:#999;text-align:center;}
+            #no-photos a                 {color:#999;}
+            #no-photos a:hover           {color:#0066ff;text-decoration:none;}
+            #no-photos p                 {font-size:14px;}
     
     /* -- Services -- */
-    #services                       {margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;border-right:1px solid #d3d3d3;float:left;}
+    #services                       {margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;float:left;}
     #services-form                  {padding-top:18px;}
     .listServices                   {margin:0;list-style:none;}
     
     /* -- Service Areas -- */
-    #service-areas                  {margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;border-right:1px solid #d3d3d3;float:left;}
+    #service-areas                  {margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;float:left;}
     #service-areas-form             {padding-top:18px;padding-left:0;}
     #service-areas-form input       {margin-top:7px;}
     .listServiceArea                {margin:0;list-style:none;}
@@ -460,23 +473,23 @@
     
     
     /* -- Special Offers -- */
-    #special-offers                 {margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;border-right:1px solid #d3d3d3;float:left;}
+    #special-offers                 {margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;float:left;}
     #special-offers-form            {padding-top:18px;}
     .listSpecialOffers              {margin:0;list-style:none;}
     
     /* -- Testimonials -- */
-    #testimonials                   {margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;border-right:1px solid #d3d3d3;float:left;}
+    #testimonials                   {margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;float:left;}
     #testimonials-form              {padding-top:18px;}
     .listFeedback                   {margin:0;list-style:none;}
     
     /* -- Credentials -- */
-    #credentials                    {margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;border-right:1px solid #d3d3d3;float:left;}
+    #credentials                    {margin-left:0;padding:0 0 18px 20px;background-color:#fcfcfc;float:left;}
     #credentials-form               {padding-top:18px;}
     .listCredentials                {margin:0;list-style:none;}
     .listCredentials li             {margin-bottom:18px;}
     
     /* -- Optional Pages -- */
-    #optional-pages                 {margin-left:0;padding:18px 0 18px 20px;background-color:#fcfcfc;border-right:1px solid #d3d3d3;float:left;}
+    #optional-pages                 {margin-left:0;padding:18px 0 18px 20px;background-color:#fcfcfc;float:left;}
     #optional-pages-form-0          {padding-top:18px;width:560px;float:left;}
     .inputs-list-0                  {margin:18px 0;list-style:none;}
     .inputs-list-0 li               {margin-bottom:18px;padding:18px 10px !important;width:540px;border:1px solid #e3e3e3;border-radius:4px;background:#ececec;list-style:none;}
@@ -506,7 +519,7 @@
     #preview-publish                {margin-left:0px;padding-bottom:36px;background-color:#fcfcfc;float:left;}
     #preview-publish input          {border:none;box-shadow:none;}    
     #emulator {
-        background-image:url('../images/iphone_bck.png');
+        background-image:url('../images/mobile-frame.png');
         background-repeat:no-repeat;
         background-attachment:inherit;
         background-position:0px 0px; 
@@ -723,7 +736,6 @@
       -moz-opacity: 0.65;
       opacity: 0.65;
     }
-    .btn-flat.sidebar   { text-align:left;width:280px;padding:18px 10px; margin-bottom:10px; }
     .btn-flat.dark-grey {
       color:#e3e3e3;
       background: #262626;
@@ -741,19 +753,21 @@
     }
     .btn-flat.white:hover {
         color:#313131;
-        background:#fcfcfc;
+        background:#fefefe;
         border-radius:0;
     }
     .btn-flat.border {
+        padding:18px;
         color:#393939;
         background:#f3f3f3;
-        box-shadow:inset 0 0 0 4px #393939;
+        box-shadow:inset 0 0 0 3px #262626;
         border-radius:0;
     }
     .btn-flat.border:hover {
+        padding:18px;
         color:#393939;
         background:#fcfcfc;
-        box-shadow:inset 0 0 0 4px #0066ff;
+        box-shadow:inset 0 0 0 3px #161616;
         border-radius:0;
     }
     .btn-flat.blue {
@@ -788,10 +802,7 @@
         color:#f3f3f3;
         background:#ff6633;
     }
-    .square {
-        width:16px;
-        height:18px;
-    }
+    .btn-flat.sidebar   { text-align:left;width:280px;padding:12px 10px; margin-bottom:10px; }
     .full {
         width:100%;
         margin:18px 0;
@@ -799,7 +810,7 @@
         text-align:center;
     }
     .large {
-        width:223px;
+        width:230px;
     }
     .medium {
         width:150px;
@@ -809,8 +820,10 @@
         width:90px;
         padding:10px 20px;
     }
-
-
+    .square {
+        width:16px;
+        height:18px;
+    }
     
 /*  --------------------------------------------------
     Miscellaneous

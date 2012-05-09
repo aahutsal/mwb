@@ -1,9 +1,8 @@
-<section id="profile" class="span7">
+<section id="manager-page" class="span7">
   <!--  =====  COMPANY PROFILE  =====  -->
-  <div id="company-profile">
     <form id="company-profile-form" name="company-profile">
-      <p>Required fields denoted with a ' * '.</p>
       <fieldset id="company-info">
+      <p>Required fields denoted with a ' * '.</p>
       <div class="clearfix">
         <label>*&nbsp;Company Name</label>
         <div class="input">
@@ -28,6 +27,7 @@
       </fieldset>
 
       <fieldset id="contact-information">
+      <h4>Location</h4>
       <div class="clearfix">
         <div class="input">
           <label>Street Address</label>
@@ -42,7 +42,7 @@
             <input name="city" type="text" placeholder="Anytown" class="span3 {validate: {required:true}}"/>
           </div>
           <div class="input span2">
-            <label>State</label>
+            <label>State/Province</label>
             <select class="span2" name="state">
               <option>AL</option>
               <option>AR</option>
@@ -61,14 +61,14 @@
       <div class="clearfix">
         <div class="input">
           <label>Number Prospects Should Call</label>
-          <input name="telephone-call" type="text" placeholder="(123) 555-6789" rel="tooltip" title="This can be either a landline or mobile number. This can be the same as the number to text." class="wizard-lg {validate: {required:true}}"/>
+          <input name="telephone-call" type="text" rel="tooltip" title="This can be either a landline or mobile number. This can be the same as the number to text." class="wizard-lg {validate: {required:true}}"/>
         </div>
       </div><!-- /clearfix -->
 
       <div class="clearfix">
         <div class="input">
           <label>Number Prospects Should Text</label>
-          <input name="telephone-text" type="text" placeholder="(123) 555-6789" rel="tooltip" title="A mobile number is prefered. This way, interested parties can either call or send you a text message." class="wizard-lg {validate: {required:true}}"/>
+          <input name="telephone-text" type="text" rel="tooltip" title="A mobile number is prefered. This way, interested parties can either call or send you a text message." class="wizard-lg {validate: {required:true}}"/>
         </div>
       </div><!-- /clearfix -->
 
@@ -79,7 +79,7 @@
         </div>
       </div><!-- /clearfix -->
       </fieldset>
-      <br />
+
       <fieldset id="social-media">
         <h4>Social Media</h4>
         <p>If your company has Facebook, Twitter, or YouTube pages, you can place the links here. They will show up as buttons on your <strong>Share</strong> page.</p>
@@ -103,7 +103,6 @@
       </div><!-- /clearfix -->
     </fieldset>
     </form>
-  </div><!-- /contact-information -->
 </section>  <!--/profile span7 -->
 
 
