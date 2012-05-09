@@ -47,7 +47,7 @@ new_hash = function(){
     $("#alert-select-website").fadeOut();
 
     // FIXME this should be uncommented
-    var uri = String.format("http://{0}/m/com.scanshowsell.website:{1}/index.html", window.location.host, website_name);
+    var uri = String.format("http://{0}/{1}/m/com.scanshowsell.website:{2}/index.html", window.location.host, document.couchapp_context.dbname, website_name);
     $("#prevpub-pane img").attr("src", String.format("http://qrcode.kaywa.com/img.php?s=8&d={0}", encodeURIComponent(uri)));
     $("#emulator-view, #emulator-view-0").attr("src", uri)
 
