@@ -1,5 +1,9 @@
 [
     {
+        "from": "_design/mwb/*",
+        "to": "*"
+    },
+    {
         "from": "js/*",
         "to": "js/*"
     },
@@ -26,7 +30,11 @@
     },
     {
         "from": "_session",
-        "to": "/_session"
+        "to": "../../_session"
+    },
+    {
+        "from": "_changes",
+        "to": "../../_changes"
     },
     {
         "from": "_list/*",
@@ -42,30 +50,13 @@
     },
 
     {
-        "from": "service/",
-        "to": "../../"
+        "from": "common/",
+        "to": "../../common"
     },    
     {
-        "from": "service/*",
+        "from": "common/*",
         "to": "../../*"
     },
-    {
-        "from": "legal/",
-        "to": "../../"
-    },    
-    {
-        "from": "legal/*",
-        "to": "../../*"
-    },
-    {
-        "from": "restaurant/",
-        "to": "../../"
-    },    
-    {
-        "from": "restaurant/*",
-        "to": "../../*"
-    },
-
 
     {
         "from": "_users/*",
@@ -73,7 +64,7 @@
     },    
     {
         "from": "",
-        "to": "index.html"
+        "to": "../../"
     },
     {
         "from": "index.html",
