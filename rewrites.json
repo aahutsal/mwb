@@ -1,9 +1,5 @@
 [
     {
-        "from": "_design/mwb/*",
-        "to": "*"
-    },
-    {
         "from": "js/*",
         "to": "js/*"
     },
@@ -48,27 +44,9 @@
         "from": "_show/*",
         "to": "_show/*"
     },
-
-    {
-        "from": "common/",
-        "to": "../../common"
-    },    
-    {
-        "from": "common/*",
-        "to": "../../*"
-    },
-
-    {
-        "from": "_users/*",
-        "to": "../../_users/*"
-    },    
     {
         "from": "",
         "to": "../../"
-    },
-    {
-        "from": "index.html",
-        "to": "index.html"
     },
     {
         "from": "*",
