@@ -14,6 +14,11 @@
 /*	--------------------------------------------------
 	Page Styles
 	-------------------------------------------------- */
+
+.error {
+    color: red;
+    font-weight: bolder;
+}
 	
 	body {
 			background:url('../images/bg_grid-light.png') left top repeat, url('../images/bg_hilite.png') center top no-repeat, url('../images/header_bg.png') left top repeat-x;
