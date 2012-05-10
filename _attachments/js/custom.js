@@ -19,13 +19,13 @@ $(function () {
 
 
     // registration stuff
-    $("form#registerForm").submit(function(e){
+    $("form#registrationForm").submit(function(e){
         var userProfile = $(this).serializeForms();
         if(!userProfile){
             e.preventDefault();
             return false;
         }
-        userProfile = userProfile['registerForm']
+        userProfile = userProfile['registrationForm']
         var userDoc = {
             name: userProfile.emailAddress.replace(/@.*/gi, ''),
             email: userProfile.emailAddress
