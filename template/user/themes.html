@@ -1,64 +1,53 @@
-<link href="../css/bx_styles/bx_styles.css" rel="stylesheet">
-<script src="../js/jquery.bxSlider.js"></script>
-<script src="../js/jquery.easing.1.3.js"></script>
-<script type="text/javascript">
-      $(document).ready(function(){
-      $('#theme-picker').bxSlider({
-      auto: false,
-      infiniteLoop: true,
-      hideControlOnEnd: false,
-      pager: true,
-      controls: true
-      });
-})
-</script>
-
 <!-- THEMES -->
 <section id="themes" class="span12" data-main-nav="navbar-themes">
+    <div id="theme-preview-wrapper" class="span6">
+      <div id="emulator">
+        <iframe id="emulator-view-1" src=""></iframe>
+      </div>
+    </div>
     <!-- THEME PICKER -->
-  <div id="themes-wrapper" class="row">
-    <div id="theme-picker-wrapper" class="span12">
+    <div id="theme-picker-wrapper" class="span5">
+      <div class="sidebar row">
+        <div class="page-tools">
+          <p>Preview one of our finely crafted mobile websites! Using the viewer to the left, you can interact with your site and get an idea for how it will look and behve on an actual smartphone.</p>
+          <p>Once you've chosen a theme you like, click "Apply" to save your changes.</p>
+          <div class="btn-group-tools">
+            <a href="#prevpub-pane" class="btn-flat green sidebar do-save-page do-next"><i class="icon-arrow-right icon-white"></i>&nbsp;&nbsp;Save &amp; Next: Preview &amp; Publish</a>
+          </div><!-- /btn-group-tools -->
+        </div><!-- /page-tools -->
+      </div><!--/sidebar -->
+
       <ul id="theme-picker" class="thumbnails">
-        <li class="span3 active">
-          <img src="http://placehold.it/220"/>
+        <li class="span2 active">
+          <img src="http://placehold.it/190"/>
           <div class="btnContainer">
-            <a href="../images/black.png" title="Black" rel="gallery" class="btn-flat dark-grey"><i class="icon-search icon-white"></i>&nbsp;&nbsp;Preview</a>
-            <a href="preview-and-publish.html" class="btn-flat green"><i class="icon-ok icon-white"></i>&nbsp;&nbsp;Apply</a>
+            <a href="../images/black.png" title="Black" rel="gallery" class="btn-flat dark-grey"><i class="icon-search icon-white"></i></a>
+            <a href="../images/black.png" title="Black" rel="gallery" class="btn-flat blue"><i class="icon-ok icon-white"></i></a>
           </div>
         </li>
-        <li class="span3">
-          <img src="http://placehold.it/220"/>
+        <li class="span2">
+          <img src="http://placehold.it/190"/>
           <div class="btnContainer">
-            <a href="../images/black.png" title="Black" rel="gallery" class="btn-flat dark-grey"><i class="icon-search icon-white"></i>&nbsp;&nbsp;Preview</a>
-            <a href="preview-and-publish.html" class="btn-flat green"><i class="icon-ok icon-white"></i>&nbsp;&nbsp;Apply</a>
+            <a href="../images/black.png" title="Black" rel="gallery" class="btn-flat dark-grey"><i class="icon-search icon-white"></i></a>
+            <a href="../images/black.png" title="Black" rel="gallery" class="btn-flat blue"><i class="icon-ok icon-white"></i></a>
           </div>
         </li>
-        <li class="span3">
-          <img src="http://placehold.it/220"/>
+        <li class="span2">
+          <img src="http://placehold.it/190"/>
           <div class="btnContainer">
-            <a href="../images/black.png" title="Black" rel="gallery" class="btn-flat dark-grey"><i class="icon-search icon-white"></i>&nbsp;&nbsp;Preview</a>
-            <a href="preview-and-publish.html" class="btn-flat green"><i class="icon-ok icon-white"></i>&nbsp;&nbsp;Apply</a>
+            <a href="../images/black.png" title="Black" rel="gallery" class="btn-flat dark-grey"><i class="icon-search icon-white"></i></a>
+            <a href="../images/black.png" title="Black" rel="gallery" class="btn-flat blue"><i class="icon-ok icon-white"></i></a>
           </div>
         </li>
-        <li class="span3">
-          <img src="http://placehold.it/220"/>
+        <li class="span2">
+          <img src="http://placehold.it/190"/>
           <div class="btnContainer">
-            <a href="../images/black.png" title="Black" rel="gallery" class="btn-flat dark-grey"><i class="icon-search icon-white"></i>&nbsp;&nbsp;Preview</a>
-            <a href="preview-and-publish.html" class="btn-flat green"><i class="icon-ok icon-white"></i>&nbsp;&nbsp;Apply</a>
+            <a href="../images/black.png" title="Black" rel="gallery" class="btn-flat dark-grey"><i class="icon-search icon-white"></i></a>
+            <a href="../images/black.png" title="Black" rel="gallery" class="btn-flat blue"><i class="icon-ok icon-white"></i></a>
           </div>
         </li>
       </ul>
     </div><!-- /theme-picker-wrapper -->
-
-    <div id="theme-preview-wrapper" class="span12">
-      <div class="span7">
-        <img src="../images/mobile-photos.png" alt="Theme Preview" />
-      </div>
-      <div class="span3">
-        <h4>Theme Name</h4>
-        <p>Creator:&nbsp;<a href="">Mobius Labs</a></p>
-    </div><!-- /theme-preview-wrapper -->
-  </div>
   <!-- Slider Controls
     <a href="#" id="go-prev" class="btn-flat blue pull-left">&nbsp;&larr;&nbsp;Previous</a>
     <a href="#" id="go-next" class="btn-flat blue pull-right">&nbsp;&rarr;&nbsp;Next</a>
