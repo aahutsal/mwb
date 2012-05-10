@@ -142,7 +142,13 @@ $(function(){
                     }
                 }
             },
-            "click button.btn.success:contains('Build')": function(e){
+            "click .do-select-theme": function(e){
+                var val = $(e.target).attr('href').split("/");
+                val = _.last(val).replace(/.png/,'')
+                console.log(val);
+                $("form[name=theme] input[name=name]").val(val);
+                e.preventDefault()
+                return false;
             },
             "click a.delete:contains('Remove photo')": function(e){
                 var model = Websites.where({_id: websiteId(website_name)})[0];
