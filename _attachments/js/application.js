@@ -219,13 +219,6 @@ $(function(){
                     async : false
                 });
             });
-            // decorating default login href
-            $("a:regex(href,^/_utils/document\.html.*)").live("click", function(){
-                $(this).attr("href","/user/account-settings.html");
-            })
-
-            // Includes the couchlogin
-            // check it out here: <a href="https://github.com/couchapp/couchdb-login-jquery">https://github.com/couchapp/couchdb-login-jquery</a>
             // Bootstrapping
             new RequestView({model: Requests })
             new WebsiteView({model: Websites });
