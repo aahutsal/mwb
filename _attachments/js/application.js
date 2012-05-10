@@ -104,11 +104,14 @@ $(function(){
         el: $("body"), 
 
         events: {
-            "blur #website-name": function(e){
-                var a = $(e.target).valid();
-                if($("#new-btn").length)
-                    $("#new-btn").attr("href", 
-                                       $("#new-btn").attr("href").replace(/#.*/g, '') + "#!" + $(e.target).val());
+            "blur #website-name": function(e){                
+                if($(e.target).valid() && $("#new-btn").length){
+                    var href = $("#new-btn").attr("href").replace(/#.*/g, '') + "#!" + $(e.target).val()
+                    $("#new-btn").attr("href",  href);
+                }
+                var url = String.format("http://www.scanshowsell.com/{0}/m/com.scanshowsell.website:{1}/index.html", 
+                                        document.couchapp_context.dbname, $(e.target).val())
+                $("#website-url").val(url);
             },
             "click #new-btn": function(e){
                 createWebsiteModel($("#website-name").val(), function(model){
@@ -151,7 +154,6 @@ $(function(){
                     model.save();
                 }                
             }
-
         },
 
         initialize : function(){
