@@ -615,7 +615,7 @@
 					
 					}
     
-	#websiteNameAction		{padding:10px;font-size:2em;height:30px;}
+	#website-name		{padding:10px;font-size:2em;height:30px;}
 
 	#three-steps	{margin-bottom:36px;width:980px;float:left;display:inline;background:url('../images/bg_grid-light.png') left top repeat, url('../images/bg_steps.png') left bottom repeat-x;}
 	#step1			{margin:0;padding:36px 30px ;color:#f3f3f3;width:265.67px;float:left;display:inline;}

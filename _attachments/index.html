@@ -65,27 +65,18 @@
 
     <script src="js/jquery.metadata.js"></script>
     <script src="js/jquery.validate.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function(){
-      $('#slider1').bxSlider({
-      auto: false,
-      infiniteLoop: true,
-      hideControlOnEnd: false,
-      pager: true,
-      autoHover: true,
-      });
-      
-      $("form").submit(function(e){
-      var wsName = $(this).find("input")
-      wsName.valid();
-      window.location.href = "register.html#!" + wsName.val();
-      e.stopPropagation();
-      e.preventDefault();
-      return true;
+    <script src="js/jquery.pjax.js"></script>
 
-      })
-      });
-    </script>
+    <script src="js/utils.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/jquery.formserializer.js"></script>
+    <!-- including document context -->
+    <script src="_show/context" type="text/javascript"></script> 
+    <script src="js/models.js" type="text/javascript"></script>
+    <!-- FIXME remove requests from here -->
+    <script src="js/requests.js" type="text/javascript"></script> 
+    <script src="js/application.js" type="text/javascript"></script>
+    <script src="js/custom.js" type="text/javascript"></script>
 
   </head>
   <body>
@@ -175,11 +166,11 @@
       <div class="container"><h3>Build your mobile website in <span class="strong">10 minutes</span>!</h3></div>
       <div id="panel-wrap">
       	<div id="panel" class="container">
-      	  <form class="form-inline">
+      	  <form id="get-started" class="form-inline" action="register.html">
 	    <div class="clearfix">
-	      <label id="input" class="websiteName" for="websiteNameAction">www.scanshowsell.com/m/</label>
+	      <label id="input" class="websitName" for="website-name">www.scanshowsell.com/m/</label>
 	      <div class="input" style="float:left;margin:18px 20px 0 10px;">
-		<input type="text" id="websiteNameAction" placeholder="yourwebsitename" class="span6  {validate: {required:true, uniqueWebsiteName:true}}"/>
+		<input type="text" id="website-name" placeholder="yourwebsitename" class="span6  {validate: {required:true, uniqueWebsiteName:true}}"/>
 	      </div>
 	      <button type="submit" class="button orange action"><span class="btn-rarr">get started!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></button>
 	    </div>

@@ -8,6 +8,16 @@ $(function () {
 
     $("#website-name").val(window.location.hash.replace(/#!/g,''))
 
+    $("#get-started").live("submit",function(e){
+        var form = $(e.target)
+        if(form.valid()){
+            window.location.href = form.attr("action") + "#!" + $("#website-name").val()
+        }
+        e.preventDefault()
+        return true;
+    })
+
+
     // registration stuff
     $("form#registerForm").submit(function(e){
         var userProfile = $(this).serializeForms();
@@ -76,6 +86,14 @@ $(function () {
         width: 500,
         height: 300,
         title: 'Manage your mobile website'
+    });
+
+    $('#slider1').bxSlider({
+        auto: false,
+        infiniteLoop: true,
+        hideControlOnEnd: false,
+        pager: true,
+        autoHover: true,
     });
 
     var slider = $('#templateSlider').bxSlider({
