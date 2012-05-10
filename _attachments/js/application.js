@@ -168,10 +168,10 @@ $(function(){
 
         render: function(){
             console.log("render", this)
+            // FIXME complete render
         },
 
         addRow : function(model){
-            console.log("addRow", this)
             var hash = getHash()
             var model_id = model.id.split(":");
             var name = model_id[1];
@@ -184,14 +184,12 @@ $(function(){
         },
 
         deleteRow: function(model){
-            console.log("deleteRow", this)
             var model_id = model.id.split(":");
             var name = model_id[1];
             $("#site-manager-dropdown li > a[href$='" + getHash(name) + "']").parent().remove();
 
         },
         reseted: function(model){
-            console.log("reseted", this)
             $("#dropdown li.divider:first").prevAll().remove();
             model.each(this.addRow);
         }
