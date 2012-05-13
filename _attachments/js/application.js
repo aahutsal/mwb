@@ -117,7 +117,7 @@ $(function(){
                 createWebsiteModel($("#website-name").val(), function(model){
                     if(model.id){
                         // succesfully created
-                        window.location.hash = "!" + $("#website-name").val()
+                        window.location.href = "wizard.html" + "!" + $("#website-name").val()
                     }                    
                 })
                 e.preventDefault()
