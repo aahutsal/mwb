@@ -46,11 +46,14 @@ new_hash = function(){
     $("#site-toggle").text("Currently editing:" + website_name) // FIXME template should be used
     $("#alert-select-website").fadeOut();
 
+    update_emulators_and_qr();
+}
+
+update_emulators_and_qr = function(){
     // FIXME this should be uncommented
     var uri = String.format("http://{0}/{1}/m/com.scanshowsell.website:{2}/index.html", window.location.host, document.couchapp_context.dbname, website_name);
     $("#prevpub-pane img").attr("src", String.format("http://qrcode.kaywa.com/img.php?s=8&d={0}", encodeURIComponent(uri)));
-    $("#emulator-view, #emulator-view-0").attr("src", uri)
-
+    $("#emulator-view-1, #emulator-view-0").attr("src", uri)
 }
 
 $(window).bind("hashchange", new_hash)
@@ -128,25 +131,43 @@ $(function(){
             "click .do-save-page": function(e){
                 var model = Websites.where({_id: websiteId(website_name)})[0];
                 if(model){
-                    var form = $(e.target).parents("div.tab-pane.active,#body.row").find("form").serializeForms();
-                    if(form){
-                        _.each(form, function(val, key){
+                    var formsData = $(e.target).parents("div.tab-pane.active,#body.row").find("form").serializeForms();
+                    if(formsData){
+                        _.each(formsData, function(val, key){
                             model.set(key, _.extend(model.get(key) || {}, val));
                         })
                             model.save();
                     } else {
                         // form is not valid. Cancelling operation
-                        e.stopPropagation();
                         e.preventDefault()
                         return true;
                     }
                 }
             },
             "click .do-select-theme": function(e){
-                var val = $(e.target).attr('href').split("/");
-                val = _.last(val).replace(/.png/,'')
-                console.log(val);
-                $("form[name=theme] input[name=name]").val(val);
+                var model = Websites.where({_id: websiteId(website_name)})[0];
+                if(model){
+                    var val = $(e.target).parents("li").find("img").attr("src").split("/");
+                    val = _.last(val).replace(/_sm\.png/,"")
+                    console.log(val);
+                    var form = $("form[name=theme]")
+                    $("input[name=name]",form).val(val)
+                    var formData = form.serializeForms();
+                    if(formData){
+                        model.set("theme", formData["theme"])
+                        model.save()
+                        console.log('model updated')
+                    }
+                }
+                console.log('do-select-theme event completing')
+
+                e.preventDefault()
+                return false;
+            },
+            "click .do-preview-theme": function(e){
+                update_emulators_and_qr()                
+                console.log('do-preview-theme event completing')
+
                 e.preventDefault()
                 return false;
             },
