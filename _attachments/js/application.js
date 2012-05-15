@@ -147,8 +147,7 @@ $(function(){
             "click .do-select-theme": function(e){
                 var model = Websites.where({_id: websiteId(website_name)})[0];
                 if(model){
-                    var val = $(e.target).parents("li").find("img").attr("src").split("/");
-                    val = _.last(val).replace(/_sm\.png/,"")
+                    var val = $(e.target).data("theme");
                     console.log(val);
                     var form = $("form[name=theme]")
                     $("input[name=name]",form).val(val)
@@ -158,16 +157,10 @@ $(function(){
                         model.save()
                         console.log('model updated')
                     }
+                    update_emulators_and_qr()                
+                    console.log('do-preview-theme event completing')
+
                 }
-                console.log('do-select-theme event completing')
-
-                e.preventDefault()
-                return false;
-            },
-            "click .do-preview-theme": function(e){
-                update_emulators_and_qr()                
-                console.log('do-preview-theme event completing')
-
                 e.preventDefault()
                 return false;
             },
