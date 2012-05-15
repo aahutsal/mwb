@@ -147,7 +147,7 @@ $(function(){
             "click .do-select-theme": function(e){
                 var model = Websites.where({_id: websiteId(website_name)})[0];
                 if(model){
-                    var val = $(e.target).data("theme");
+                    var val = $(e.target).attr("title");
                     console.log(val);
                     var form = $("form[name=theme]")
                     $("input[name=name]",form).val(val)
