@@ -9,7 +9,7 @@
 .bx-next {
 	position:absolute;
 	top:0;
-	right:-50px;
+	right:0px;
 	z-index:999;
 	width: 109px;
 	height: 390px;
@@ -21,7 +21,7 @@
 .bx-prev {
 	position:absolute;
 	top:0;
-	left:-50px;
+	left:-40px;
 	z-index:999;
 	width: 109px;
 	height: 390px;
