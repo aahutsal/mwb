@@ -17,12 +17,6 @@
     <link href="css/bootstrap-3.css" rel="stylesheet">
     <link href="css/home.css" rel="stylesheet">
     <link href="css/bx_styles/bx_styles.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-      padding-top: 40px;
-      }
-    </style>
-    
     <!--  JavaScript  -->
     <script src="js/jquery-1.7.1.min.js"></script>
     <script src="js/jquery-ui-1.8.17.custom.min.js"></script>
@@ -81,46 +75,48 @@
   </head>
   <body>
     <section class="topbar">
-      <div class="container-fluid">
+      <div class="container">
+        <div class="row">
         <ul class="nav">
-          <li><a href="#">Home</a></li>
-          <li class="active"><a href="#service-providers">Service Providers</a></li>
+          <li><a href="#service-providers">Service Providers</a></li>
     	    <li><a href="#construction">Construction</a></li>
           <li><a href="#hospitality">Hospitality</a></li>
           <li><a href="#entertainment">Entertainment</a></li>
         </ul>
         <div id="login_form"></div>
-        <a class="btn-flat border pull-right" href="register.html">Sign Up</a>
+        </div>
       </div>
     </section>
 
     <!--====================  Island A: Header and Hero Unit  ====================-->
-    <section id="home" class="container-fluid">
-      <div id="island-a" class="row-fluid">
+    <section id="home">
+      <div class="container island-wrap">
+      <div class="row island-a">
       	<header>
       	  <a href="index.html"><img src="images/title_sm.png" alt="ScanShowSell.com" border="0" /></a>
       	  <ul class="main-nav pull-right">
       	    <!-- <li><a class="header-home" href="index.html">&nbsp;&nbsp;</a></li> -->
       	    <li><a href="why.html">why go mobile</a></li>
-      	    <li><a href="process.html">how it works</a></li>
       	    <li><a href="features.html">features</a></li>
       	    <li><a href="pricing.html">pricing</a></li>
       	    <li><a href="showcase.html">showcase</a></li>
             <li><a href="#">blog</a></li>
       	  </ul>
       	</header>
+      </div><!-- /row header -->
 
+      <div class="row island a">
       	<!-- Main hero unit for a primary marketing message or call to action -->
       	<div id="slider-wrap" class="span12">
       	  <ul id="slider1">
       	    <li>
             <div class="slide1">
           		<div class="row">
-          		  <div class="span6 pull-right">
+          		  <div class="span6 offset5">
             	    <h1>Is your business ready for<br />
             	    <span class="strong">the mobile web?</span></h1>
                     <a class="btn-flat blue hero" href="register.html">
-                      <span class="btn-rarr">go mobile for free!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                      <span class="btn-rarr">go mobile for free&nbsp;&nbsp;&nbsp;</span>
                     </a>
           		  </div><!-- /span7 -->
           		</div><!-- /row -->
@@ -133,7 +129,7 @@
             	    <h1>Get to your prospect<br />
           	      <span class="strong">before your competition.</span></h1>
                     <a class="btn-flat orange hero" href="register.html">
-                      <span class="btn-rarr">go mobile for free!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                      <span class="btn-rarr">go mobile for free&nbsp;&nbsp;&nbsp;</span>
                     </a>
           		  </div>
           		</div>
@@ -142,11 +138,11 @@
       	    <li>
       	      <div class="slide3">
             		<div class="row">
-            		  <div class="span6 pull-right">
+            		  <div class="span6 offset5">
       	      	    <h1>A mobile website is<br />
       	      	    <span class="strong">your electronic brochure.</span></h1>
                       <a class="btn-flat green hero" href="register.html">
-                        <span class="btn-rarr">go mobile for free!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <span class="btn-rarr">go mobile for free&nbsp;&nbsp;&nbsp;</span>
                       </a>
             		  </div>
             		</div>
@@ -154,38 +150,42 @@
       	    </li>
       	  </ul><!-- /slider-1 -->
       	</div><!-- /slider-wrap -->
-      </div><!-- /island-a row-fluid -->
-    </section><!-- /home container-fluid -->
+      </div><!-- /row island a -->
+      </div><!-- island-wrap container -->
+    </section><!-- /home row -->
 
     <!--====================  Island B: Call To Action #1  ====================-->
-    <section id="call-1" class="container-fluid">
-      <div id="island-b" class="row-fluid">
+    <section id="call-1">
+      <div class="container island-wrap">
+      <div class="row island b">
         <div class="span12">
           <h3>build your mobile website in <span class="strong">10 minutes</span>!</h3>
           <div id="panel-wrap">
           	  <form id="get-started" class="form-inline" action="register.html">
           	    <div class="clearfix">
-        	      <label id="input" class="websitName" for="website-name">www.scanshowsell.com/m/</label>
-        	      <div class="input" style="float:left;margin:18px 20px 0 10px;">
-              		<input type="text" id="website-name" placeholder="yourwebsitename" class="span6  {validate: {required:true, uniqueWebsiteName:true}}"/>
-        	      </div>
-        	      <a class="btn-flat orange large" hef="register.html">
-                  <span class="btn-rarr">get started!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                </a>
-        	    </div>
-        	  </form>
-        </div><!-- /panel-wrap -->
+          	      <label id="input" class="website-name" for="website-name">www.scanshowsell.com/m/</label>
+          	      <div class="input">
+                		<input type="text" id="website-name" placeholder="yourwebsitename" class="span6"/>
+          	      </div>
+                  <a class="btn-flat orange large pull-right" hef="register.html">
+                    <span class="btn-rarr">get started&nbsp;&nbsp;&nbsp;</span>
+                  </a>
+          	    </div>
+          	  </form>
+          </div><!-- /panel-wrap -->
       </div><!-- /span12 -->
-    </div><!-- /island-b row-fluid -->
-  </section><!-- /call-1 container-fluid -->
+    </div><!-- /row island b -->
+    </div><!-- /container island-wrap -->
+  </section><!-- /call-1 -->
     
   <!--====================  Island C: Three Steps  ====================-->
-  <section id="three-steps" class="container-fluid">
-    <div id="island-c" class="row-fluid">
+  <section id="three-steps">
+    <div class="container island-wrap">
+    <div class="row island c">
         <div class="span12">
-        	<h2>our process is as simple as 1, 2, 3</h2>
+        	<h2>our process is as simple as 1 - 2 - 3.</h2>
         </div>
-    	  <div id="step1" class="span4">
+    	  <div id="step1" class="span3">
     	    <center>
             <img src="images/step_1.png" alt="Step 1: Scan" />
           </center>
@@ -203,7 +203,7 @@
     	    <p>They are taken directly to your mobile friendly website.&nbsp; 
             One that is built specifically for smartphones.</p>
     	  </div><!-- /step-2 -->
-    	  <div id="step3" class="span4">
+    	  <div id="step3" class="span3">
     	    <center>
             <img src="images/step_3.png" alt="Step 3: Sell" />
           </center>
@@ -215,29 +215,83 @@
         <div class="span12">
         	<h2>it's that easy. don't believe it? <a href="features.html">learn more!</a></h2>
         </div>
-    </div><!-- /island-c row-fluid -->
-  </section><!--/three-steps container-fluid -->
+    </div><!-- /row island c -->
+    </div><!-- /container island-wrap -->
+  </section><!--/three-steps -->
+
+  <!--====================  Island D: Perfect For...  ====================-->
+  <section id="perfect">
+    <div class="container island-wrap">
+    <div class="row island d">
+      <div class="span12">
+        <h2>perfect for individuals and small businesses.</h2>
+      </div><!-- /span12 -->
+      <div id="col-1" class="span3">
+        <ul>
+          <li class="icn-elec"><p>Electricians</p></li>
+          <li class="icn-plumb"><p>Plumbers</p></li>
+          <li class="icn-saw"><p>Carpenters</p></li>
+        </ul>
+      </div><!-- /col-1 -->
+      <div id="col-2" class="span3">
+        <ul>
+          <li class="icn-tree"><p>Landscape Architects</p></li>
+          <li class="icn-bricks"><p>Stoneworks</p></li>
+          <li class="icn-anvil"><p>Metalworks</p></li>
+        </ul>
+      </div><!-- /col-2 -->
+      <div id="col-3" class="span3">
+        <ul>
+          <li class="icn-person"><p>Independent Contractors</p></li>
+          <li class="icn-small-bus"><p>Small Businesses</p></li>
+          <li class="icn-med-bus"><p>Medium Businesses</p></li>
+        </ul>
+      </div><!-- /col-3 -->
+    </div><!-- /row island d -->
+    </div><!-- /container island-wrap -->
+  </section><!-- /perfect -->
+
+  <!--====================  Island E: Built for Smartphones  ====================-->
+  <section id="tailored">
+    <div class="container island-wrap">
+    <div class="row island e">
+      <div class="span12">
+        <h2>your website - tailored for smartphones.</h2>
+      </div><!-- /span12 -->
+      <div id="phones" class="span5">
+        <img src="images/smartphones.png" alt="Your website will work on iPhone, Android, Windows Phone, Blackberry and more." />
+      </div><!-- /phones -->
+      <div class="span5 offset0">
+        <h4>Something important.</h4>
+        <p>Some more really important content. I'd love your help writing the copy for this section.</p>
+      </div><!-- /span6 -->
+    </div><!-- /row island e -->
+    </div><!-- /container island-wrap -->
+  </section><!-- /tailored -->
 
   <footer>
-    <div id="footer-1"  class="container-fluid">
-      <div class="row-fluid">
-          <div class="span12">
-            <ul id="sitemap-1">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Why Go Mobile</a></li>
-              <li><a href="#">How It Works</a></li>
-              <li><a href="#">Features</a></li>
-              <li><a href="#">Pricing</a></li>
-              <li><a href="#">Showcase</a></li>
-              <li><a href="#">Blog</a></li>
-            </ul>
-          </div><!-- /span12 -->
-        </div><!-- /row -->
-      </div>
+    <div id="footer-1">
+      <div class="container island-wrap">
+        <div class="row island f">
+            <div class="span12">
+              <ul id="sitemap-1">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Why Go Mobile</a></li>
+                <li><a href="#">How It Works</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Showcase</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </div><!-- /span12 -->
+          </div><!-- /row island f -->
+        </div><!-- /container island-wrap -->
+      </div><!-- /footer-1 -->
 
-    <div class="container-fluid">
-      <div id="footer-2" class="row-fluid">
-        <div class="span2">
+      <div id="footer-2">
+        <div class="container">
+          <div class="row">
+        <div class="span3">
     	    <ul id="sitemap-2">
     	      <li><a href="#">About Us</a></li>
     	      <li><a href="#">Support</a></li>
@@ -246,20 +300,20 @@
             <li><a href="#">Hospitality</a></li>
             <li><a href="#">Entertainment</a></li>
     	    </ul>
-        </div><!-- /span2 -->
-        <div class="span5">
+        </div><!-- /span3 -->
+        <div class="span4">
           <h4>Newsletter</h4>
           <p>Get our newsletter.</p>
           <form action="">
             <div class="clearfix"><input class="span4" id="" name="" type="text" placeholder="Email Address" /></div>
           </form>
         </div><!-- /span5 -->
-        <div class="span5">
+        <div class="span4">
           <h4>We're Social</h4>
           <p>Social media component.</p>
-        </div><!-- /span5 -->
-      </div><!-- /row -->
-    </div><!-- /container-fluid -->
+        </div><!-- /span4 -->
+    </div><!-- /row -->
+    </div>
   </footer>
   </body>
 </html>

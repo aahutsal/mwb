@@ -18,13 +18,8 @@
     
     .topbar {
 			  height: 40px;
-			  position: absolute;
 			  background:#f9f9fe;
 			  border-bottom:1px solid #e3e3e3;
-			  top: 0;
-			  left: 0;
-			  right: 0;
-			  z-index: 10000;
 			  overflow: visible;
 			}
 	.topbar a {
@@ -86,6 +81,9 @@
 	  margin-left: 10px;
 	  margin-right: 0;
 	}
+
+	#login_form 	{margin-top:5px;padding:5px 10px;background:#ff6600;color:#e3e3e3;float:right;}
+	#login_form a 	{color:#f3f3f3;font-weight:600;}
 	
 /*	--------------------------------------------------
 	Header
@@ -123,7 +121,7 @@
 								}
 	#sitemap-1 li 				{margin:0;padding:0;float:left;list-style:none;}
 	#sitemap-1 li a 			{
-								margin:0 30px;
+								margin:0 35px;
 								padding:10px 20px;
 								color:#c3c3c3;
 								font-size:1.25em;
@@ -131,6 +129,7 @@
 								height:auto;
 								display:block;
 								}
+	#sitemap-1 li a:first-child {margin-left:0;}
 
 	#sitemap-2					{margin:0 0 0 40px;float:left;list-style:none;}
 	
@@ -142,11 +141,17 @@
 /*    --------------------------------------------------
     Typography
     -------------------------------------------------- */
+	.island p 		{font-size:16px;line-height:24px;}
+
 	h1 				{font-family:'Lato', 'Helvetica Neue', Helvetica, sans-serif;font-weight:300;}
-	#island-b > div h3	{margin-bottom:36px;font-family:'Lato', 'Helvetica Neue', Helvetica, sans-serif;text-transform:uppercase;font-weight:300;color:#f3f3f3;letter-spacing:1px;text-align:center;}
-	#island-b label	{padding:36px 0 0 30px;width:auto;font-size:2em;}
-	#island-c h2	{margin:36px 0;color:#f3f3f3;font-family:'Novecentowide-Normal', sans-serif;font-size:30px;letter-spacing:1px;text-align: center;}
-	h4				{color:#f3f3f3;}
+	.island h2 		{margin:36px 0;font-family:'Novecentowide-Normal', sans-serif;font-weight:100;letter-spacing:1px;text-align:center;}
+	.island.b h3 	{margin-bottom:36px;font-family:'Lato', 'Helvetica Neue', Helvetica, sans-serif;text-transform:uppercase;font-weight:300;color:#f3f3f3;letter-spacing:1px;text-align:center;}
+	.island.c h2 	{color:#f3f3f3;}
+	.island.c h4 	{color:#f3f3f3;}
+	.island.d h2 	{color:#663300;}
+	.island.e h2 	{color:#009900;}
+
+	.island.b label	{padding:36px 0 0 30px;width:auto;float:left;font-size:2em;}
 	.strong			{font-weight:700;}
 
 /*    --------------------------------------------------
@@ -171,21 +176,64 @@
 	.slide2 > div > div,
 	.slide3 > div > div		{margin-top:18px;}
 
+	#slider2 li .slide1,
+	#slider2 li .slide2 		{background-image:none;}
+
 /*  --------------------------------------------------
     Content Islands
     -------------------------------------------------- */ 
     
     #home 			{padding-bottom:18px;background:#f9f9f9;}
     #call-1 		{padding-top:36px;padding-bottom:54px;background:#181b20;}
-    #three-steps	{padding-top:36px;padding-bottom:36px;background:#005ab1;}
+
+    	.island.b div.input {margin:14px 0 0 10px;float:left;}
+    	.island.b a.btn-flat 	{margin:14px 30px 0 0;}
+    	#website-name	{padding:10px;font-size:2em;height:40px;width:370px;border-radius:0;}
+
+    #three-steps	{padding-top:0;padding-bottom:18px;background:#0066cc;}
 
 	    #step1 h4		{margin:0 auto 18px auto;width:29px;height:28px;text-indent:-9999px;background-image:url('../images/scribble_no-1.png');background-repeat: no-repeat;}
 		#step2 h4		{margin:0 auto 18px auto;width:35px;height:28px;text-indent:-9999px;background-image:url('../images/scribble_no-2.png');background-repeat: no-repeat;}
 		#step3 h4		{margin:0 auto 18px auto;width:35px;height:28px;text-indent:-9999px;background-image:url('../images/scribble_no-3.png');background-repeat: no-repeat;}
-
 		#step1,
 		#step2,
-		#step3 			{color:#e3e3e3;}
+		#step3 			{margin:36px 0 36px 130px;color:#e3e3e3;}
+		#step1 			{margin-left:20px !important;}
+		#step1 img,
+		#step3 img 		{padding-bottom:54px;}
+		#step2 img 		{padding-bottom:6px;}
+
+	#perfect 		{background:#ff6600;}
+
+		#col-1,
+		#col-2,
+		#col-3 			{margin-bottom:18px;margin-left:130px;}
+		#col-1 			{margin-left:20px !important;}
+		#col-1 ul,
+		#col-2 ul,
+		#col-3 ul 		{padding:0;list-style:none;}
+		#col-1 ul li,
+		#col-2 ul li,
+		#col-3 ul li 	{
+						margin:0;
+						padding:18px 0;
+						padding-left:40px;
+						color:#f3f3f3;
+						list-style:none;
+						background-image: url("../images/sprite-perfect.png");
+						background-repeat: no-repeat;
+						}
+		li.icn-elec		{background-position: -42px 3px;}
+		li.icn-plumb	{background-position: -43px -57px;}
+		li.icn-saw		{background-position: -40px -122px;}
+		li.icn-tree		{background-position: -370px 3px;}
+		li.icn-bricks	{background-position: -370px -57px;}
+		li.icn-anvil	{background-position: -370px -122px;}
+		li.icn-person	{background-position: -690px 3px;}
+		li.icn-small-bus{background-position: -690px -57px;}
+		li.icn-med-bus	{background-position: -690px -122px;}
+
+	#tailored 		{padding-top:18px;padding-bottom:36px;background:#e8fce8;}
     
     footer			{margin:0;padding:0;padding-bottom:36px;background:url('../images/broken_noise.png');}
     footer h4		{color:#f3f3f3;text-shadow:2px 2px 2px rgba(0,0,0,0.4);}
@@ -339,7 +387,7 @@
     .btn-flat .btn-rarr {
 		background-image: url('../images/btn_rarr.png');
 		background-repeat:no-repeat;
-		background-position: right center;
+		background-position: right 6px;
 	}
     .btn-flat.sidebar   { text-align:left;width:280px;padding:12px 10px; margin-bottom:10px; }
     .full {
@@ -349,8 +397,10 @@
 	    text-align:center;
     }
     .large {
-	    width:230px;
+	    padding:24px;
 	    font-size:1.75em;
+	    font-weight:300;
+	    letter-spacing:1px;
     }
     .medium {
         width:150px;
@@ -371,6 +421,6 @@
     
     #panel-wrap		{margin:0 auto;padding:10px;float:none;background:rgba(14,17,23,0.55);}
     #panel			{background:#f2f2f2;-webkit-box-shadow:0px 3px 6px rgba(0,0,0,0.5);-moz-box-shadow:0px 3px 6px rgba(0,0,0,0.5);-o-box-shadow:0px 3px 6px rgba(0,0,0,0.5);box-shadow:0px 3px 6px rgba(0,0,0,0.5);}
-	#website-name	{padding:10px;font-size:2em;height:30px;}
+	
 
 	    

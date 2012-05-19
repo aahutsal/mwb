@@ -96,6 +96,14 @@ $(function () {
         autoHover: true,
     });
 
+    $('#slider2').bxSlider({
+        auto: false,
+        infiniteLoop: true,
+        hideControlOnEnd: false,
+        pager: true,
+        autoHover: true,
+    });
+
     var slider = $('#templateSlider').bxSlider({
         controls: true,
         auto: false,
