@@ -82,8 +82,9 @@
 	  margin-right: 0;
 	}
 
-	#login_form 	{margin-top:5px;padding:5px 10px;background:#ff6600;color:#e3e3e3;float:right;}
-	#login_form a 	{color:#f3f3f3;font-weight:600;}
+	.call		 	{margin-top:5px;padding:5px 10px;background:#ff6600;color:#e3e3e3;display:inline-block;float:none;position:absolute;right:125px;top:-6px;}
+	#loin_form		{margin-top:5px;padding:5px 10px;background:#d1d1d1;color:#434343;float:right;}
+	#login_form a 	{margin:0;padding:10px 5px;font-size:inherit;color:#434343;font-weight:600;display:inline-block;}
 	
 /*	--------------------------------------------------
 	Header
