@@ -14,15 +14,9 @@
         <![endif]-->
 
     <!-- Styles -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-3.css" rel="stylesheet">
     <link href="css/home.css" rel="stylesheet">
     <link href="css/bx_styles/bx_styles.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-      padding-top: 40px;
-      }
-    </style>
-    
     <!--  JavaScript  -->
     <script src="js/jquery-1.7.1.min.js"></script>
     <script src="js/jquery-ui-1.8.17.custom.min.js"></script>
@@ -80,258 +74,237 @@
 
   </head>
   <body>
-    <div class="topbar">
-      <div class="fill">
-        <div class="container">
-          <ul class="nav">
-            <li><a href="#">Home</a></li>
-            <li class="active"><a href="#service-providers">Service Providers</a></li>
-	    <li><a href="#construction">Construction</a></li>
-            <li><a href="#hospitality">Hospitality</a></li>
-            <li><a href="#entertainment">Entertainment</a></li>
-            
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-dropdown="dropdown" href="#">More...</a>
-              <ul class="dropdown-menu">
-            	<li><a href="#construction">Construction</a></li>
-            	<li><a href="#landscaping">Landscaping</a></li>
-              </ul>
-            </li>
-          </ul>
-          <div id="login_form"></div>
-          <a class="btn primary pull-right" style="margin-top:5px;" href="register.html">Register</a>
-        </div>
-      </div>
-    </div>
-
-    
     <!--====================  Island A: Header and Hero Unit  ====================-->
-    <div id="island-a" class="row">
-      <div class="container">
-	<header>
-	  <a href="index.html"><img src="images/title_sm.png" alt="ScanShowSell.com" border="0" /></a>
-	  <ul class="main-nav pull-right">
-	    <li><a class="header-home" href="index.html">&nbsp;&nbsp;</a></li>
-	    <li><a href="why.html">why go mobile</a></li>
-	    <li><a href="process.html">how it works</a></li>
-	    <li><a href="features.html">features</a></li>
-	    <li><a href="pricing.html">pricing</a></li>
-	    <li><a href="about.html">about</a></li>
-	  </ul>
-	</header>
-	
-	<!-- Main hero unit for a primary marketing message or call to action -->
-	<div id="slider-wrap" class="span16">
-	  <ul id="slider1">
-	    <li>
-	      <div class="slide1">
-		<div class="row">
-		  <div class="span7 offset8">
-	      	    <h1>Is your business ready for<br />
-	      	      <span class="strong">the mobile web?</span></h1>
-	      	    <div class="btn_wrap"><a class="button blue" href="register.html"><span class="btn-rarr">go mobile for free!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></div>
-		  </div>
-		</div>
-	      </div>
-	    </li>
-	    <li>
-	      <div class="slide2">
-		<div class="row">
-		  <div class="span7 offset1">
-	      	    <h1>Get to your prospect<br />
-	      	      <span class="strong">before your competition.</span></h1>
-	      	    <div class="btn_wrap"><a class="button orange" href="register.html"><span class="btn-rarr">go mobile for free!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></div>
-		  </div>
-		</div>
-	      </div>
-	    </li>
-	    <li>
-	      <div class="slide3">
-		<div class="row">
-		  <div class="span8 offset7">
-	      	    <h1>A mobile website is<br />
-	      	      <span class="strong">your electronic brochure.</span></h1>
-	      	    <div class="btn_wrap"><a class="button green" href="register.html"><span class="btn-rarr">go mobile for free!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></div>
-		  </div>
-		</div>
-	      </div>
-	    </li>
-	  </ul>
-	</div>
-      </div>
-    </div>
+    <section id="home">
+      <div class="container island-wrap">
+      <div class="row island-a">
+      	<header>
+          <p class="call">Call us: <strong>1-855-722-6746</strong></p>
+      	  <a href="index.html"><img src="images/title_sm.png" alt="ScanShowSell.com" border="0" /></a>
+      	  <ul class="main-nav pull-right">
+      	    <!-- <li><a class="header-home" href="index.html">&nbsp;&nbsp;</a></li> -->
+      	    <li><a href="why.html">why go mobile</a></li>
+      	    <li><a href="features.html">features</a></li>
+      	    <li><a href="pricing.html">pricing</a></li>
+      	    <li><a href="showcase.html">showcase</a></li>
+            <li><a href="#">blog</a></li>
+            <li><div id="login_form"></div></li>
+      	  </ul>
+      	</header>
+      </div><!-- /row header -->
+
+      <div class="row island a">
+      	<!-- Main hero unit for a primary marketing message or call to action -->
+      	<div id="slider-wrap" class="span12">
+      	  <ul id="slider1">
+      	    <li>
+            <div class="slide1">
+          		<div class="row">
+          		  <div class="span6 offset5">
+            	    <h1>Is your business ready for<br />
+            	    <span class="strong">the mobile web?</span></h1>
+                    <a class="btn-flat blue hero" href="register.html">
+                      <span class="btn-rarr">go mobile for free&nbsp;&nbsp;&nbsp;</span>
+                    </a>
+          		  </div><!-- /span7 -->
+          		</div><!-- /row -->
+            </div><!-- /slide1 -->
+      	    </li>
+      	    <li>
+      	    <div class="slide2">
+          		<div class="row">
+          		  <div class="span6 offset1">
+            	    <h1>Get to your prospect<br />
+          	      <span class="strong">before your competition.</span></h1>
+                    <a class="btn-flat orange hero" href="register.html">
+                      <span class="btn-rarr">go mobile for free&nbsp;&nbsp;&nbsp;</span>
+                    </a>
+          		  </div>
+          		</div>
+            </div><!-- /slide-2 -->
+            </li>
+      	    <li>
+      	      <div class="slide3">
+            		<div class="row">
+            		  <div class="span6 offset5">
+      	      	    <h1>A mobile website is<br />
+      	      	    <span class="strong">your electronic brochure.</span></h1>
+                      <a class="btn-flat green hero" href="register.html">
+                        <span class="btn-rarr">go mobile for free&nbsp;&nbsp;&nbsp;</span>
+                      </a>
+            		  </div>
+            		</div>
+      	      </div><!-- /slide-3 -->
+      	    </li>
+      	  </ul><!-- /slider-1 -->
+      	</div><!-- /slider-wrap -->
+      </div><!-- /row island a -->
+      </div><!-- island-wrap container -->
+    </section><!-- /home row -->
 
     <!--====================  Island B: Call To Action #1  ====================-->
-    <div id="island-b" class="row">
-      <div class="container"><h3>Build your mobile website in <span class="strong">10 minutes</span>!</h3></div>
-      <div id="panel-wrap">
-      	<div id="panel" class="container">
-      	  <form id="get-started" class="form-inline" action="register.html">
-	    <div class="clearfix">
-	      <label id="input" class="websitName" for="website-name">www.scanshowsell.com/m/</label>
-	      <div class="input" style="float:left;margin:18px 20px 0 10px;">
-		<input type="text" id="website-name" placeholder="yourwebsitename" class="span6  {validate: {required:true, uniqueWebsiteName:true}}"/>
-	      </div>
-	      <button type="submit" class="button orange action"><span class="btn-rarr">get started!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></button>
-	    </div>
-	  </form>
-      	</div>
-      </div>
-    </div>
-    
-    
-    <!--====================  Island C: Three Steps  ====================-->
-    <div id="island-c" class="row">
-      <div class="container">
-	<h2 class="bg_h2">our process is as simple as 1, 2, 3</h2>
-	<div id="three-steps" class="shadow_box">
-      	  <div id="step1">
-      	    <center>
-              <img src="images/step_1.png" alt="Step 1: Scan" /></center>
-      	    <br />
-      	    <h4>1.</h4>
-      	    <p>Your prospect or customer scans your QR code from your business 
-              card, vehicle, job sign...wherever.</p>
-      	  </div>
-      	  <div id="step2">
-      	    <center>
-              <img src="images/step_2.png" alt="Step 2: Show" /></center>
-      	    <br />
-      	    <h4>2.</h4>
-      	    <p>They are taken directly to your mobile friendly website.&nbsp; 
-              One that is built specifically for smartphones.</p>
-      	  </div>
-      	  <div id="step3">
-      	    <center>
-              <img src="images/step_3.png" alt="Step 3: Sell" /></center>
-      	    <br />
-      	    <h4>3.</h4>
-      	    <p>With one click they can request a service call or an estimate. 
-              They can also tap-to-call, tap-to-text, or tap-to-email you..</p>
-      	  </div>
-      	  <span class="warp"></span>
-      	</div>
-      	<h2>it's that easy. don't believe it? <a href="features.html">learn more!</a></h2>
-      </div>
-    </div>
-    
-    <!--====================  Island D: Call To Action #2  ====================
-        <div id="island-d" class="row">
-	  <div class="container"><h3>Build your mobile website in <strong>10 minutes</strong>!</h3></div>
+    <section id="call-1">
+      <div class="container island-wrap">
+      <div class="row island b">
+        <div class="span12">
+          <h3>build your mobile website in <span class="strong">10 minutes</span>!</h3>
           <div id="panel-wrap">
-      	    <div id="panel" class="container">
-      	      <form class="form-inline">
-		<div class="clearfix">
-		  <label id="input" class="websiteName" for="websiteNameAction">www.scanshowsell.com/m/</label>
-		  <div class="input" style="float:left;margin-left:35px;">
-		    <input type="text" id="websiteNameAction" class="span6" placeholder="yourwebsitename" />
-		  </div>
-		  <button type="submit" class="button orange" style="display:inline;float:left;">get started!</button>
-		</div>
-	      </form>
-      	    </div>
-          </div>
+          	  <form id="get-started" class="form-inline" action="register.html">
+          	    <div class="clearfix">
+          	      <label id="input" class="website-name" for="website-name">www.scanshowsell.com/m/</label>
+          	      <div class="input">
+                		<input type="text" id="website-name" placeholder="yourwebsitename" class="span6"/>
+          	      </div>
+                  <a class="btn-flat orange large pull-right" hef="register.html">
+                    <span class="btn-rarr">get started&nbsp;&nbsp;&nbsp;</span>
+                  </a>
+          	    </div>
+          	  </form>
+          </div><!-- /panel-wrap -->
+      </div><!-- /span12 -->
+    </div><!-- /row island b -->
+    </div><!-- /container island-wrap -->
+  </section><!-- /call-1 -->
+    
+  <!--====================  Island C: Three Steps  ====================-->
+  <section id="three-steps">
+    <div class="container island-wrap">
+    <div class="row island c">
+        <div class="span12">
+        	<h2>our process is as simple as 1 - 2 - 3.</h2>
         </div>
-        
-        ====================  Island E: Testimonials & Blog Posts  ====================
-        <div id="island-e" class="row">
-          <div id="panel" class="container">
-      	    <h2 style="padding:10px 0 0 20px;">Perfect For:</h2>
-      	    <br />
-      	    <div class="row">
-      	      <div class="span5">
-      		<dl>
-      		  <dt>For Sale by Owner</dt>
-      		  <dd>Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</dd>
-      		  <dt>Real Estate Agents</dt>
-      		  <dd>Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</dd>
-      		  <dt>Seeking Renters</dt>
-      		  <dd>Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</dd>
-      		</dl>
-      	      </div>
-      	      <div class="span5">
-      		<dl>
-      		  <dt>Building Managers</dt>
-      		  <dd>Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</dd>
-      		  <dt>Apartment Owners</dt>
-      		  <dd>Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</dd>
-      		  <dt>Banks</dt>
-      		  <dd>Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</dd>
-      		</dl>
-      	      </div>
-      	      <div class="span5">
-      		<dl>
-      		  <dt>Property Owners</dt>
-      		  <dd>Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</dd>
-      		  <dt>Commercial Brokers</dt>
-      		  <dd>Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</dd>
-      		  <dt>Auction Houses</dt>
-      		  <dd>Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</dd>
-      		</dl>
-      	      </div>
-      	    </div>
-          </div>
-      	  
-          <div class="container">
-      	    <div id="testimonials" class="span16">
-      	      <h3>What Our Customers Say</h3>
-      	      <div class="testimonial">
-      	        <img class="thumbnail pull-left" src="images/90x90.gif" alt="">
-      	        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim, quam ut placerat ultricies, magna elit sollicitudin est, adipiscing sollicitudin massa risus et risus.</p>
-      	      </div>
-      	      <div class="testimonial">
-      	        <img class="thumbnail pull-left" src="images/90x90.gif" alt="">
-      	        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim, quam ut placerat ultricies, magna elit sollicitudin est, adipiscing sollicitudin massa risus et risus.</p>
-      	      </div>
-      	      
-      	      <div id="blog-feed" class="span16">
-      	        <h3>What's New</h3>
-      	        <div class="span7"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim, quam ut placerat ultricies, magna elit sollicitudin est, adipiscing sollicitudin massa risus et risus.</p></div>
-      	        <div class="span7 offset1"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim, quam ut placerat ultricies, magna elit sollicitudin est, adipiscing sollicitudin massa risus et risus.</p></div>
-      	      </div>
-            </div>
-      	    
-          </div>
+    	  <div id="step1" class="span3">
+    	    <center>
+            <img src="images/step_1.png" alt="Step 1: Scan" />
+          </center>
+    	    <br />
+    	    <h4>1.</h4>
+    	    <p>Your prospect or customer scans your QR code from your business 
+            card, vehicle, job sign...wherever.</p>
+    	  </div><!-- /step-1 -->
+    	  <div id="step2" class="span3">
+    	    <center>
+            <img src="images/step_2.png" alt="Step 2: Show" />
+          </center>
+    	    <br />
+    	    <h4>2.</h4>
+    	    <p>They are taken directly to your mobile friendly website.&nbsp; 
+            One that is built specifically for smartphones.</p>
+    	  </div><!-- /step-2 -->
+    	  <div id="step3" class="span3">
+    	    <center>
+            <img src="images/step_3.png" alt="Step 3: Sell" />
+          </center>
+    	    <br />
+    	    <h4>3.</h4>
+    	    <p>With one click they can request a service call or an estimate. 
+            They can also tap-to-call, tap-to-text, or tap-to-email you..</p>
+    	  </div><!-- /step-3 -->
+        <div class="span12">
+        	<h2>it's that easy. don't believe it? <a href="features.html">learn more!</a></h2>
         </div>
-        -->
+    </div><!-- /row island c -->
+    </div><!-- /container island-wrap -->
+  </section><!--/three-steps -->
 
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="span6">
-            <h4>Site Map</h4>
-            <ul id="sitemap-1">
-	      <li><a href="#">Home</a></li>
-	      <li><a href="#">About</a></li>
-	      <li><a href="#">Sellers</a></li>
-	      <li><a href="#">Buyers</a></li>
-	      <li><a href="#">Tools & Resources</a></li>
-	      <li><a href="#">Contact</a></li>
-	    </ul>
-	    <ul id="sitemap-2">
-	      <li><a href="#">Network</a></li>
-	      <li><a href="#">Real Estate</a></li>
-	      <li><a href="#">Automotive</a></li>
-	      <li><a href="#">Aviation</a></li>
-	      <li><a href="#">Marine</a></li>
-	      <li><a href="#">Support</a></li>
-	    </ul>
-          </div>
-          
-          <div class="span5">
-            <h4>Newsletter</h4>
-            <p>Get our newsletter.</p>
-            <form action="">
-              <div class="clearfix"><input class="span4" id="" name="" type="text" placeholder="Email Address" /></div>
-            </form>
-          </div>
-          
-          <div class="span5">
-            <h4>We're Social</h4>
-            <p>Social media component.</p>
-          </div>
-        </div>
-      </div>
-    </footer>
+  <!--====================  Island D: Perfect For...  ====================-->
+  <section id="perfect">
+    <div class="container island-wrap">
+    <div class="row island d">
+      <div class="span12">
+        <h2>perfect for individuals and small businesses.</h2>
+      </div><!-- /span12 -->
+      <div id="col-1" class="span3">
+        <ul>
+          <li class="icn-elec"><p>Electricians</p></li>
+          <li class="icn-plumb"><p>Plumbers</p></li>
+          <li class="icn-saw"><p>Carpenters</p></li>
+        </ul>
+      </div><!-- /col-1 -->
+      <div id="col-2" class="span3">
+        <ul>
+          <li class="icn-tree"><p>Landscape Architects</p></li>
+          <li class="icn-bricks"><p>Stoneworks</p></li>
+          <li class="icn-anvil"><p>Metalworks</p></li>
+        </ul>
+      </div><!-- /col-2 -->
+      <div id="col-3" class="span3">
+        <ul>
+          <li class="icn-person"><p>Independent Contractors</p></li>
+          <li class="icn-small-bus"><p>Small Businesses</p></li>
+          <li class="icn-med-bus"><p>Medium Businesses</p></li>
+        </ul>
+      </div><!-- /col-3 -->
+    </div><!-- /row island d -->
+    </div><!-- /container island-wrap -->
+  </section><!-- /perfect -->
+
+  <!--====================  Island E: Built for Smartphones  ====================-->
+  <section id="tailored">
+    <div class="container island-wrap">
+    <div class="row island e">
+      <div class="span12">
+        <h2>your website - tailored for smartphones.</h2>
+      </div><!-- /span12 -->
+      <div id="phones" class="span5">
+        <img src="images/smartphones.png" alt="Your website will work on iPhone, Android, Windows Phone, Blackberry and more." />
+      </div><!-- /phones -->
+      <div class="span5 offset0">
+        <h4>Something important.</h4>
+        <p>Some more really important content. I'd love your help writing the copy for this section.</p>
+      </div><!-- /span6 -->
+    </div><!-- /row island e -->
+    </div><!-- /container island-wrap -->
+  </section><!-- /tailored -->
+
+  <footer>
+    <div id="footer-1">
+      <div class="container island-wrap">
+        <div class="row island f">
+            <div class="span12">
+              <ul id="sitemap-1">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Why Go Mobile</a></li>
+                <li><a href="#">How It Works</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Showcase</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </div><!-- /span12 -->
+          </div><!-- /row island f -->
+        </div><!-- /container island-wrap -->
+      </div><!-- /footer-1 -->
+
+      <div id="footer-2">
+        <div class="container">
+          <div class="row">
+        <div class="span3">
+    	    <ul id="sitemap-2">
+    	      <li><a href="#">About Us</a></li>
+    	      <li><a href="#">Support</a></li>
+            <li><a href="#">Service Providers</a></li>
+            <li><a href="#">Construction</a></li>
+            <li><a href="#">Hospitality</a></li>
+            <li><a href="#">Entertainment</a></li>
+    	    </ul>
+        </div><!-- /span3 -->
+        <div class="span4">
+          <h4>Newsletter</h4>
+          <p>Get our newsletter.</p>
+          <form action="">
+            <div class="clearfix"><input class="span4" id="" name="" type="text" placeholder="Email Address" /></div>
+          </form>
+        </div><!-- /span5 -->
+        <div class="span4">
+          <h4>Need help? Call us!</h4>
+          <br />
+          <p><strong>1-855-722-6746</strong></p>
+          <p>Office Hours:</p>
+          <p>9am - 5pm, Monday - Friday</p>
+        </div><!-- /span4 -->
+    </div><!-- /row -->
+    </div>
+  </footer>
   </body>
 </html>
