@@ -52,7 +52,7 @@ new_hash = function(){
 update_emulators_and_qr = function(){
     // FIXME this should be uncommented
     var uri = String.format("http://{0}/{1}/m/com.scanshowsell.website:{2}/index.html", window.location.host, document.couchapp_context.dbname, website_name);
-    $("#prevpub-pane img").attr("src", String.format("http://qrcode.kaywa.com/img.php?s=8&d={0}", encodeURIComponent(uri)));
+    $("#prevpub-pane img").attr("src", String.format("http://qrcode.kaywa.com/img.php?s=6&d={0}", encodeURIComponent(uri)));
     $("#emulator-view-1, #emulator-view-0").attr("src", uri)
 }
 
