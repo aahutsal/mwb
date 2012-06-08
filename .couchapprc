@@ -1,7 +1,7 @@
 {
     "env": {
         "default": {"db": "http://admin:secret9022@vm3:5984/common"},
-        "prod": {"db": "http://admin:dee9022@107.21.225.5:5984/common"},
+        "prod": {"db": "http://admin:secret9022@vm232:5984/common"},
 	"sam": {"db": "http://admin:admin@sqg.iriscouch.com/mwb"}
     }               
 }
