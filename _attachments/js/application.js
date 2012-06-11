@@ -42,7 +42,7 @@ new_hash = function(){
     }
 
     $("#site-manager-dropdown .divider:first").prevAll().removeClass("active");
-    $("#site-manager-dropdown a[href$='" + hash + "']").parent().addClass('active')
+    $("#site-manager-dropdown a:contains('" + website_name + "')").parent().addClass('active')
     $("#site-toggle").text("Currently editing:" + website_name) // FIXME template should be used
     $("#alert-select-website").fadeOut();
 
@@ -192,12 +192,12 @@ $(function(){
         },
 
         addRow : function(model){
-            var hash = getHash()
+            var hash = getHash().replace(/#!/g,'')
             var model_id = model.id.split(":");
             var name = model_id[1];
             var li = $("<li/>").append($("<a/>").attr("href", getHash(name)).text(name));
             // making li active
-            if(name === getHash()){
+            if(name == hash){
                 li.addClass("active")
             }
             $("#site-manager-dropdown").prepend(li);

@@ -1,3 +1,4 @@
+<script src="../js/site-settings.js"></script>
 <section id="section-head" class="row">
   <nav id="dashnav" class="navbar">
     <div class="navbar-inner">
@@ -18,7 +19,7 @@
 
 <section id="site-settings" class="span15">
   <div id="site-info"  class="row">
-    <form class="span8 form-inline site-settings-form" name="site-info-form">
+    <form class="span8 form-inline site-settings-form" name="site-info">
       <h3>Site Information</h3>
       <ul id="form-list">
         <li>
@@ -26,12 +27,12 @@
           <div class="clearfix">
             <div class="input">
               <label>Site Name</label>
-              <input type="text" class="span7 {validate: {required:true}}" id="site-name" size="30" name="site-name" placeholder="Website Name"></input>
+              <input type="text" class="span7 {validate: {required:true}}" size="30" name="name" placeholder="Website Name" readonly="readonly"></input>
             </div>
             <br />
             <div class="input">
               <label>Site Description</label>
-              <textarea type="text" id="site-description" name="site-description" class="span7" placeholder="200 characters..."></textarea>
+              <textarea type="text" class="span7 {validate: {required:true, maxlength:200}}" name="description" rows="5" placeholder="Max 200 characters..."></textarea>
             </div>
             <br />
             <div class="input">
