@@ -20,10 +20,10 @@
     font-weight: bolder;
 }
 	
-	body {
+body {
 			background:url('../images/bg_grid-light.png') left top repeat, url('../images/bg_hilite.png') center top no-repeat, url('../images/header_bg.png') left top repeat-x;
-			}
-	#page-wrap		{
+}
+#page-wrap		{
 			margin-top:90px;
 			background: #fcfcfc;
 			background: -moz-linear-gradient(top, #fcfcfc 0%, #f9f9f9 100%);
@@ -36,7 +36,11 @@
 			/* border-top:4px solid #f05a22;*/
 			box-shadow: 0px -1px 3px rgba(0,0,0,0.25);
 			-moz-box-shadow: 0px -1px 3px rgba(0,0,0,0.25);
-			}
+}
+.width300px {
+    width: 300px;
+}
+
 
 /*	--------------------------------------------------
 	Header
