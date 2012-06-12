@@ -1,5 +1,6 @@
 $(function(){
-    WebsiteView = Backbone.View.extend({
+
+    SingleWebsiteView = Backbone.View.extend({
         el: $("#site-settings"), 
 
         events: {
