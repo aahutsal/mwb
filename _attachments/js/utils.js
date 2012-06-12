@@ -45,6 +45,12 @@ $.expr[':'].regex = function(elem, index, match) {
     regex = new RegExp(matchParams.join('').replace(/^\s+|\s+$/g,''), regexFlags);
     return regex.test(jQuery(elem)[attr.method](attr.property));
 }
+
+$.expr[':'].textEquals = function(a, i, m) {
+    var match = $(a).text().match("^" + m[3] + "$")
+    return match && match.length > 0;
+}
+
 var matcher = /\s*(?:((?:(?:\\\.|[^.,])+\.?)+)\s*([!~><=]=|[><])\s*("|')?((?:\\\3|.)*?)\3|(.+?))\s*(?:,|$)/g;
 
 function resolve(element, data) {

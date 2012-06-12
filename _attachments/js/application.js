@@ -42,7 +42,7 @@ new_hash = function(){
     }
 
     $("#site-manager-dropdown .divider:first").prevAll().removeClass("active");
-    $("#site-manager-dropdown a:contains('" + website_name + "')").parent().addClass('active')
+    $("#site-manager-dropdown a:textEquals('" + website_name + "')").parent().addClass('active')
     $("#site-toggle").text("Currently editing:" + website_name) // FIXME template should be used
     $("#alert-select-website").fadeOut();
 
