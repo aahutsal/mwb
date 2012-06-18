@@ -127,7 +127,16 @@ $(function(){
                 return true;
             },
 
-            // TESTME: this block of the code require more testing
+            // FIXME think how to merge those two [Saves] below
+            // clicking on [Save] <submit> inside form
+            "click submit": function(e){
+                var form = $(e.target).parents("form").serializeForms()
+                var model = Websites.where({_id: websiteId(getHash().replace(/#!/gi,''))})[0]
+                model.save(form)
+            },
+
+
+            // clicking on [Save Page] outside form
             "click .do-save-page": function(e){
                 var model = Websites.where({_id: websiteId(website_name)})[0];
                 if(model){
