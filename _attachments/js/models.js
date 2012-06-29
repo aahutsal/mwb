@@ -1,6 +1,29 @@
 // trying to dynamically determine dbname and ddoc, using couchapp_context
 var ddoc = document.couchapp_context.ddoc, dbname = document.couchapp_context.dbname
 
+createWebsiteModel = function(wsName, complete){
+    var id = websiteId(wsName);
+    var model = {
+        _id: id,
+        owner: username
+    }
+    Websites.create(model,{
+        async: false,
+        success:function(model){
+            console.log('Created', model)
+            if(_.isFunction(complete)){
+                complete(model)
+            }
+        },
+        error:function(error){
+            console.log('Error', error)
+            if(_.isFunction(complete)){
+                complete(error)
+            }
+        }
+    })
+}
+
 // `ddoc_name` is the name of your couchapp project.
 Backbone.couch_connector.config.db_name = dbname;
 Backbone.couch_connector.config.ddoc_name = ddoc;
