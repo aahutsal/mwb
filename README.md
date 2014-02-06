@@ -2,8 +2,7 @@
 
 This is meant to be an example CouchApp and to ship with most of the CouchApp goodies.
 
-Clone with git:
-
+**Clone with git:**
     git clone git://github.com/couchapp/example.git
     cd example
 
